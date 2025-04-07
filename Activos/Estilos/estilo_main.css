@@ -4,7 +4,8 @@ body{
     box-sizing: border-box; /*ESTO ES MUY IMPORTANTE EN TODOS LOS CSS*/
     margin: 0;
     padding: 0;
-    
+    line-height: 1.5;
+    border: 0;
 }
 nav.Menu {
     position: fixed; /* Fija el menú en la parte superior de la página */
@@ -186,4 +187,77 @@ nav.Menu ul div a img  {
     outline:1px solid white;
     font-weight: bold;
 
+}
+
+footer {
+    background-color: #5e6a3a;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    z-index: 1000;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-shadow: 3px 1px 8px #f4aa3cde;
+    font-weight: bold;
+}
+
+footer div {
+    display: inline-block;
+    padding: 0rem 2rem 1rem 3rem;
+    vertical-align: top; /* Alinea el elemento verticalmente hasta arriba */
+    box-sizing: border-box; /* Para que el padding no afecte el tamaño del elemento */
+}
+
+footer div p {
+    line-height: 1.0;
+}
+
+.pie_2 {
+    align-items: center;
+    text-align: center;
+}
+
+.conten_image {
+    padding: 0.45rem 0px 0px 0px;
+}
+
+.pie_2 img {
+    width: 3rem;
+    /* Espacio entre imágenes */
+    margin: 0 1rem 0 1rem; /* Espacio entre las imágenes */    
+}
+
+.pie_2 img:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+    /* Transition para animación de rotación */
+    transition: transform 1s;
+}
+
+.pie_2 img:nth-of-type(1):hover {
+    filter: drop-shadow(0px 0px 4px #f7038c); /* Sombra de la imagen para Instagram */
+}
+
+.pie_2 img:nth-of-type(2):hover {
+    filter: drop-shadow(0px 0px 4px #024a1d); /* Sombra de la imagen para WhatsApp */
+}
+
+.pie_2 img:nth-of-type(3):hover {
+    filter: drop-shadow(0px 0px 4px #1398F1); /* Sombra de la imagen para Facebook */
+}
+
+.pie_2 img:nth-of-type(4):hover {
+    filter: drop-shadow(0px 0px 4px #65C2C9); /* Sombra de la imagen para TikTok */
+}
+
+.Texto_centrado {
+    text-align: center;
 }
