@@ -220,38 +220,12 @@ justify-content: center;
     transition: transform 0.2s ease-in-out; /* transición suave */
 
 }
-.carousel-section {
-    text-align: center;
-    margin: 2rem 0;
-}
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-}
-.carousel img {
-    width: 300px;
-    margin: 0 10px;
-    border-radius: 10px;
-}
-.carousel-controls {
-    margin-top: 1rem;
-}
-.carousel-controls button {
-    background-color: #de7c37;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.carousel-controls button:hover {
-    background-color: #e77257;
-}
+
 .galeria {
     padding: 4rem 0;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Para evitar que los elementos se salgan del contenedor */
+    
 }
 
 .galeria-titulo {
@@ -417,7 +391,7 @@ footer div p {
     max-width: 32px;
     max-height: 32px;
     background-color: transparent;
-    
+
 }
 
 .menu-toggle img {
@@ -447,12 +421,23 @@ footer div p {
     opacity: 0;
 }
 
+/*Intentar */
+
+
+
 /* Media queries para activar el menú responsive */
 @media screen and (max-width: 768px) {
     /* Mostrar botón de menú */
     .menu-toggle {
         display: block;
     }
+    .logo-container a, .logo-container h2{
+        background: transparent;
+        visibility: hidden;
+
+    }
+
+    
     
     /* Posicionar el menú fuera de la pantalla */
     nav.Menu ul {
@@ -486,11 +471,6 @@ footer div p {
         left: 1rem;
     }
     
-    nav.Menu ul div h2 {
-        position: relative;
-        left: 4rem;
-    }
-    
     .conten_input {
         width: 100%;
         justify-content: center;
@@ -498,7 +478,7 @@ footer div p {
     }
     
     nav.Menu ul li {
-        padding: 15px 0;
+        padding: 10px 0;
     }
 }
 

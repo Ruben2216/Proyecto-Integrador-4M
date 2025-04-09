@@ -104,9 +104,9 @@ header.innerHTML =
             indiceActual++;
         }
         
-        // Iniciar animación
+        // Iniciar animación de cambio de imágenes cada 3 segundos
         setInterval(actualizarGaleria, velocidadCambio);
         
-        // Centrar inicialmente
+        // Centrar inicialmente el primer elemento
         contenedor.style.transform = `translateX(-${2 * anchoItem}px)`;
     });
