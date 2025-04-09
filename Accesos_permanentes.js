@@ -22,7 +22,7 @@ header.innerHTML =
         <div class="contenedor_nav"><li><a href="#Recordatorios">Recordatorios</a></li></div>
         <div class="contenedor_nav"><li><a href="#Veterinarias">Veterinarias</a></li></div>
         <div class="contenedor_nav"><li><a href="#Consejos">Consejos</a></li></div>
-        <div class="contenedor_nav"><li><a href="#Perfil">Perfil</a></li></div>
+        <div class="contenedor_nav"><li><a href="Login.html">Perfil</a></li></div>
         <div class="conten_input">
             <input type="text" id="buscador" placeholder="Buscar...">
             <button id="botonBuscar"><img src="Activos/Imagenes/lupa.svg" alt="Buscar"></button>
@@ -82,7 +82,7 @@ header.innerHTML =
         contenedor.append(...clonesInicio);
         
         let indiceActual = 2;
-        const velocidadCambio = 1000; // 3 segundos para la animacion de cambio de iamgenes
+        const velocidadCambio = 3000; // 3 segundos para la animacion de cambio de iamgenes
         
         function actualizarGaleria() {
             // Eliminar clones al final del array original para evitar que se repitan
