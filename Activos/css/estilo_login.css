@@ -23,13 +23,84 @@ body{
 }
 
 .contenido_login {
-    width:23rem;
-    height: 34rem;
+    width: 22rem;
+    height: 32rem;
     background-color: #ffffff;
     border-radius: 30px 0px 0px 30px;
-    padding: 1rem 0rem 1rem 1rem;
-    z-index:1px;
+    padding: 2rem;
+    z-index: 1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Espaciado entre elementos */
 }
+
+.contenido_login h1 {
+    font-family:  sans-serif;
+    font-size: 2rem;
+    color: #333333;
+    margin:0;
+}
+
+.contenido_login p {
+    font-family:  inherit;
+    font-size: 1rem;
+    color: #666666;
+    text-align: center;
+    margin:0;
+}
+form{
+    font-family: inherit;
+}
+
+.contenido_login form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Espaciado entre campos del formulario */
+}
+
+.contenido_login input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #eeececd7;
+}
+
+.contenido_login .recovery-password, a {
+    font-size: 0.9rem;
+    color: #4a90e2;
+    text-decoration: none;
+    align-self: flex-end;
+}
+
+.contenido_login .recovery-password:hover, a:hover{
+    text-decoration: underline;
+    color: #054997;
+    transition: color 0.8s; /*Efecto de transicion de color*/
+}
+
+.contenido_login .social-login {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espaciado entre iconos */
+}
+
+.contenido_login .social-login a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+.contenido_login .social-login a img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
 .seccion_img{
     width:25rem;
     height: 34rem;
@@ -46,7 +117,6 @@ section.seccion_img div img{
     
 }
 
-
 .login-button {
     background-color: #4a90e2; /* Azul suave */
     color: white;
@@ -58,4 +128,71 @@ section.seccion_img div img{
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-weight: 600;
-    }
+}
+
+
+p:nth-of-type(1) {
+    margin-bottom:1rem;
+}
+
+.contenedor_transicion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Posiciones iniciales */
+.contenedor_transicion .seccion_login {
+    transform: translateX(0);
+    transition: transform 0.8s ease-in-out;
+}
+
+.contenedor_transicion .seccion_img {
+    transform: translateX(0);
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Posiciones finales al activar la clase */
+.contenedor_transicion.activar .seccion_login {
+    transform: translateX(100%);
+}
+
+.contenedor_transicion.activar .seccion_img {
+    transform: translateX(-100%);
+    border-radius: 30px 0 0 30px; /* Invertir los bordes redondeados */
+    padding: 1rem 0 1rem 1rem; /*Para el mismo borde*/
+    transition-duration: 0.8s;
+}
+.contenedor_transicion.activar .contenido_login{
+    gap:0;
+
+}
+.contenedor_transicion.activar .contenido_login p{
+    padding-top:1rem;
+}
+
+
+/* Cambiar la visibilidad inicial de la sección derecha */
+.seccion_login.derecha {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Al activar, mostrar con display: block y permitir transiciones */
+.contenedor_transicion.activar .seccion_login.derecha {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Ocultar la sección izquierda cuando se activa */
+.contenedor_transicion.activar .seccion_login.izquierda {
+    display:none;
+    opacity: 0;
+}
+.sign_up{
+    border-radius: 0 30px 30px 0;
+}
