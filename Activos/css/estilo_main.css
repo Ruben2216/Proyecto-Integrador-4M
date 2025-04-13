@@ -206,3 +206,25 @@ details[open] {
         opacity: 1;
     }
 }
+/*ANIMACION DE GALERIA DE EFECTO DE APARICION DESDE PEQUEÑO*/
+@keyframes show {
+    from{
+        opacity: 0;
+        scale: 55%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+    
+}
+.galeria{
+    view-timeline-name: --galeria;
+    view-timeline-axis: block;
+    
+    animation-timeline: --galeria;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+}
