@@ -84,5 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
         contenedor.style.transition = 'none'; // Sin transición para evitar movimiento visual raro
         moverGaleria(); // Recentrar
     });
-    /*Prueba para ver si se suben cambios*/
 });
