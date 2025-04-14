@@ -17,17 +17,16 @@
     <div class="contenedor">
         <div class="envoltura">
             <div class="contenido">
-                <header>
-                    
-                </header>
+                <header></header>
                 <div class="transicion">
+                    <!-- FORMULARIO DE INICIO DE SESIÓN -->
                     <section class="seccion seccion--izquierda">
                         <div class="sign-in">
                             <h1>¡Hola!</h1>
                             <p>Bienvenido de vuelta</p>
-                            <form action="#" method="POST">
-                                <label for="username">Ingresa tu usuario</label>
-                                <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+                            <form action="Activos/BasePHP/validar_login.php" method="POST">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
                                 <br>
                                 <label for="password">Contraseña</label>
                                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
@@ -47,20 +46,25 @@
                             </div>
                         </div>
                     </section>
+
+                    <!-- FORMULARIO DE REGISTRO -->
                     <section class="seccion seccion--derecha">
                         <div class="sign-up">
                             <h1>Crea tu cuenta</h1>
                             <br>
-                            <form action="#" method="POST">
-                                <label for="username">Ingresa tu nombre</label>
+                            <form action="Activos/BasePHP/guardar_usuario.php" method="POST">
+                                <label for="nombre">Ingresa tu nombre</label>
                                 <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
-                                <label for="password">Correo</label>
+
+                                <label for="email">Correo</label>
                                 <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+
                                 <label for="password">Contraseña</label>
                                 <input type="password" name="password" placeholder="Contraseña" minlength="8" required>
                                 <br>
                                 <button class="boton" type="submit" id="derecha">Crear cuenta</button>
                             </form>
+
                             <p class="sign-up__volver-login">
                                 ¿Ya tienes una cuenta? <a href="#" class="volver-login__enlace">Inicia sesión</a>
                             </p>
@@ -75,6 +79,7 @@
                             </div>                            
                         </div>
                     </section>
+
                     <section class="imagen">
                         <div>
                             <img src="https://img.freepik.com/foto-gratis/disparo-vertical-lindo-perro-labrador-sentado-montana-puesta-sol_181624-43911.jpg?semt=ais_country_boost&w=740" alt="Perro_logo">
