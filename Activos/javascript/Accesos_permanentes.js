@@ -17,7 +17,7 @@ header.innerHTML =
             <a href="#Inicio"><img src="Activos/Imagenes/barra_nav/icono_barra.png" alt="Logo" width="40px"></a>
             <h2 class="Nombre_pagina">PetClub</h2>
         </div>
-        <div class="contenedor_nav"><li><a href="index.html">Inicio</a></li></div>
+        <div class="contenedor_nav"><li><a href="Index.html">Inicio</a></li></div> 
         <div class="contenedor_nav"><li><a href="#MisMascotas">Mis Mascotas</a></li></div>
         <div class="contenedor_nav"><li><a href="#Recordatorios">Recordatorios</a></li></div>
         <div class="contenedor_nav"><li><a href="#Veterinarias">Veterinarias</a></li></div>

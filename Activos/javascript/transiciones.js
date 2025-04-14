@@ -1,16 +1,18 @@
 // Ajustar la lógica para manejar la visibilidad de las secciones
-var contenedor = document.querySelector('.transicion');
-var botonRegistro = document.querySelector('.crear-cuenta');
-var botonLogin = document.querySelector('.seccion.seccion--derecha .login-button');
+const contenedor = document.querySelector('.transicion');
+const botonRegistro = document.querySelector('.crear-cuenta');
+const botonLogin = document.querySelector('.volver-login__enlace');
 
 if (botonRegistro) {
-    botonRegistro.addEventListener('click', function() {
+    botonRegistro.addEventListener('click', function (e) {
+        e.preventDefault();
         contenedor.classList.add('activar');
     });
 }
 
 if (botonLogin) {
-    botonLogin.addEventListener('click', function() {
+    botonLogin.addEventListener('click', function (e) {
+        e.preventDefault();
         contenedor.classList.remove('activar');
     });
 }
