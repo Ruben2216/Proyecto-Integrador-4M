@@ -4,7 +4,7 @@ body{
     padding: 0;
     margin: 0;
 }
-.contenedor_padre{  
+.contenedor{  
     width: 100% ;
     height: 100vh;
     display:grid;
@@ -13,7 +13,7 @@ body{
 
 }
 
-.contenedor_hijo {
+.contenido {
     background: #f3f3f7;
     width: 100%;
     display: flex; 
@@ -22,29 +22,29 @@ body{
     border-radius: 30px;
 }
 
-.contenido_login {
+.sign-in, .sign-up {
     width: 22rem;
     height: 32rem;
     background-color: #ffffff;
     border-radius: 30px 0px 0px 30px;
     padding: 2rem;
     z-index: 1;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem; /* Espaciado entre elementos */
+    gap: 1rem;
 }
 
-.contenido_login h1 {
+.sign-in h1, .sign-up h1 {
     font-family:  sans-serif;
     font-size: 2rem;
     color: #333333;
     margin:0;
 }
 
-.contenido_login p {
+.sign-in p, .sign-up p {
     font-family:  inherit;
     font-size: 1rem;
     color: #666666;
@@ -55,14 +55,14 @@ form{
     font-family: inherit;
 }
 
-.contenido_login form {
+.sign-in form, .sign-up form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem; /* Espaciado entre campos del formulario */
+    gap: 0.8rem;
 }
 
-.contenido_login input {
+.sign-in input, .sign-up input {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
@@ -72,36 +72,36 @@ form{
     background: #eeececd7;
 }
 
-.contenido_login .recovery-password, a {
+.recuperar, a {
     font-size: 0.9rem;
     color: #4a90e2;
     text-decoration: none;
     align-self: flex-end;
 }
 
-.contenido_login .recovery-password:hover, a:hover{
+.recuperar:hover, a:hover{
     text-decoration: underline;
     color: #054997;
-    transition: color 0.8s; /*Efecto de transicion de color*/
+    transition: color 0.8s;
 }
 
-.contenido_login .social-login {
+.social-img{
     display: flex;
     justify-content: center;
-    gap: 1rem; /* Espaciado entre iconos */
+    gap: 1rem;
 }
 
-.contenido_login .social-login a img {
+.social-img a img {
     width: 40px;
     height: 40px;
     transition: transform 0.2s;
 }
 
-.contenido_login .social-login a img:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+.social-img a img:hover {
+    transform: scale(1.1);
 }
 
-.seccion_img{
+.imagen{
     width:25rem;
     height: 34rem;
     background-color: #ffffff;
@@ -109,7 +109,7 @@ form{
     padding: 1rem 1rem 1rem 0rem;
 
 }
-section.seccion_img div img{
+section.imagen div img{
     width: 25rem;
     height: 34rem;
     border-radius: 30px;
@@ -117,8 +117,8 @@ section.seccion_img div img{
     
 }
 
-.login-button {
-    background-color: #4a90e2; /* Azul suave */
+.boton {
+    background-color: #4a90e2;
     color: white;
     padding: 12px 24px;
     font-size: 16px;
@@ -135,7 +135,7 @@ p:nth-of-type(1) {
     margin-bottom:1rem;
 }
 
-.contenedor_transicion {
+.transicion {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,56 +143,51 @@ p:nth-of-type(1) {
     overflow: hidden;
 }
 
-/* Posiciones iniciales */
-.contenedor_transicion .seccion_login {
+.transicion .seccion {
     transform: translateX(0);
     transition: transform 0.8s ease-in-out;
 }
 
-.contenedor_transicion .seccion_img {
+.transicion .imagen {
     transform: translateX(0);
     transition: transform 0.8s ease-in-out;
 }
 
-/* Posiciones finales al activar la clase */
-.contenedor_transicion.activar .seccion_login {
+.transicion.activar .seccion {
     transform: translateX(100%);
 }
 
-.contenedor_transicion.activar .seccion_img {
+.transicion.activar .imagen {
     transform: translateX(-100%);
-    border-radius: 30px 0 0 30px; /* Invertir los bordes redondeados */
-    padding: 1rem 0 1rem 1rem; /*Para el mismo borde*/
+    border-radius: 30px 0 0 30px;
+    padding: 1rem 0 1rem 1rem;
     transition-duration: 0.8s;
 }
-.contenedor_transicion.activar .contenido_login{
+.transicion.activar .sign-in, .transicion.activar .sign-up{
     gap:0;
 
 }
-.contenedor_transicion.activar .contenido_login p{
+.transicion.activar .sign-in p, .transicion.activar .sign-up p{
     padding-top:1rem;
 }
 
 
-/* Cambiar la visibilidad inicial de la sección derecha */
-.seccion_login.derecha {
+.seccion--derecha {
     display: none;
     visibility: hidden;
     opacity: 0;
 }
 
-/* Al activar, mostrar con display: block y permitir transiciones */
-.contenedor_transicion.activar .seccion_login.derecha {
+.transicion.activar .seccion--derecha {
     display: block;
     visibility: visible;
     opacity: 1;
 }
 
-/* Ocultar la sección izquierda cuando se activa */
-.contenedor_transicion.activar .seccion_login.izquierda {
+.transicion.activar .seccion--izquierda {
     display:none;
     opacity: 0;
 }
-.sign_up{
+.sign-up{
     border-radius: 0 30px 30px 0;
 }

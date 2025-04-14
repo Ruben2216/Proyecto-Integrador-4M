@@ -1,7 +1,7 @@
 // Ajustar la lógica para manejar la visibilidad de las secciones
-var contenedor = document.querySelector('.contenedor_transicion');
-var botonRegistro = document.querySelector('.create-account');
-var botonLogin = document.querySelector('.seccion_login.derecha .login-button');
+var contenedor = document.querySelector('.transicion');
+var botonRegistro = document.querySelector('.crear-cuenta');
+var botonLogin = document.querySelector('.seccion.seccion--derecha .login-button');
 
 if (botonRegistro) {
     botonRegistro.addEventListener('click', function() {
