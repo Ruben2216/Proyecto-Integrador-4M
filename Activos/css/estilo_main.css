@@ -80,7 +80,7 @@ body {
     overflow: hidden; /* Para evitar que los elementos se salgan del contenedor */
 }
 
-.galeria__titulo {
+h2{
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -171,6 +171,39 @@ body {
     user-select: none; /*NO SELECCIONABLE POR EL USUARIO*/
 
 }
+ .mapa{
+    margin-top:2rem;
+    /* outline:2px solid black; */
+    width: 100%;
+    height: fit-content; /*SE HACE "AUTOMATICA LA ALTURA"*/
+    max-height: fit-content;
+    background: #d3cfc3;
+    display:grid;
+    align-items: center;
+    justify-content: left;
+} 
+
+.mapa__titulo{
+    margin:1rem;
+
+}
+.mapa__contenedor{
+    width:40rem;
+    height: 20rem;
+    padding: 2rem;
+    margin-left:3rem;
+    outline:2px solid #5e6a3a;
+} 
+.mapa__contenedor:hover{
+    box-shadow: 0 0 15px #90a357;
+    
+}
+#map{ /*CUIDADO CON LA ESPECIFICIDAD*/
+
+    position: relative;
+    
+}
+
 
 .preguntas_frecuentes {
     min-height: fit-content; /*PRUEBA POR DESBORDAMIENTO*/
@@ -229,7 +262,7 @@ details[open] {
     }
     
 }
-.galeria{
+.galeria, .mapa, .preguntas_frecuentes{
     view-timeline-name: --galeria;
     view-timeline-axis: block;
     

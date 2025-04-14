@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="Activos/css/nav.css">
     <link rel="stylesheet" href="Activos/css/main.css">
     <link rel="stylesheet" href="Activos/css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> <!-- PARA EL MAPA, EXTERNO-->
+
     <title>PetClub</title>
 </head>
 <body>
@@ -28,7 +30,7 @@
     </div>
     <main class="principal_contenido">
         <section class="galeria">
-            <h2 id="galeria__titulo" class="galeria__titulo">Conoce las diferentes razas</h2>
+            <h2 id="galeria__titulo" >Conoce las diferentes razas</h2>
             <div class="galeria__contenedor">
                 <article class="galeria__item active">
                     <img src="Activos/Imagenes/fotos_mascotas/Labrador Retriever.jpg" alt="Labrador Retriever" loading="lazy">
@@ -40,7 +42,7 @@
                 <article class="galeria__item">
                     <img src="Activos/Imagenes/fotos_mascotas/Pastor Aleman.avif" alt="Pastor Alemán" loading="lazy">
                     <div class="galeria__overlay">
-                        <div class="galeria__text-item">Leal, protector y fácil de entrenar.</div>
+                        <div class="galeria__text-item">Leal, protector     y fácil de entrenar.</div>
                         <div class="galeria__name-pet">Pastor Alemán</div>
                     </div>
                 </article>
@@ -165,6 +167,13 @@
                 </article>
             </div>
         </section>
+        <section class="mapa">
+            <h2 class="mapa__titulo">Veterinarias cerca de ti</h2>
+            
+            <div id="map" class="mapa__contenedor"></div>
+
+            
+        </section>
         <section class="preguntas_frecuentes">
             <h2>Preguntas Frecuentes</h2>
             <details>
@@ -201,5 +210,8 @@
     <footer class="footer"></footer>
     <script src="Activos/javascript/Accesos_permanentes.js"></script>
     <script src="Activos/javascript/scroll_imagenes.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="Activos/javascript/mapa_veterinarias.js"></script>
+
 </body>
 </html>
