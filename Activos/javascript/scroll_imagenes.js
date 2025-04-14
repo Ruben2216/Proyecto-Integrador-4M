@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => { 
-    const contenedor = document.querySelector('.galeria-contenedor'); 
-    const items = document.querySelectorAll('.galeria-item'); 
+    const contenedor = document.querySelector('.galeria__contenedor'); 
+    const items = document.querySelectorAll('.galeria__item'); 
     const gap = 24; // El mismo espacio (gap) entre ítems usado en el CSS
     let anchoItem = items[0].offsetWidth + gap; // Ancho + gap
 
