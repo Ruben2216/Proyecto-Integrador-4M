@@ -1,16 +1,36 @@
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
+let boton =document.querySelector("#bienvenida-btn");
 
 // Obtener el estado de la sesión
 fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
+
+   
+
     .then(res => res.json())
     .then(data => {
+       
         let perfilBtn = '';
         let cerrarBtn = '';
 
-        if (data.autenticado) {
+        if (data.autenticado) { 
+
             perfilBtn = `<div class="contenedor_nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/perfil.php">Yo (${data.nombre})</a></li></div>`;
             cerrarBtn = `<div class="contenedor_nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/logout.php">Cerrar sesión</a></li></div>`;
+
+            document.getElementById("nombre-usuario").innerHTML = "Hola, " + "<span style='color: green; font-weight: bold;'>" + data.nombre + "</span>" + "<br>" + "¡Bienvenido a PetClub! 🐾✨¡Estamos felices de tenerte aquí! 💖";
+            if (boton) {
+                boton.disabled = false;
+                boton.click(); // Esto activa el popover inmediatamente
+                console.log("Botón de bienvenida activado y clic simulado");
+
+                //simulacion de tiempo despues del clic
+                const tiempo = 2000;
+                setTimeout(function() {
+                    boton.click();
+                }, tiempo);
+            }
+
         } else {
             perfilBtn = `<div class="contenedor_nav"><li><a href="/Proyecto-Integrador-4M/Login.php">Login</a></li></div>`;
         }
@@ -33,7 +53,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
                 <div class="contenedor_nav"><li><a href="Index.html">Inicio</a></li></div> 
                 <div class="contenedor_nav"><li><a href="#MisMascotas">Mis Mascotas</a></li></div>
                 <div class="contenedor_nav"><li><a href="#Recordatorios">Recordatorios</a></li></div>
-                <div class="contenedor_nav"><li><a href="#Veterinarias">Veterinarias</a></li></div>
+                <div class="contenedor_nav"><li><a href="#mapa__titulo">Veterinarias</a></li></div>
                 <div class="contenedor_nav"><li><a href="#Consejos">Consejos</a></li></div>
                 ${perfilBtn}
                 ${cerrarBtn}
@@ -83,3 +103,4 @@ footer.innerHTML =
     <p class="Texto_centrado">© 2025 Mascotas Felices. Todos los derechos reservados.</p>
 </div>
 `;
+

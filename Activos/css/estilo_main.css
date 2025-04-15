@@ -7,6 +7,14 @@ body {
     line-height: 1.5;
     border: 0;
 }
+*{
+    box-sizing: border-box;
+
+}
+section[id], div[id]{ /*ES PARA QUE LA BARRA DE NAVEGACION NO ESTORBE AL MOMENTO DE IR AL ID DE CUALQUIER ELEMENTO de section o div, ESTO SOLUCIONA EL ID DEL ICONO DE LA BARRA*/
+    scroll-margin-top: 15rem;
+}
+
 .portada {
     width: 100%;
     height: 100vh;
@@ -171,30 +179,50 @@ h2{
     user-select: none; /*NO SELECCIONABLE POR EL USUARIO*/
 
 }
- .mapa{
+.mapa{
     margin-top:2rem;
     /* outline:2px solid black; */
     width: 100%;
-    height: fit-content; /*SE HACE "AUTOMATICA LA ALTURA"*/
-    max-height: fit-content;
+    height:fit-content; /*SE HACE "AUTOMATICA LA ALTURA"*/
+    padding-bottom: 2rem;
     background: #d3cfc3;
-    display:grid;
-    align-items: center;
-    justify-content: left;
 } 
+.mapa__contenedor{
+    max-width: 100vw;
+    display:flex;
+    align-items: top;
+    gap:1rem;   
+}
 
-.mapa__titulo{
-    margin:1rem;
+.mapa__texto p:first-child{
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin:0;
 
 }
-.mapa__contenedor{
+.mapa__texto{
+    width: fit-content;
+    line-height: 1.7;
+
+}
+.mapa__texto p{
+    font-size: 1.5rem;
+    padding-left:10rem;
+    margin:0;
+}
+
+
+.mapa__titulo{
+    align-items: center;
+    
+}
+.mapa__contenedor-mapa{
     width:40rem;
     height: 20rem;
-    padding: 2rem;
-    margin-left:3rem;
-    outline:2px solid #5e6a3a;
+    border:2px solid #5e6a3a;
+    margin-left: 2rem;
 } 
-.mapa__contenedor:hover{
+.mapa__contenedor-mapa:hover{
     box-shadow: 0 0 15px #90a357;
     
 }
@@ -203,12 +231,61 @@ h2{
     position: relative;
     
 }
+[popover]{ /*NECESARIO PARA EVITAR UN PUNTO FEO BLANCO EN PANTALLA*/
+    margin:0;
+    border:none;
+    padding:0;
+    border-width: none;
+}
+@keyframes slideDown { /*ANIMACION DE APARICION DEL POPOVER*/
+  from {
+    transform: translate(-50%, 0) scale(0.5); 
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.popover {
+    width: 30rem;
+    background: #2E3B2D;
+    border: 5px solid #97c63f;
+    color: white;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.05rem 1.25rem;
+    border-radius:25px;
+    user-select: none;
+    text-align: center;
+    animation: slideDown 0.5s ease-in-out;
+  }
+  [popover]::backdrop {
+    background: #000a;
+    backdrop-filter: blur(1px); 
+  }
+
+  .mostrar-popover{
+    position: fixed;
+    top:3.75rem;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+#bienvenida-btn{
+    display: none; /*NO SE VA A MOSTRAR EL BOTON*/
+}
+
+
 
 
 .preguntas_frecuentes {
     min-height: fit-content; /*PRUEBA POR DESBORDAMIENTO*/
     min-width: fit-content; /*IGUAL PRUEBA*/    
 }
+
 
 .preguntas_frecuentes h2 {
     text-align: center;

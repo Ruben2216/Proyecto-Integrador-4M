@@ -73,7 +73,7 @@ navigator.geolocation.getCurrentPosition(function(pos) {
                 + "<span><strong>Teléfono:</strong> " + vet.telefono + "</span><br>" 
                 + "<span style='color: green;'><strong>Abre</strong>: " + vet.horarioAbierto + "</span><br>" 
                 +"<span style='color: red;'><strong>Cierra:</strong> " + vet.horarioCerrado + "</span>"
-            ).openPopup();
+            ).openPopup(); 
         });
 
         // Evento de doble click -- abre Google Maps

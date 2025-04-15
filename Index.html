@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Activos/css/estilo_main.css">
     <link rel="stylesheet" href="Activos/css/nav.css">
-    <link rel="stylesheet" href="Activos/css/main.css">
     <link rel="stylesheet" href="Activos/css/footer.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> <!-- PARA EL MAPA, EXTERNO-->
 
@@ -167,13 +166,34 @@
                 </article>
             </div>
         </section>
-        <section class="mapa">
-            <h2 class="mapa__titulo">Veterinarias cerca de ti</h2>
-            
-            <div id="map" class="mapa__contenedor"></div>
+        <section id="mapa__titulo" class="mapa">
+            <h2  class="mapa__titulo">Veterinarias cerca de ti</h2>
+            <div class="mapa__contenedor">
+                
+                <div id="map" class="mapa__contenedor-mapa" ></div>
+                <div  class="mapa__texto">
+                    <p>¿Cómo funciona el mapa?📌 <br></p>
+                    <p>
+                            1. Encuentra clínicas cercanas <br>
+                            2. Haz clic en el marcador para ver detalles<br>
+                            4. Haz dos clic en el marcador para ir a google maps <br>
+                            3. Llama o agenda tu cita
+                    </p>
+                </div>
+        </div>
 
             
         </section>
+        <button id="bienvenida-btn" popovertarget="bienvenida-msg" popovertargetaction="toogle" disabled>
+
+            Mostrar
+        </button>
+
+        <div id="bienvenida-msg" popover>
+            <div class="popover mostrar-popover">
+            <p id="nombre-usuario"></p>
+            </div>
+        </div>
         <section class="preguntas_frecuentes">
             <h2>Preguntas Frecuentes</h2>
             <details>
