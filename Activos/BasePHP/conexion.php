@@ -1,9 +1,9 @@
 <?php
 $host = "localhost";
 $usuario = "root";
-$contrasena = "1234";
+$contrasena = "1234"; //cambiar si es diferente
 $basededatos = "PetClub";
-$puerto=3306;
+$puerto=3306; //cambiar si es diferente
 
 $conn = new mysqli($host, $usuario, $contrasena, $basededatos, $puerto);
 
