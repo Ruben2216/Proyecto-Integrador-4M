@@ -53,9 +53,12 @@
                             <h1>Crea tu cuenta</h1>
                             <br>
                             <form action="Activos/BasePHP/guardar_usuario.php" method="POST">
-                                <label for="nombre">Ingresa tu nombre</label>
-                                <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
+                              <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
 
+                                <label for="apellido">Apellido</label>
+                                <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+                                
                                 <label for="email">Correo</label>
                                 <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
 

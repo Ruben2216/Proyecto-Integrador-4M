@@ -4,3 +4,19 @@ CREATE TABLE usuario (
     Usua_Email VARCHAR(100) NOT NULL UNIQUE,
     Usua_Contraseña VARCHAR(255) NOT NULL
 );
+
+la modifique por esta
+CREATE TABLE IF NOT EXISTS usuario (
+    Usua_Id INT(11) NOT NULL AUTO_INCREMENT,
+    Usua_Nombre VARCHAR(100) NOT NULL,
+    Usua_Apellido VARCHAR(100) DEFAULT NULL,
+    Usua_Email VARCHAR(100) NOT NULL,
+    Usua_Contraseña VARCHAR(255) NOT NULL,
+    Usua_Edad INT(11) DEFAULT NULL,
+    Usua_Genero ENUM('Masculino', 'Femenino', 'Otro') DEFAULT NULL,
+    Usua_Telefono VARCHAR(20) DEFAULT NULL,
+    Usua_Direccion TEXT DEFAULT NULL,
+    PRIMARY KEY (Usua_Id),
+    UNIQUE KEY Usua_Email (Usua_Email)
+);
+
