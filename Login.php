@@ -36,7 +36,7 @@
                             </form>
                             <p>¿No tienes cuenta? <a href="#" class="crear-cuenta">Crea una</a></p>
                             <p>O continua con</p>
-                            <div class="social-img">
+                            <div class="sign-up__social-img">
                                 <a href="#" aria-label="Iniciar sesión con Google">
                                     <img src="Activos/Imagenes/login/icon-google.svg" alt="Google">
                                 </a>
@@ -64,15 +64,14 @@
 
                                 <label for="password">Contraseña</label>
                                 <input type="password" name="password" placeholder="Contraseña" minlength="8" required>
-                                <br>
-                                <button class="boton" type="submit" id="derecha">Crear cuenta</button>
+                                <button class="boton boton--crear" type="submit" id="derecha">Crear cuenta</button>
                             </form>
 
                             <p class="sign-up__volver-login">
                                 ¿Ya tienes una cuenta? <a href="#" class="volver-login__enlace">Inicia sesión</a>
                             </p>
                             <p>O continua con</p>
-                            <div class="social-img">
+                            <div class="sign-up__social-img sign-up--imgs">
                                 <a href="#" aria-label="Iniciar sesión con Google">
                                     <img src="Activos/Imagenes/login/icon-google.svg" alt="Google">
                                 </a>

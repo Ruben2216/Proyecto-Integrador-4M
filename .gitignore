@@ -1,0 +1,24 @@
+# Ignorar la carpeta vendor, si no no jalara
+vendor/
+
+#esto es de cada quien
+.env
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de caché
+.cache/
+*.cache
+
+# Ignorar archivos de Composer
+composer.lock.backup
+
+# Ignorar otros archivos temporales
+*.tmp
+*.swp
+*.bak

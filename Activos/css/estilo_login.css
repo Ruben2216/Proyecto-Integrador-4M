@@ -37,7 +37,6 @@ body {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
     padding: 2rem;
     z-index: 1;
@@ -47,12 +46,23 @@ body {
     align-items: center;
     gap: 1rem;
 }
+.sign-in{
+    border-radius: 30px 0 0 30px;;
+}
 
+.imagen{
+    border-radius: 0% 30px 30px 0; 
+    border: none;
+}
 .sign-in h1, .sign-up h1 {
     font-family: sans-serif;
     font-size: 2rem;
     color: #ffffff;
     margin: 0;
+}
+.sign-up h1{
+    padding-top:1.5rem;
+    
 }
 
 .sign-in p, .sign-up p {
@@ -76,6 +86,9 @@ form label {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+}
+.sign-up form {
+    gap:0.6rem;
 }
 
 .sign-in input, .sign-up input {
@@ -102,19 +115,19 @@ form label {
     transition: color 0.8s;
 }
 
-.social-img {
+.sign-up__social-img {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-.social-img a img {
+.sign-up__social-img a img {
     width: 40px;
     height: 40px;
     transition: transform 0.2s;
 }
 
-.social-img a img:hover {
+.sign-up__social-img a img:hover {
     transform: scale(1.1);
 }
 
@@ -147,9 +160,9 @@ section.imagen div img {
     background-color: #4e572f; 
     transform: scale(1.05);
 }
+.boton--crear{
+margin:0.8rem 0;
 
-p:nth-of-type(1) {
-    margin-bottom: 1rem;
 }
 
 .transicion {
@@ -185,15 +198,13 @@ p:nth-of-type(1) {
     gap: 0;
 }
 
-.transicion.activar .sign-in p, .transicion.activar .sign-up p {
-    padding-top: 1rem;
-}
 
 .seccion--derecha {
     display: none;
     visibility: hidden;
     opacity: 0;
 }
+
 
 .transicion.activar .seccion--derecha {
     display: block;
@@ -236,10 +247,13 @@ p:nth-of-type(1) {
 }
 
 .sign-up__volver-login {
-    margin-top: 1rem;
     font-size: 0.9rem;
     color: #dddddd;
     text-align: center;
+    padding-bottom:0.7rem;
+}
+.sign-up--imgs{
+    padding-top: 0.7rem;
 }
 
 .volver-login__enlace {

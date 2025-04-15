@@ -10,6 +10,10 @@ $sql = "INSERT INTO usuario (Usua_Nombre, Usua_Apellido, Usua_Email, Usua_Contra
         VALUES ('$nombre', '$apellido', '$email', '$password')";
 
 if ($conn->query($sql)) {
+    // se debw incluir el archivo correo.php para enviar el correo
+    $_POST['email'] = $email;
+    include '../../correo.php'; //enviar al php de correo el correo del usuario
+
     header("Location: ../../Index.html"); 
     exit();
 } else {
