@@ -12,6 +12,7 @@ nav.Menu {
     display: flex;
     background: #5e6a3a;
     color: white;
+    user-select: none
 }
 
 .contenedor-nav {
