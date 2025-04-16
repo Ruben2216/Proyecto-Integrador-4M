@@ -1,8 +1,9 @@
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f2f5;
+    font-family:  sans-serif;
+    background: linear-gradient(135deg, #cdeecd, #f0f4f8); /*DEGRADADO*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,131 +11,138 @@ body {
 }
 
 .perfil-card {
-    background-color: #fff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
+    padding: 50px 40px;
     box-sizing: border-box;
-    text-align: center;
+    position: relative;
+    color: #1e293b;
 }
 
 .perfil-foto {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.perfil-header{
+    place-items: center;
+
 }
 
 .perfil-header h2 {
     margin: 0;
     font-size: 22px;
-    color: #333;
+    font-weight: 600;
 }
 
 .perfil-header .correo {
-    color: #777;
     font-size: 14px;
-    margin-top: 4px;
-    margin-bottom: 20px;
+    color: #64748b;
+    margin-bottom: 30px;
 }
 
-.perfil-datos .dato {
+.dato {
+    position: relative;
+    margin-bottom: 25px;
     text-align: left;
-    margin-bottom: 15px;
 }
 
-.perfil-datos label {
-    display: block;
-    font-weight: 600;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.perfil-datos input,
-.perfil-datos select,
-.perfil-datos textarea {
+/* Input base */
+.dato input,
+.dato select,
+.dato textarea {
     width: 100%;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background-color: #fafafa;
-    box-sizing: border-box;
-    font-size: 14px;
-    transition: border 0.2s;
-}
-
-.perfil-datos input:focus,
-.perfil-datos select:focus,
-.perfil-datos textarea:focus {
-    border-color: #007bff;
+    padding: 14px 12px 14px 12px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    color: #1e293b;
+    font-size: 15px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
     outline: none;
-    background-color: #fff;
 }
 
-.perfil-datos textarea {
+.dato input:focus,
+.dato select:focus,
+.dato textarea:focus {
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 0 0 2px #078158;
+}
+
+
+/* Área de texto */
+.dato textarea {
     resize: vertical;
-    min-height: 60px;
+    min-height: 80px;
 }
 
 .btn-actualizar {
-    margin-top: 20px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .btn-actualizar button {
-    padding: 12px 20px;
-    background-color: #007bff;
+    background-color: #10b981;
     color: white;
+    padding: 14px 26px;
+    font-size: 15px;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
 
 .btn-actualizar button:hover {
-    background-color: #0056b3;
-}
-
-.btn-regresar {
-    margin-top: 15px;
-    text-align: center;
+    background-color: #078158;
+    transform: translateY(-2px);
 }
 
 .regresar-btn {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: transparent;
-    color: #007bff;
     text-decoration: none;
     font-size: 14px;
+    color: white;
     font-weight: 600;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 6px;
-    transition: background-color 0.2s;
+    background-color: #10b981;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 .regresar-btn:hover {
-    background-color: rgba(0, 123, 255, 0.1);
+    background-color: #078158;
+}
+.regresar-btn:active, .btn-actualizar button:active{
+    transform: scale(0.9);
+    transition: all 0.2s ease-in-out;
 }
 
 .toast {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #28a745;
+    bottom: 20px;
+    right: 20px;
+    background-color: #10b981;
     color: white;
-    padding: 14px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     font-size: 14px;
     z-index: 1000;
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
+    opacity: 0.95;
 }
-
-
