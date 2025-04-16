@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include 'conexion.php';
 
 $nombre = $_POST['nombre'];
@@ -10,13 +14,18 @@ $sql = "INSERT INTO usuario (Usua_Nombre, Usua_Apellido, Usua_Email, Usua_Contra
         VALUES ('$nombre', '$apellido', '$email', '$password')";
 
 if ($conn->query($sql)) {
-    // se debw incluir el archivo correo.php para enviar el correo
-    $_POST['email'] = $email;
-    include '../../correo.php'; //enviar al php de correo el correo del usuario
+    // Obtener el ID del nuevo usuario
+    $nuevo_id = $conn->insert_id;
 
-    header("Location: ../../Index.html"); 
+    // Iniciar sesión automáticamente
+    session_start();
+    $_SESSION['usuario_id'] = $nuevo_id;
+    $_SESSION['usuario_nombre'] = $nombre;
+    $_SESSION['usuario_apellido'] = $apellido;
+
+    // Redirigir al index
+    header("Location: ../../Index.html");
     exit();
 } else {
     echo "Error al registrar usuario: " . $conn->error;
 }
-?>
