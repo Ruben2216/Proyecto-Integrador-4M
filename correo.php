@@ -28,15 +28,33 @@ try {
     '<html> 
     <head>
         <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; }
-            .header { text-align: center; margin-bottom: 20px; }
-            .content { padding: 20px; background-color: #f9f9f9; border-radius: 10px; }
-            .footer { margin-top: 20px; text-align: center; font-size: 0.9em; color: #555; }
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+            }
+                strong{
+                color:#5e6a3a;
+                }
+            .header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .content {
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+            }
+            .footer {
+                margin-top: 20px;
+                text-align: center;
+                font-size: 0.9em;
+                color: #555;
+            }
         </style>
     </head>
     <body>
         <div class="header">
-            <h1>¡Bienvenido a PetClub!</h1>
+            <h1>¡Bienvenido a <strong>PetClub!</strong></h1>
         </div>
         <div class="content">
             <p>¡Gracias por registrarte en <strong>PetClub</strong>! Estamos emocionados de tenerte con nosotros. Aquí podrás encontrar todo lo que necesitas para cuidar y consentir a tu mascota.</p>

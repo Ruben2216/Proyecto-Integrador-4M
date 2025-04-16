@@ -71,7 +71,7 @@ nav.Menu ul li a {
 
 .Menu input[type="text"] {
     width: 180px;
-    height: 25px;
+    height: 30px;
     border-color: transparent;
     border-radius: 5px 0 0 5px; /* Arriba izquierda, arriba derecha, abajo derecha, abajo izquierda */
     font-size: 14px;
