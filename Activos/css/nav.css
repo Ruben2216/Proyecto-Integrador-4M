@@ -5,7 +5,8 @@ nav.Menu {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 15px 0;
+    /* padding: 15px 0; */
+    min-height:3.75rem ;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     display: flex;
@@ -13,20 +14,20 @@ nav.Menu {
     color: white;
 }
 
-.contenedor_nav {
+.contenedor-nav {
     width: max-content;
     display: grid;
     align-items: center;
     justify-content: center;
 }
 
-.contenedor_nav:hover {
+.contenedor-nav:hover {
     box-sizing: border-box;
     color: #393f27;
     text-shadow: 0px 0px 5px #e9ebe3;
     font-weight: bold;
     background: #a4ba62;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     border-radius: 5px;
 }
 
@@ -49,6 +50,17 @@ nav.Menu ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+
+.contenedor-nav__login {
+    color:inherit;
+    font-weight: bold;
+    background: #a4ba62;
+    border-radius: 5px;
+    margin-right: 0.6rem;
+}
+.contenedor-nav__login:hover  {
+    background: #a4ba6253;
 }
 
 .Menu button {
@@ -91,18 +103,23 @@ nav.Menu ul li a {
     border-radius: 10px;
 }
 
-.Menu {
+.Menu li{
     align-items: end;
     text-align: end;
+    margin:0;
+}
+.conten-input{
+    display:grid;
+    place-items: center;
+    align-items: center;
 }
 
-.conten_input {
+.conten-input__hijo {
     display: flex;
     box-sizing: border-box;
-    height: fit-content; /*adapta al contenido del div*/
 }
 
-.conten_input:hover {
+.conten-input__hijo:hover {
     outline: #474747 solid 3px;
     border-radius: 8px;
     transition: outline 0.1s ease-in-out;
@@ -211,7 +228,7 @@ nav.Menu ul div h2 {
     }
     
     /* Ajustes para los elementos del menú */
-    .contenedor_nav {
+    .contenedor-nav {
         width: 100%;
         margin: 10px 0;
         text-align: center;

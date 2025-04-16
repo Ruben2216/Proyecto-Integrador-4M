@@ -15,8 +15,8 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
 
         if (data.autenticado) { 
 
-            perfilBtn = `<div class="contenedor_nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/perfil.php">Yo (${data.nombre})</a></li></div>`;
-            cerrarBtn = `<div class="contenedor_nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/logout.php">Cerrar sesión</a></li></div>`;
+            perfilBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/perfil.php">Yo (${data.nombre})</a></li></div>`;
+            cerrarBtn = `<div class="contenedor-nav "><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/logout.php">Cerrar sesión</a></li></div>`;
 
             document.getElementById("nombre-usuario").innerHTML = "Hola, " + "<span style='color: green; font-weight: bold;'>" + data.nombre + "</span>" + "<br>" + "¡Bienvenido a PetClub! 🐾✨¡Estamos felices de tenerte aquí! 💖";
             if (boton) {
@@ -32,7 +32,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
             }
 
         } else {
-            perfilBtn = `<div class="contenedor_nav"><li><a href="/Proyecto-Integrador-4M/Login.php">Login</a></li></div>`;
+            perfilBtn = `<div class="contenedor-nav contenedor-nav__login"><li><a href="/Proyecto-Integrador-4M/Login.php"">Login</a></li></div>`;
         }
 
         header.innerHTML = 
@@ -50,16 +50,18 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
                     <a href="#Inicio"><img src="Activos/Imagenes/barra_nav/icono_barra.png" alt="Logo" width="40px"></a>
                     <h2 class="Nombre_pagina">PetClub</h2>
                 </div>
-                <div class="contenedor_nav"><li><a href="Index.html">Inicio</a></li></div> 
-                <div class="contenedor_nav"><li><a href="#MisMascotas">Mis Mascotas</a></li></div>
-                <div class="contenedor_nav"><li><a href="#Recordatorios">Recordatorios</a></li></div>
-                <div class="contenedor_nav"><li><a href="#mapa__titulo">Veterinarias</a></li></div>
-                <div class="contenedor_nav"><li><a href="#Consejos">Consejos</a></li></div>
+                <div class="contenedor-nav"><li><a href="Index.html">Inicio</a></li></div> 
+                <div class="contenedor-nav"><li><a href="#MisMascotas">Mis Mascotas</a></li></div>
+                <div class="contenedor-nav"><li><a href="#Recordatorios">Recordatorios</a></li></div>
+                <div class="contenedor-nav"><li><a href="#mapa__titulo">Veterinarias</a></li></div>
+                <div class="contenedor-nav"><li><a href="#Consejos">Consejos</a></li></div>
                 ${perfilBtn}
                 ${cerrarBtn}
-                <div class="conten_input">
+                <div class="conten-input">
+                <div class="conten-input__hijo">
                     <input type="text" id="buscador" placeholder="Buscar...">
                     <button id="botonBuscar"><img src="Activos/Imagenes/barra_nav/lupa.svg" alt="Buscar"></button>
+                </div>
                 </div>
             </ul>
         </nav>
