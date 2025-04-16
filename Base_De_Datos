@@ -1,3 +1,5 @@
+Ignorar: TRUNCATE TABLE usuario;
+
 CREATE TABLE usuario (
     Usua_Id INT AUTO_INCREMENT PRIMARY KEY,
     Usua_Nombre VARCHAR(100) NOT NULL,
@@ -20,3 +22,43 @@ CREATE TABLE IF NOT EXISTS usuario (
     UNIQUE KEY Usua_Email (Usua_Email)
 );
 
+TODO LO SIGUIENTE ES PARA HACER EL APARTADO DE "MIS MASCOTAS"
+
+1. cree la tabla de especie (estaba pensando que como solo se maneraran perros seria mas como RAZA pero igual asi lo deje)
+CREATE TABLE especie (
+    Esp_Id INT AUTO_INCREMENT PRIMARY KEY,
+    Esp_Nombre VARCHAR(100) NOT NULL
+);
+
+2. Como ya tenemos las razas que estarian, le meti esos datos predefinidos a la tabla
+INSERT INTO especie (Esp_Nombre) VALUES
+('Labrador Retriever'),
+('Pastor Alemán'),
+('Bulldog Inglés'),
+('Poodle (Caniche)'),
+('Chihuahua'),
+('Golden Retriever'),
+('Husky Siberiano'),
+('Dálmata'),
+('Beagle'),
+('Shih Tzu'),
+('Boxer'),
+('Rottweiler'),
+('Border Collie'),
+('Cocker Spaniel'),
+('Doberman'),
+('Pug'),
+('Maltés'),
+('San Bernardo'),
+('Akita Inu');
+
+3. Creacion de la tabla mascota
+CREATE TABLE mascota (
+    Masc_Id INT AUTO_INCREMENT PRIMARY KEY,
+    Masc_Nombre VARCHAR(100) NOT NULL,
+    Masc_Nacimiento DATE NOT NULL,
+    Masc_Especie INT NOT NULL,
+    Masc_Dueno INT NOT NULL,
+    FOREIGN KEY (Masc_Especie) REFERENCES especie(Esp_Id),
+    FOREIGN KEY (Masc_Dueno) REFERENCES usuario(Usua_Id)
+);

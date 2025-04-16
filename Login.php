@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Guardar a donde quería ir el usuario antes de iniciar sesión
+if (isset($_GET['redirect_to'])) {
+    $_SESSION['redireccion'] = $_GET['redirect_to'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

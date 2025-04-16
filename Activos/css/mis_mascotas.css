@@ -1,0 +1,132 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 40px;
+}
+
+.contenedor-mascotas {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: #1a75bc;
+    margin-bottom: 30px;
+}
+
+.mascotas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.mascota-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px;
+    text-align: left;
+}
+
+.mascota-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.mascota-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.sin-mascotas {
+    color: #999;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.btn-registrar {
+    display: inline-block;
+    background-color: #1a75bc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-registrar:hover {
+    background-color: #135e91;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-eliminar:hover {
+    background-color: #a71d2a;
+}
+
+.formulario-mascota {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.formulario-mascota input,
+.formulario-mascota select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.formulario-mascota label {
+    font-weight: bold;
+}
+
+.btn-volver-inicio {
+    display: inline-block;
+    margin-bottom: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.btn-volver-inicio:hover {
+    background-color: #ddd;
+}
+
+.btn-volver-fijo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #1a75bc;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.btn-volver-fijo:hover {
+    background-color: #125b8c;
+}
