@@ -46,4 +46,6 @@ PARA INSTALAR LAS DEPENDENCIAS DE LA API DE GOOGLE PARA LA AUTENTICACION POR COR
 
 composer require google/apiclient
 
+Modificar la tabla usuario porque google no guarda una contraseña como tal en la base
+ALTER TABLE usuario MODIFY Usua_Contraseña VARCHAR(255) NULL;
 --------------------------------------------------
