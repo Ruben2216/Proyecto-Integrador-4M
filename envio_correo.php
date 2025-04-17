@@ -1,30 +1,34 @@
 <?php
-//TODO ESTO ES SACADO DE LA DOCUMENTACIOND DE PHPMailer, TAMBIEN SE PUEDEN AGREGAR ARCHIVOS PERO NA 
-// Cargar el autoload de Composer
-require __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 
-// Importar PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
+// Cargar variables de entorno desde el archivo .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 // Crear una nueva instancia de PHPMailer
 $mail = new PHPMailer(true);
 
 try {
-    // Configuración del servidor SMTP
+    // Configuración del servidor SMTP usando variables del .env
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com'; 
+    $mail->Host = $_ENV['MAIL_HOST'];
     $mail->SMTPAuth = true;
-    $mail->Username = 'rubenclemente221@gmail.com'; // CORREO PERSONAL X 
-    $mail->Password = 'olrf zqrm vobc bjsz'; //NO MOVER
+    $mail->Username = $_ENV['MAIL_USERNAME'];
+    $mail->Password = $_ENV['MAIL_PASSWORD'];
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port = 587;
+    $mail->Port = $_ENV['MAIL_PORT'];
 
-    // Configuración del correo
-    $userEmail = $_POST['email']; // Correo del formulario
+    // Datos del usuario del formulario
+    $userEmail = $_POST['email'];
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $bienvenidaUsuario = "Bienvenido " . $nombre . " " . $apellido;
+
+    // Mensaje en formato HTML
     $mensaje = '<html> 
 <head>
     <style>
@@ -70,17 +74,17 @@ try {
 </body>
 </html>';
 
-    $mail->setFrom('rubenclemente221@gmail.com', 'PetClub!');
-    $mail->addAddress($userEmail); // Destinatario
+    // Configuración del correo
+    $mail->setFrom($_ENV['MAIL_USERNAME'], $_ENV['MAIL_FROM_NAME']);
+    $mail->addAddress($userEmail);
     $mail->isHTML(true);
     $mail->Subject = $bienvenidaUsuario;
     $mail->Body = $mensaje;
 
     // Enviar el correo
     $mail->send();
-    echo 'El mensaje ha sido enviado correctamente'; //para probar si si jala o que pedo PTM!
+    echo 'El mensaje ha sido enviado correctamente';
 } catch (Exception $e) {
     echo "El mensaje no pudo ser enviado. Error: {$mail->ErrorInfo}";
 }
-
 ?>
