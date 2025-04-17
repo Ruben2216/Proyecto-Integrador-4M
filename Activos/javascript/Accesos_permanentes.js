@@ -15,9 +15,9 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
             mascotasBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/mis_mascotas.php">Mis Mascotas</a></li></div>`; //Usuario autenticado
 
             document.getElementById("nombre-usuario").innerHTML = "Hola, " + 
-                "<span style='color: green; font-weight: bold;'>" + data.nombre + "</span>" +
+                `<span style='color: green; font-weight: bold;'>${data.nombre}</span>` +
                 "<br>¡Bienvenido a PetClub! 🐾✨¡Estamos felices de tenerte aquí! 💖";
-            
+
             if (boton) {
                 boton.disabled = false;
                 boton.click(); // abre el popover

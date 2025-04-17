@@ -41,3 +41,9 @@ Pasos para lo del .nev
 5. En el caso de que no tengas agregado el .env al .gitignore agregalo, porque si no lo agregas, nada va a jalar
 6. YA ES TODO
 
+--------------------------------------------------
+PARA INSTALAR LAS DEPENDENCIAS DE LA API DE GOOGLE PARA LA AUTENTICACION POR CORREO GMAIL
+
+composer require google/apiclient
+
+--------------------------------------------------
