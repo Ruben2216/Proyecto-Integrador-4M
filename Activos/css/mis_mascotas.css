@@ -1,18 +1,30 @@
+/* Fuente y fondo */
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #f9f9f9;
+    background: linear-gradient(135deg, #cdeecd, #f0f4f8);
     margin: 0;
-    padding: 40px;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #5e6a3a;
 }
 
+/* Contenedor principal */
+.wrapper {
+    flex: 1;
+}
+
+/* Contenido central */
 .contenedor-mascotas {
     max-width: 800px;
     margin: auto;
     text-align: center;
+    padding: 40px 20px;
 }
 
 h1 {
-    color: #1a75bc;
+    color: #5e6a3a;
     margin-bottom: 30px;
 }
 
@@ -33,50 +45,79 @@ h1 {
 }
 
 .mascota-card h2 {
-    color: #333;
+    color: #5e6a3a;
     margin-bottom: 10px;
 }
 
 .mascota-card p {
     margin: 5px 0;
-    color: #555;
+    color: #5e6a3a;
 }
 
 .sin-mascotas {
-    color: #999;
+    color: #5e6a3a;
     font-style: italic;
     margin-top: 20px;
 }
 
-.btn-registrar {
+/* Botones verdes */
+.btn,
+.btn-registrar,
+.regresar-btn {
     display: inline-block;
-    background-color: #1a75bc;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
     color: white;
+    background-color: #5e6a3a;
     padding: 10px 20px;
     border-radius: 8px;
-    text-decoration: none;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
 }
 
-.btn-registrar:hover {
-    background-color: #135e91;
+.btn:hover,
+.btn-registrar:hover,
+.regresar-btn:hover {
+    background-color: #4a562d;
 }
 
+.btn:active,
+.btn-registrar:active,
+.regresar-btn:active {
+    transform: scale(0.9);
+}
+
+.regresar-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+/* Botón rojo */
 .btn-eliminar {
     background-color: #dc3545;
     color: white;
-    border: none;
     padding: 6px 12px;
     border-radius: 6px;
+    border: none;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .btn-eliminar:hover {
     background-color: #a71d2a;
 }
 
+.btn-eliminar:active {
+    transform: scale(0.9);
+}
+
+/* Formulario */
 .formulario-mascota {
     max-width: 400px;
     margin: 0 auto;
@@ -90,43 +131,18 @@ h1 {
 .formulario-mascota select {
     padding: 8px;
     border-radius: 6px;
-    border: 1px solid #ccc;
+    border: 2px solid #5e6a3a;
+    color: #5e6a3a;
+    font-weight: 500;
+    outline: none;
+}
+
+.formulario-mascota input::placeholder,
+.formulario-mascota select::placeholder {
+    color: #5e6a3a99;
 }
 
 .formulario-mascota label {
     font-weight: bold;
-}
-
-.btn-volver-inicio {
-    display: inline-block;
-    margin-bottom: 15px;
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    transition: background-color 0.3s;
-}
-
-.btn-volver-inicio:hover {
-    background-color: #ddd;
-}
-
-.btn-volver-fijo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #1a75bc;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 1000;
-    transition: background-color 0.3s;
-}
-
-.btn-volver-fijo:hover {
-    background-color: #125b8c;
+    color: #5e6a3a;
 }

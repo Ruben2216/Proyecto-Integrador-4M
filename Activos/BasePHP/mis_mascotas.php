@@ -23,32 +23,69 @@ $resultado = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Mis Mascotas</title>
+
+    <!-- Estilos específicos de esta página -->
     <link rel="stylesheet" href="../css/mis_mascotas.css">
+
+    <!-- Estilo de la barra de navegación -->
+    <link rel="stylesheet" href="../css/nav.css">
+
+    <!-- Estilo del footer -->
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Estilo para sticky footer -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .wrapper {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
-    <a href="../../Index.html" class="btn-volver-fijo">← Volver al inicio</a>
-    <div class="contenedor-mascotas">
-        <h1>Mis Mascotas</h1>   
+    <!-- Header dinámico -->
+    <header></header>
 
-        <a href="registrar_mascota.php" class="btn-registrar">+ Registrar nueva mascota</a> 
+    <!-- Contenedor flexible para que el footer quede abajo -->
+    <div class="wrapper">
+        <!-- Contenido principal -->
+        <main style="margin-top: 4.5rem;">
+            <div class="contenedor-mascotas">
+                <h1>Mis Mascotas</h1>   
 
-        <?php if ($resultado->num_rows > 0): ?>
-            <div class="mascotas-lista">
-                <?php while($fila = $resultado->fetch_assoc()): ?>
-                    <div class="mascota-card">
-                        <h2><?= $fila['Masc_Nombre'] ?></h2>
-                        <p><strong>Raza:</strong> <?= $fila['Esp_Nombre'] ?></p>
-                        <p><strong>Nacimiento:</strong> <?= $fila['Masc_Nacimiento'] ?></p>
-                        <form method="POST" action="eliminar_mascota.php" onsubmit="return confirm('¿Estás seguro de eliminar esta mascota?');">
-                            <input type="hidden" name="mascota_id" value="<?= $fila['Masc_Id'] ?>">
-                            <button type="submit" class="btn-eliminar">Eliminar</button>
-                        </form>
+                <a href="registrar_mascota.php" class="btn-registrar">+ Registrar nueva mascota</a> 
+
+                <?php if ($resultado->num_rows > 0): ?>
+                    <div class="mascotas-lista">
+                        <?php while($fila = $resultado->fetch_assoc()): ?>
+                            <div class="mascota-card">
+                                <h2><?= htmlspecialchars($fila['Masc_Nombre']) ?></h2>
+                                <p><strong>Raza:</strong> <?= htmlspecialchars($fila['Esp_Nombre']) ?></p>
+                                <p><strong>Nacimiento:</strong> <?= htmlspecialchars($fila['Masc_Nacimiento']) ?></p>
+                                <form method="POST" action="eliminar_mascota.php" onsubmit="return confirm('¿Estás seguro de eliminar esta mascota?');">
+                                    <input type="hidden" name="mascota_id" value="<?= $fila['Masc_Id'] ?>">
+                                    <button type="submit" class="btn-eliminar">Eliminar</button>
+                                </form>
+                            </div>
+                        <?php endwhile; ?>
                     </div>
-                <?php endwhile; ?>
+                <?php else: ?>
+                    <p class="sin-mascotas">No tienes mascotas registradas aún.</p>
+                <?php endif; ?>
+
             </div>
-        <?php else: ?>
-            <p class="sin-mascotas">No tienes mascotas registradas aún.</p>
-        <?php endif; ?>
+        </main>
     </div>
+
+    <!-- Footer dinámico -->
+    <footer></footer>
+
+    <!-- Script que carga el header y footer -->
+    <script src="../javascript/Accesos_permanentes.js"></script>
 </body>
 </html>

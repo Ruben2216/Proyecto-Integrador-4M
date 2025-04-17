@@ -1,75 +1,86 @@
-
 body {
     margin: 0;
     padding: 0;
-    font-family:  sans-serif;
-    background: linear-gradient(135deg, #cdeecd, #f0f4f8); /*DEGRADADO*/
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #cdeecd, #f0f4f8);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    color: #5e6a3a;
 }
 
+/* Contenedor general */
 .perfil-card {
     background: rgba(255, 255, 255, 0.25);
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     width: 100%;
-    max-width: 480px;
-    padding: 50px 40px;
+    max-width: 600px;
+    padding: 40px 30px;
     box-sizing: border-box;
     position: relative;
-    color: #1e293b;
 }
 
+/* Foto */
 .perfil-foto {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.perfil-header{
-    place-items: center;
-
+/* Encabezado */
+.perfil-header {
+    text-align: center;
 }
 
 .perfil-header h2 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 600;
+    margin: 10px 0 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #5e6a3a;
 }
 
 .perfil-header .correo {
-    font-size: 14px;
+    font-size: 13px;
     color: #64748b;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
+/* Campos */
 .dato {
-    position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
-/* Input base */
+.dato label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #5e6a3a;
+}
+
 .dato input,
 .dato select,
 .dato textarea {
     width: 100%;
-    padding: 14px 12px 14px 12px;
-    border: none;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.5);
-    color: #1e293b;
-    font-size: 15px;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    padding: 12px;
+    border: 2px solid #5e6a3a;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #5e6a3a;
+    font-size: 14px;
+    font-weight: 500;
     transition: all 0.3s ease;
     outline: none;
 }
@@ -77,40 +88,44 @@ body {
 .dato input:focus,
 .dato select:focus,
 .dato textarea:focus {
-    background-color: rgba(255,255,255,0.9);
-    box-shadow: 0 0 0 2px #078158;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 0 0 2px #5e6a3a;
 }
 
-
-/* Área de texto */
 .dato textarea {
     resize: vertical;
-    min-height: 80px;
+    min-height: 70px;
 }
 
+/* Botón actualizar */
 .btn-actualizar {
-    margin-top: 30px;
     text-align: center;
+    margin-top: 25px;
 }
 
 .btn-actualizar button {
-    background-color: #10b981;
+    background-color: #5e6a3a;
     color: white;
-    padding: 14px 26px;
-    font-size: 15px;
+    padding: 12px 24px;
+    font-size: 14px;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-actualizar button:hover {
-    background-color: #078158;
+    background-color: #4a562d;
     transform: translateY(-2px);
 }
 
+.btn-actualizar button:active {
+    transform: scale(0.95);
+}
+
+/* Botón regresar */
 .regresar-btn {
     position: absolute;
     top: 20px;
@@ -119,25 +134,27 @@ body {
     font-size: 14px;
     color: white;
     font-weight: 600;
-    background-color: #10b981;
+    background-color: #5e6a3a;
     padding: 10px;
     border-radius: 8px;
     transition: background-color 0.3s;
+    z-index: 10;
 }
 
 .regresar-btn:hover {
-    background-color: #078158;
-}
-.regresar-btn:active, .btn-actualizar button:active{
-    transform: scale(0.9);
-    transition: all 0.2s ease-in-out;
+    background-color: #4a562d;
 }
 
+.regresar-btn:active {
+    transform: scale(0.9);
+}
+
+/* Toast éxito */
 .toast {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #10b981;
+    background-color: #5e6a3a;
     color: white;
     padding: 12px 20px;
     border-radius: 10px;
@@ -145,4 +162,28 @@ body {
     font-size: 14px;
     z-index: 1000;
     opacity: 0.95;
+}
+
+/* Estilo tipo credencial en 2 columnas */
+.perfil-datos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Botón centrado en ambas columnas */
+.perfil-datos-grid .btn-actualizar {
+    grid-column: span 2;
+}
+
+/* Responsive: se apilan en una sola columna si es pantalla chica */
+@media (max-width: 768px) {
+    .perfil-datos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-datos-grid .btn-actualizar {
+        grid-column: span 1;
+    }
 }

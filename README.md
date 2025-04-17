@@ -21,7 +21,7 @@ Deben configurar sus llaves de acceso y sus cuentas en envio_correo.php porque p
 correo y llave de acceso por aplicacion no la contraseña normal
 --------------------------------------------------------------
 
-Pasos para lo del .nev
+Pasos para lo del .envs
 1. Abrir la terminal del proyecto y instalar lo siguiente: composer require vlucas/phpdotenv
 2. Crear un archivo .env en la raiz del proyecto (en el caso de que cree una carpeta abril la terminal del proyecto y poner touch .env)
 3. En el archivo .env cololar los siguientes datos:
