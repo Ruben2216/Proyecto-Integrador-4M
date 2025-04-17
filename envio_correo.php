@@ -1,23 +1,40 @@
 <?php
-
+//TODO ESTO ES SACADO DE LA DOCUMENTACIOND DE PHPMailer, TAMBIEN SE PUEDEN AGREGAR ARCHIVOS PERO NA 
 // Cargar el autoload de Composer
 require __DIR__ . '/vendor/autoload.php';
 
-// Obtener el correo del formulario
-$userEmail = $_POST['email']; //correo del formulario
-$nombre = $_POST['nombre']; //OTROS CAMPOS DEL FORM
-$apellido = $_POST['apellido'];
-$bienvenidaUsuario="Bienvenido ".$nombre." ".$apellido;
-$mensaje= '<html> 
+// Importar PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Crear una nueva instancia de PHPMailer
+$mail = new PHPMailer(true);
+
+try {
+    // Configuración del servidor SMTP
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com'; 
+    $mail->SMTPAuth = true;
+    $mail->Username = 'rubenclemente221@gmail.com'; // CORREO PERSONAL X 
+    $mail->Password = 'olrf zqrm vobc bjsz'; //NO MOVER
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+
+    // Configuración del correo
+    $userEmail = $_POST['email']; // Correo del formulario
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $bienvenidaUsuario = "Bienvenido " . $nombre . " " . $apellido;
+    $mensaje = '<html> 
 <head>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
         }
-            strong{
-            color:#5e6a3a;
-            }
+        strong {
+            color: #5e6a3a;
+        }
         .header {
             text-align: center;
             margin-bottom: 20px;
@@ -53,14 +70,17 @@ $mensaje= '<html>
 </body>
 </html>';
 
-require __DIR__ . '/vendor/autoload.php';
+    $mail->setFrom('rubenclemente221@gmail.com', 'PetClub!');
+    $mail->addAddress($userEmail); // Destinatario
+    $mail->isHTML(true);
+    $mail->Subject = $bienvenidaUsuario;
+    $mail->Body = $mensaje;
 
-$resend = Resend::client('re_5x6SicD8_Nz4BpjKVAtEgariYGJgfJtta');
+    // Enviar el correo
+    $mail->send();
+    echo 'El mensaje ha sido enviado correctamente'; //para probar si si jala o que pedo PTM!
+} catch (Exception $e) {
+    echo "El mensaje no pudo ser enviado. Error: {$mail->ErrorInfo}";
+}
 
-$resend->emails->send([
-'from' => 'PetClub! <onboarding@resend.dev>',
-'to' => [$userEmail],
-'subject' => $bienvenidaUsuario,
- 'html' => $mensaje,
-]);
 ?>

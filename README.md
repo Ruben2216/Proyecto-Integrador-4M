@@ -17,3 +17,6 @@ composer install --no-scripts --no-dev
 
 listo, espero les funcione a ustedes porque la carpeta ya esta creada que es la de vendor
 ---------------------------------------------------------
+Deben configurar sus llaves de acceso y sus cuentas en envio_correo.php porque probablemente les negara el acceso por la seguridad de google
+correo y llave de acceso por aplicacion no la contraseña normal
+--------------------------------------------------------------
