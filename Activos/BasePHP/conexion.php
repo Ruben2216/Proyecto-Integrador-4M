@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $usuario = "root";
-$contrasena = ""; //cambiar si es diferente
+$contrasena = "1234"; //cambiar si es diferente
 $basededatos = "PetClub";
 $puerto=3306; //cambiar si es diferente
 

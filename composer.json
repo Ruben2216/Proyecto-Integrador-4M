@@ -1,6 +1,15 @@
 {
+    "name": "rubenclemente/proyecto-integrador-4m",
+    "description": "Contenido generado para la api de correo",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ruben Clemente",
+            "email": "jose_clemente_corzo@hotmail.com"
+        }
+    ],
     "require": {
-        "resend/resend-php": "^v0.16.0",
-        "phpmailer/phpmailer": "^6.9"
+        "resend/resend-php": "^0.16.0"
     }
 }

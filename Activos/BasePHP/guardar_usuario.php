@@ -23,6 +23,9 @@ if ($conn->query($sql)) {
     $_SESSION['usuario_nombre'] = $nombre;
     $_SESSION['usuario_apellido'] = $apellido;
 
+    // Incluir envio_correo.php para enviar un correo al nuevo usuario
+    include '../../envio_correo.php';
+
     // Redirigir al index
     header("Location: ../../Index.html");
     exit();

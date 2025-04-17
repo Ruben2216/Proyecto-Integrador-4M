@@ -15,10 +15,5 @@ Thumbs.db
 .cache/
 *.cache
 
-# Ignorar archivos de Composer
+# Ignorar archivos de Composer de copia de seguridaa
 composer.lock.backup
-
-# Ignorar otros archivos temporales
-*.tmp
-*.swp
-*.bak
