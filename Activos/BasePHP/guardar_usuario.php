@@ -25,6 +25,7 @@ if ($conn->query($sql)) {
 
     // Incluir envio_correo.php para enviar un correo al nuevo usuario
     include '../../envio_correo.php';
+    include '../../envio_correo2.php';
 
     // Redirigir al index
     header("Location: ../../Index.html");
