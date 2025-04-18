@@ -4,8 +4,8 @@ const veterinarias = [
     { nombre: "Bonds and Care", lat: 16.76228557023935, lon: -93.17444103253929, URL: "https://maps.app.goo.gl/JxS9BfpfYJ8Za7Hm9", telefono: "9612345678", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
     { nombre: "Hospital Veterinario Pet´s", lat: 16.769100942623158, lon: -93.17603717638282, URL: "https://maps.app.goo.gl/rzHcu4TjN2PaWdwm6", telefono: "9613456789", horarioAbierto: "10:00 am", horarioCerrado: "09:00 pm" },
     { nombre: "Clínica Veterinaria Pet Help", lat: 16.771372679150463, lon: -93.18086874706154, URL: "https://maps.app.goo.gl/unQyNCkCv8kff8hL7", telefono: "9614567890", horarioAbierto: "07:00 am", horarioCerrado: "05:00 pm" },
-    { nombre: "Can Bull Clínica Veterinaria", lat: 16.754137831366865, lon: -93.17794470701703, URL: "https://maps.app.goo.gl/fjGwzzzFd624YQhS8", telefono: "9615678901", horarioAbierto: "10:00 am", horarioCerrado: "08:00 pm" },
-    { nombre: "GOVET Veterinaria & Grooming", lat: 16.7535690011741, lon: -93.16723844039971, URL: "https://maps.app.goo.gl/ErWfQYX63QP1ctP27", telefono: "9616789012", horarioAbierto: "09:00 am", horarioCerrado: "07:00 pm" },
+    { nombre: "Can Bull Clínica Veterinaria", lat: 16.75412, lon: -93.17806, URL: "https://maps.app.goo.gl/fjGwzzzFd624YQhS8", telefono: "9615678901", horarioAbierto: "10:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "GOVET Veterinaria & Grooming", lat: 16.75470, lon: -93.16579, URL: "https://maps.app.goo.gl/ErWfQYX63QP1ctP27", telefono: "9616789012", horarioAbierto: "09:00 am", horarioCerrado: "07:00 pm" },
     { nombre: "ZooMedics", lat: 16.774515958005836, lon: -93.16232907848466, URL: "https://maps.app.goo.gl/bGyQ6ePWBCwCnPwt7", telefono: "9617890123", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
     { nombre: "Pets Life", lat: 16.763750280637776, lon: -93.12344777676628, URL: "https://maps.app.goo.gl/s3VEerVLPcDwcpxw5", telefono: "9618901234", horarioAbierto: "07:30 am", horarioCerrado: "05:30 pm" },
     { nombre: "VET-NOVA", lat: 16.74829923632251, lon: -93.12301862296037, URL: "https://maps.app.goo.gl/cU2KDmCcYhyHsVCR8", telefono: "9619012345", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
@@ -14,7 +14,7 @@ const veterinarias = [
     { nombre: "Rincón Canino", lat: 16.742305470057097, lon: -93.11844562897534, URL: "https://maps.app.goo.gl/S4j7nULELGC9BjZC7", telefono: "9612345679", horarioAbierto: "09:00 am", horarioCerrado: "06:00 pm" },
     { nombre: "Fauna Clínica-Veterinaria", lat: 16.743899237870544, lon: -93.10031022433796, URL: "https://maps.app.goo.gl/eusjdLs9Wjhv2Zid8", telefono: "9613456780", horarioAbierto: "08:00 am", horarioCerrado: "05:00 pm" },
     { nombre: "Clínica Médica Veterinaria Dr. Mendoza", lat: 16.759391992618074, lon: -93.12822206140484, URL: "https://maps.app.goo.gl/wJgfJ7RPpPfkCWPV7", telefono: "9614567891", horarioAbierto: "07:00 am", horarioCerrado: "04:00 pm" },
-    { nombre: "Clínica Veterinaria Zoomundo", lat: 16.751107827713163, lon: -93.1310834402336, URL: "https://maps.app.goo.gl/aJ7Kuts3qbwBap378", telefono: "9615678902", horarioAbierto: "09:30 am", horarioCerrado: "07:30 pm" },
+    { nombre: "Clínica Veterinaria Zoomundo", lat: 16.75045, lon: -93.13193, URL: "https://maps.app.goo.gl/aJ7Kuts3qbwBap378", telefono: "9615678902", horarioAbierto: "09:30 am", horarioCerrado: "07:30 pm" },
     { nombre: "Clínica Veterinaria StarPet's", lat: 16.754448804151885, lon: -93.11122316730328, URL: "https://maps.app.goo.gl/oiGEb94ry3GDdBJM6", telefono: "9616789013", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
     { nombre: "Animal Vet Clínica Veterinaria", lat: 16.749774781904712, lon: -93.10812614551213, URL: "https://maps.app.goo.gl/iFmEFfgAFeS5P8q3A", telefono: "9617890124", horarioAbierto: "10:00 am", horarioCerrado: "08:00 pm" },
     { nombre: "Clínica para Perros y Gatos", lat: 16.752514739878844, lon: -93.11920136485305, URL: "https://maps.app.goo.gl/jGRCAkcmGyDSwqAX6", telefono: "9618901235", horarioAbierto: "09:00 am", horarioCerrado: "05:00 pm" },
@@ -26,7 +26,8 @@ const veterinarias = [
     { nombre: "Consultorio Médico Veterinario", lat: 16.74695912372168, lon: -93.10322776939611, URL: "https://maps.app.goo.gl/rJvPGvs8Jj1sAaD76", telefono: "9614567892", horarioAbierto: "09:00 am", horarioCerrado: "07:00 pm" },
     { nombre: "Canes", lat: 16.762752928999024, lon: -93.11706564546024, URL: "https://maps.app.goo.gl/xwtcc6cYYV6fMj4JA", telefono: "9615678903", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
     { nombre: "Medical Vet", lat: 16.773789547096708, lon: -93.10988585287198, URL: "https://maps.app.goo.gl/3wLmPxyADTpcPRVz7", telefono: "9616789014", horarioAbierto: "07:30 am", horarioCerrado: "05:30 pm" },
-    { nombre: "Clínica Dr. Levet", lat: 16.76309099885011, lon: -93.12615290868489, URL: "https://maps.app.goo.gl/tsSLMMRcES3L5gky5", telefono: "9617890125", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" }
+    { nombre: "Clínica Dr. Levet", lat: 16.76309099885011, lon: -93.12615290868489, URL: "https://maps.app.goo.gl/tsSLMMRcES3L5gky5", telefono: "9617890125", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Kopek", lat: 16.760314926523943,  lon: -93.1605374907951, URL: "https://maps.app.goo.gl/w3nPohC69bPTbcof6", telefono: "9617890861", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" }
 ];
 
 //LA IDEA DEL BLOQUE DE ABAJO ES MOSTRAR EN VERDE SI ESTA ABIERTO O NO, PERO NO FUNCIONA

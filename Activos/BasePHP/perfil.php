@@ -26,7 +26,7 @@ $usuario = $resultado->fetch_assoc();
     <header></header>
 
     <!-- Botón regresar -->
-    <a href="../../Index.html" class="regresar-btn">← Regresar al inicio</a>
+    <a href="../../Index.php" class="regresar-btn">← Regresar al inicio</a>
 
     <div class="perfil-card">
         <div class="perfil-header">

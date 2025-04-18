@@ -81,3 +81,43 @@ CREATE TABLE recordatorio (
 
 el CASCADE tiene el control de eliminacion, por si se elimina antes la mascota
 Aqui implemente para que el recordatorio se pueda EDITAR y esto se modifique en la tabla, pensaba que tambien se podria hacer lo mismo pero en MIS MASCOTAS
+
+CREATE TABLE curiosidades (
+    Curi_Id INT PRIMARY KEY,
+    Curi_Texto TEXT NOT NULL,
+    Curi_Especie INT NOT NULL,
+    FOREIGN KEY (Curi_Especie) REFERENCES especie(Esp_Id)
+);
+
+INSERT INTO curiosidades (Curi_Id, Curi_Texto, Curi_Especie) VALUES
+(1, 'Es una de las razas más populares del mundo debido a su carácter amigable y obediente.', 1),
+(2, 'Es ampliamente utilizada como perro policía y de servicio por su inteligencia y lealtad.', 2),
+(3, 'Tiene un hocico corto y arrugado, lo que puede causar problemas respiratorios.', 3),
+(4, 'Es una de las razas más inteligentes y puede aprender trucos con facilidad.', 4),
+(5, 'Es la raza de perro más pequeña del mundo, pero tiene una gran personalidad.', 5),
+(6, 'Es muy utilizada como perro de terapia debido a su temperamento tranquilo.', 6),
+(7, 'Fue criada originalmente para tirar de trineos en climas fríos.', 7),
+(8, 'Es famosa por su pelaje con manchas negras y su papel en películas de Disney.', 8),
+(9, 'Tiene un gran sentido del olfato, lo que lo convierte en un excelente perro detector.', 9),
+(10, 'Era considerada un perro sagrado en la antigua China y era criada por la realeza.', 10),
+(11, 'Es conocida por su energía y alegría, siendo una excelente compañera para familias activas.', 11),
+(12, 'Es muy protectora de su familia y puede ser reservada con extraños.', 12),
+(13, 'Destaca por su gran inteligencia y capacidad para aprender comandos complejos.', 13),
+(14, 'Tiene un carácter dulce y suele llevarse bien con los niños.', 14),
+(15, 'Requiere una socialización temprana para desarrollar un comportamiento equilibrado.', 15),
+(16, 'Tiende a roncar debido a su hocico achatado.', 16),
+(17, 'Requiere cuidados especiales por el largo de su pelaje.', 17),
+(18, 'Es conocida por su fuerza y tamaño, pero también por su ternura con los niños.', 18),
+(19, 'Tiene un temperamento reservado y leal, a menudo formando un fuerte lazo con un solo dueño.', 19),
+(20, 'Puede ser entrenada para competiciones de agilidad gracias a su energía y destreza.', 13),
+
+(21, 'A menudo requiere compañía constante, ya que no le gusta estar sola por mucho tiempo.', 5),
+(22, 'Es propensa a la displasia de cadera si no se ejercita correctamente.', 6),
+(23, 'Disfruta correr y explorar, por lo que necesita espacios amplios.', 7),
+(24, 'Necesita cepillado frecuente para mantener su pelaje limpio y sin enredos.', 4),
+(25, 'Se adapta bien a la vida en departamentos si se le proporciona ejercicio diario.', 16),
+(26, 'Presenta un ladrido agudo y fuerte para su tamaño.', 10),
+(27, 'Tiende a babear bastante, especialmente después de beber agua.', 18),
+(28, 'Es muy obediente y responde bien al adiestramiento positivo.', 2),
+(29, 'Puede sufrir de ansiedad por separación si no se le presta suficiente atención.', 1),
+(30, 'Fue utilizada históricamente como perro guardián y de caza mayor.', 19);

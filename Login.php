@@ -20,7 +20,7 @@ if (isset($_GET['redirect_to'])) {
     <title>PetClub</title>
 </head>
 <body>
-    <a href="Index.html" class="boton-regresar">
+    <a href="Index.php" class="boton-regresar">
         &larr; <strong>Regresar</strong>
     </a>        
     <div class="contenedor">

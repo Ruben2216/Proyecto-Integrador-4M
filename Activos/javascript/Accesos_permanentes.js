@@ -14,7 +14,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
 
         let activeClass = "style='text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 3px;'";
 
-        let inicioClass = currentPath.includes("Index.html") ? activeClass : "";
+        let inicioClass = currentPath.includes("Index.php") ? activeClass : "";
         let mascotasClass = currentPath.includes("mis_mascotas.php") || currentPath.includes("registrar_mascota.php") ? activeClass : "";
         let perfilClass = currentPath.includes("perfil.php") ? activeClass : "";
         let recordatoriosClass = currentPath.includes("recordatorios.php") || currentPath.includes("nuevo_recordatorio.php") || currentPath.includes("editar_recordatorio.php") ? activeClass : "";
@@ -54,14 +54,14 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
             </label>
             <ul>
                 <div class="logo-container"> 
-                    <a href="/Proyecto-Integrador-4M/Index.html"><img src="/Proyecto-Integrador-4M/Activos/Imagenes/barra_nav/icono_barra.png" alt="Logo" width="40px"></a>
+                    <a href="/Proyecto-Integrador-4M/Index.php"><img src="/Proyecto-Integrador-4M/Activos/Imagenes/barra_nav/icono_barra.png" alt="Logo" width="40px"></a>
                     <h2 class="Nombre_pagina">PetClub</h2>
                 </div>
-                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html" ${inicioClass}>Inicio</a></li></div> 
+                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.php" ${inicioClass}>Inicio</a></li></div> 
                 ${mascotasBtn}
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/recordatorios.php" ${recordatoriosClass}>Recordatorios</a></li></div>
-                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html#mapa__titulo">Veterinarias</a></li></div>
-                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html#Consejos">Consejos</a></li></div>
+                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.php#mapa__titulo">Veterinarias</a></li></div>
+                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.php#Consejos">Consejos</a></li></div>
                 ${perfilBtn}
                 ${cerrarBtn}
                 <div class="conten-input">

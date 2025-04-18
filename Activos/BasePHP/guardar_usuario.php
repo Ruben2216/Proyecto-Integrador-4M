@@ -20,7 +20,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['email_email'])) {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 } else {
     // Si faltan datos requeridos, redirigir al inicio
-    header("Location: /Proyecto-Integrador-4M/Index.html");
+    header("Location: /Proyecto-Integrador-4M/Index.php");
     exit();
 }
 
@@ -46,7 +46,7 @@ if ($conn->query($sql)) {
             $usuario_id = $fila['Usua_Id'];
         } else {
             // Si no se encuentra, redirigir
-            header("Location: /Proyecto-Integrador-4M/Index.html");
+            header("Location: /Proyecto-Integrador-4M/Index.php");
             exit();
         }
     }
@@ -59,10 +59,10 @@ if ($conn->query($sql)) {
         include __DIR__ . '/../../envio_correo.php';
     }
     // Redirigir al inicio
-    header("Location: /Proyecto-Integrador-4M/Index.html");
+    header("Location: /Proyecto-Integrador-4M/Index.php");
     exit();
 } else {
     // Si hay error en la consulta, redirigir
-    header("Location: /Proyecto-Integrador-4M/Index.html");
+    header("Location: /Proyecto-Integrador-4M/Index.php");
     exit();
 }

@@ -22,7 +22,7 @@ if ($resultado->num_rows == 1) {
             unset($_SESSION['redireccion']); // eliminarla para evitar redirecciones futuras no deseadas
             header("Location: ../../$destino");
         } else {
-            header("Location: ../../Index.html"); 
+            header("Location: ../../Index.php"); 
         }
         exit();
     } else {
