@@ -1,14 +1,11 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['usuario_id'])) {
     header("Location: ../../Login.php");
     exit();
 }
 
 include 'conexion.php';
-
-// Obtener razas desde la tabla especie
 $razas = $conn->query("SELECT * FROM especie");
 ?>
 
@@ -17,48 +14,40 @@ $razas = $conn->query("SELECT * FROM especie");
 <head>
     <meta charset="UTF-8">
     <title>Registrar Mascota</title>
-
-    <!-- Estilos -->
-    <link rel="stylesheet" href="../css/mis_mascotas.css"> <!-- reutilizamos -->
+    <link rel="stylesheet" href="../css/mis_mascotas.css">
     <link rel="stylesheet" href="../css/nav.css">
-
-    <!-- Para que el contenido no se esconda debajo del nav -->
-    <style>
-        main {
-            margin-top: 4.5rem;
-        }
-    </style>
 </head>
 <body>
-    <!-- Barra de navegación dinámica -->
+    <!-- Header dinámico -->
     <header></header>
 
-    <!-- Contenido principal -->
-    <main>
-        <div class="contenedor-mascotas">
-            <h1>Registrar Nueva Mascota</h1>
+    <div class="contenedor-mascotas" style="margin-top: 4rem;">
+        <h1>Agregar Nueva Mascota</h1>
+        <form action="guardar_mascota.php" method="POST" class="formulario-mascota">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required>
 
-            <form action="guardar_mascota.php" method="POST" class="formulario-mascota">
-                <label>Nombre:</label>
-                <input type="text" name="nombre" required>
+            <label for="raza">Raza:</label>
+            <select name="raza" id="raza" required>
+                <option value="">--Selecciona--</option>
+                <?php while ($r = $razas->fetch_assoc()): ?>
+                    <option value="<?= $r['Esp_Id'] ?>"><?= $r['Esp_Nombre'] ?></option>
+                <?php endwhile; ?>
+            </select>
 
-                <label>Raza:</label>
-                <select name="raza" required>
-                    <option value="">--Selecciona--</option>
-                    <?php while ($r = $razas->fetch_assoc()): ?>
-                        <option value="<?= $r['Esp_Id'] ?>"><?= $r['Esp_Nombre'] ?></option>
-                    <?php endwhile; ?>
-                </select>
+            <label for="nacimiento">Fecha de nacimiento:</label>
+            <input type="date" name="nacimiento" id="nacimiento" required>
 
-                <label>Fecha de nacimiento:</label>
-                <input type="date" name="nacimiento" required>
+            <div class="btn-actualizar">
+                <button type="submit">Guardar Mascota</button>
+            </div>
+        </form>
+    </div>
 
-                <button type="submit" class="btn-registrar">Guardar Mascota</button>
-            </form>
-        </div>
-    </main>
+    <!-- Footer (opcional, se oculta por JS en esta página) -->
+    <footer></footer>
 
-    <!-- Script que carga la barra de navegación (sin footer) -->
+    <!-- Script que carga nav/footer -->
     <script src="../javascript/Accesos_permanentes.js"></script>
 </body>
 </html>

@@ -17,6 +17,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
         let inicioClass = currentPath.includes("Index.html") ? activeClass : "";
         let mascotasClass = currentPath.includes("mis_mascotas.php") || currentPath.includes("registrar_mascota.php") ? activeClass : "";
         let perfilClass = currentPath.includes("perfil.php") ? activeClass : "";
+        let recordatoriosClass = currentPath.includes("recordatorios.php") || currentPath.includes("nuevo_recordatorio.php") || currentPath.includes("editar_recordatorio.php") ? activeClass : "";
 
         if (data.autenticado) {
             perfilBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/perfil.php" ${perfilClass}>Yo (${data.nombre})</a></li></div>`;
@@ -29,12 +30,13 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
                     "<br>¡Bienvenido a PetClub! 🐾✨¡Estamos felices de tenerte aquí! 💖";
             }
 
-            if (boton) {
+            if (boton && !sessionStorage.getItem("bienvenida_mostrada")) {
                 boton.disabled = false;
                 boton.click(); // abre
 
                 setTimeout(() => {
                     boton.click(); // cierra
+                    sessionStorage.setItem("bienvenida_mostrada", "true");
                 }, 2000);
             }
         } else {
@@ -57,7 +59,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
                 </div>
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html" ${inicioClass}>Inicio</a></li></div> 
                 ${mascotasBtn}
-                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html#Recordatorios">Recordatorios</a></li></div>
+                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/recordatorios.php" ${recordatoriosClass}>Recordatorios</a></li></div>
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html#mapa__titulo">Veterinarias</a></li></div>
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html#Consejos">Consejos</a></li></div>
                 ${perfilBtn}
@@ -79,8 +81,12 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
 if (
     !window.location.pathname.includes("mis_mascotas.php") &&
     !window.location.pathname.includes("perfil.php") &&
-    !window.location.pathname.includes("registrar_mascota.php")
+    !window.location.pathname.includes("registrar_mascota.php") &&
+    !window.location.pathname.includes("recordatorios.php") &&
+    !window.location.pathname.includes("nuevo_recordatorio.php") &&
+    !window.location.pathname.includes("editar_recordatorio.php")
 ) {
+
     footer.innerHTML = `
     <div class="Pie_pagina">
         <div class="pie_1">

@@ -62,3 +62,22 @@ CREATE TABLE mascota (
     FOREIGN KEY (Masc_Especie) REFERENCES especie(Esp_Id),
     FOREIGN KEY (Masc_Dueno) REFERENCES usuario(Usua_Id)
 );
+
+Actualizacion del programa, ahora se implemento la tabla de recordatorios (agregar, editar y eliminar)
+4. Primero se debe crear la siguiente tabla en la base de datos (al igual que las anteriores me base completamente en la del reporte de base de datos)
+#Como extra creo que seria mejor cambiar eso de frecuencia por otra cosa, o simplemente que en vez de frecuencia fuera horario no se :(
+
+CREATE TABLE recordatorio (
+    Recor_Id INT AUTO_INCREMENT PRIMARY KEY,
+    Recor_Titulo VARCHAR(45) NOT NULL,
+    Recor_Descripcion VARCHAR(100) NOT NULL,
+    Recor_Fecha DATETIME NOT NULL,
+    Recor_Frecuencia ENUM('Diaria', 'Semanal') NOT NULL,
+    Recor_Mascota INT NOT NULL,
+    FOREIGN KEY (Recor_Mascota) REFERENCES mascota(Masc_Id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+el CASCADE tiene el control de eliminacion, por si se elimina antes la mascota
+Aqui implemente para que el recordatorio se pueda EDITAR y esto se modifique en la tabla, pensaba que tambien se podria hacer lo mismo pero en MIS MASCOTAS

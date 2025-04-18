@@ -1,26 +1,20 @@
-/* Fuente y fondo */
 body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #cdeecd, #f0f4f8);
     margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    padding: 40px 20px;
     color: #5e6a3a;
+    min-height: 100vh;
 }
 
 /* Contenedor principal */
-.wrapper {
-    flex: 1;
-}
-
-/* Contenido central */
-.contenedor-mascotas {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
+.contenedor-recordatorios {
     padding: 40px 20px;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 h1 {
@@ -28,98 +22,116 @@ h1 {
     margin-bottom: 30px;
 }
 
-.mascotas-lista {
+.recordatorios-lista {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.mascota-card {
+.recordatorio-card {
     background-color: white;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 250px;
+    width: 260px;
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
-.mascota-card:hover {
+.recordatorio-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(94, 106, 58, 0.4); /* sombra verde oscuro */
+    box-shadow: 0 8px 16px rgba(94, 106, 58, 0.4); 
 }
 
-.mascota-card h2 {
+.recordatorio-card h2 {
     color: #5e6a3a;
     margin-bottom: 10px;
 }
 
-.mascota-card p {
+.recordatorio-card p {
     margin: 5px 0;
     color: #5e6a3a;
 }
 
-.sin-mascotas {
+.sin-recordatorios {
     color: #5e6a3a;
     font-style: italic;
     margin-top: 20px;
 }
 
-/* Botones generales */
-.btn,
+/* Botón de registrar */
 .btn-registrar {
     display: inline-block;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    color: white;
     background-color: #5e6a3a;
+    color: white;
     padding: 10px 20px;
     border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
 }
 
 .btn-registrar {
     margin-bottom: 40px;
 }
 
-.btn:hover,
 .btn-registrar:hover {
     background-color: #4a562d;
     transform: translateY(-2px);
 }
 
-.btn:active,
 .btn-registrar:active {
     transform: scale(0.9);
 }
 
-/* Botón rojo */
+/* Botón Eliminar */
 .btn-eliminar {
     background-color: #dc3545;
     color: white;
+    border: none;
     padding: 6px 12px;
     border-radius: 6px;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
-    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    font-weight: bold;
     font-size: 14px;
 }
 
 .btn-eliminar:hover {
     background-color: #a71d2a;
+    transform: scale(1.05);
 }
 
-.btn-eliminar:active {
-    transform: scale(0.9);
+/* Botón Editar en la esquina superior */
+.btn-editar-superior {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3b82f6;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Formulario mejorado estilo tarjeta */
-.formulario-mascota {
+.btn-editar-superior:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+.acciones-recordatorio {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Formulario */
+.formulario-recordatorio {
     max-width: 420px;
     margin: 40px auto;
     background-color: rgba(255, 255, 255, 0.9);
@@ -129,17 +141,17 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    text-align: left;
 }
 
-.formulario-mascota label {
+.formulario-recordatorio label {
     font-weight: bold;
     font-size: 14px;
     color: #5e6a3a;
 }
 
-.formulario-mascota input,
-.formulario-mascota select {
+.formulario-recordatorio input,
+.formulario-recordatorio select,
+.formulario-recordatorio textarea {
     padding: 12px;
     border-radius: 10px;
     border: 1.5px solid #5e6a3a;
@@ -149,14 +161,14 @@ h1 {
     transition: all 0.2s ease-in-out;
 }
 
-.formulario-mascota input:focus,
-.formulario-mascota select:focus {
+.formulario-recordatorio input:focus,
+.formulario-recordatorio select:focus,
+.formulario-recordatorio textarea:focus {
     outline: none;
     border-color: #78b679;
     background-color: #ffffff;
 }
 
-/* Botón actualizar tipo tarjeta */
 .btn-actualizar {
     text-align: center;
     margin-top: 10px;
@@ -183,8 +195,7 @@ h1 {
     transform: scale(0.95);
 }
 
-/* Enlace volver */
-.volver-link {
+a.volver-link {
     margin-top: 25px;
     display: block;
     text-align: center;
@@ -195,7 +206,11 @@ h1 {
     transition: color 0.3s;
 }
 
-.volver-link:hover {
+a.volver-link:hover {
     color: #3a4422;
     text-decoration: underline;
 }
+
+
+
+
