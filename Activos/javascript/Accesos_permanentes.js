@@ -14,7 +14,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
 
         let activeClass = "style='text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 3px;'";
 
-        let inicioClass = currentPath.includes("Index.html") ? activeClass : "";
+        let inicioClass = currentPath.includes("Index.html") || currentPath === "/Proyecto-Integrador-4M/" ? activeClass : "";
         let mascotasClass = currentPath.includes("mis_mascotas.php") || currentPath.includes("registrar_mascota.php") ? activeClass : "";
         let perfilClass = currentPath.includes("perfil.php") ? activeClass : "";
 
@@ -23,19 +23,21 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
             cerrarBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/logout.php">Cerrar sesión</a></li></div>`;
             mascotasBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/mis_mascotas.php" ${mascotasClass}>Mis Mascotas</a></li></div>`;
 
-            if (document.getElementById("nombre-usuario")) {
+            if (document.getElementById("nombre-usuario") && !sessionStorage.getItem("bienvenidaMostrada")) {
                 document.getElementById("nombre-usuario").innerHTML = "Hola, " + 
                     `<span style='color: green; font-weight: bold;'>${data.nombre}</span>` +
                     "<br>¡Bienvenido a PetClub! 🐾✨¡Estamos felices de tenerte aquí! 💖";
-            }
 
-            if (boton) {
-                boton.disabled = false;
-                boton.click(); // abre
+                if (boton) {
+                    boton.disabled = false;
+                    boton.click(); // abre
 
-                setTimeout(() => {
-                    boton.click(); // cierra
-                }, 2000);
+                    setTimeout(() => {
+                        boton.click(); // cierra
+                    }, 2000);
+
+                    sessionStorage.setItem("bienvenidaMostrada", "true");
+                }
             }
         } else {
             perfilBtn = `<div class="contenedor-nav contenedor-nav__login"><li><a href="/Proyecto-Integrador-4M/Login.php">Login</a></li></div>`;
