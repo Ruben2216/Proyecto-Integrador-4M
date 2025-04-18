@@ -30,14 +30,14 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
                     "<br>¡Bienvenido a PetClub! 🐾✨¡Estamos felices de tenerte aquí! 💖";
             }
 
-            if (boton && !sessionStorage.getItem("bienvenida_mostrada")) {
+            if (boton) {
                 boton.disabled = false;
                 boton.click(); // abre
 
                 setTimeout(() => {
                     boton.click(); // cierra
-                    sessionStorage.setItem("bienvenida_mostrada", "true");
                 }, 2000);
+            
             }
         } else {
             perfilBtn = `<div class="contenedor-nav contenedor-nav__login"><li><a href="/Proyecto-Integrador-4M/Login.php">Login</a></li></div>`;
