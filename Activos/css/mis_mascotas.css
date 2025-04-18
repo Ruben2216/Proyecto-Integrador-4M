@@ -65,8 +65,7 @@ h1 {
 }
 /* Botones verdes */
 .btn,
-.btn-registrar,
-.regresar-btn {
+.btn-registrar {
     display: inline-block;
     text-decoration: none;
     font-size: 14px;
@@ -81,22 +80,14 @@ h1 {
 }
 
 .btn:hover,
-.btn-registrar:hover,
-.regresar-btn:hover {
+.btn-registrar:hover {
     background-color: #4a562d;
+    transform: translateY(-2px);
 }
 
 .btn:active,
-.btn-registrar:active,
-.regresar-btn:active {
+.btn-registrar:active {
     transform: scale(0.9);
-}
-
-.regresar-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
 }
 
 /* Botón rojo */

@@ -269,3 +269,12 @@ nav.Menu ul div h2 {
         width: 80%;
     }
 }
+
+.Menu a.activo {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px; /* grosor del subrayado */
+    color: #ffffff;
+    font-weight: bold;
+}
+

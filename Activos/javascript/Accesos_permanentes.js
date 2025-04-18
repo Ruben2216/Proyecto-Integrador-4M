@@ -9,10 +9,19 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
         let cerrarBtn = '';
         let mascotasBtn = '';
 
+        // Detectar ruta actual
+        let currentPath = window.location.pathname;
+
+        let activeClass = "style='text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 3px;'";
+
+        let inicioClass = currentPath.includes("Index.html") ? activeClass : "";
+        let mascotasClass = currentPath.includes("mis_mascotas.php") || currentPath.includes("registrar_mascota.php") ? activeClass : "";
+        let perfilClass = currentPath.includes("perfil.php") ? activeClass : "";
+
         if (data.autenticado) {
-            perfilBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/perfil.php">Yo (${data.nombre})</a></li></div>`;
+            perfilBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/perfil.php" ${perfilClass}>Yo (${data.nombre})</a></li></div>`;
             cerrarBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/logout.php">Cerrar sesión</a></li></div>`;
-            mascotasBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/mis_mascotas.php">Mis Mascotas</a></li></div>`;
+            mascotasBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/mis_mascotas.php" ${mascotasClass}>Mis Mascotas</a></li></div>`;
 
             if (document.getElementById("nombre-usuario")) {
                 document.getElementById("nombre-usuario").innerHTML = "Hola, " + 
@@ -46,7 +55,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
                     <a href="/Proyecto-Integrador-4M/Index.html"><img src="/Proyecto-Integrador-4M/Activos/Imagenes/barra_nav/icono_barra.png" alt="Logo" width="40px"></a>
                     <h2 class="Nombre_pagina">PetClub</h2>
                 </div>
-                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html">Inicio</a></li></div> 
+                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html" ${inicioClass}>Inicio</a></li></div> 
                 ${mascotasBtn}
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html#Recordatorios">Recordatorios</a></li></div>
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.html#mapa__titulo">Veterinarias</a></li></div>
@@ -66,12 +75,12 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
         `;
     });
 
-// Mostrar footer solo si NO estamos en mis_mascotas.php ni perfil.php
+// Mostrar footer solo si NO estamos en mis_mascotas.php, perfil.php o registrar_mascota.php
 if (
     !window.location.pathname.includes("mis_mascotas.php") &&
-    !window.location.pathname.includes("perfil.php")
+    !window.location.pathname.includes("perfil.php") &&
+    !window.location.pathname.includes("registrar_mascota.php")
 ) {
-
     footer.innerHTML = `
     <div class="Pie_pagina">
         <div class="pie_1">
