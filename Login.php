@@ -39,17 +39,17 @@ if (isset($_GET['redirect_to'])) {
                                 <br>
                                 <label for="password">Contraseña</label>
                                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                                <a href="#" class="recuperar">Recuperar Contraseña</a>
+                                <a href="pagina_404.html" class="recuperar">Recuperar Contraseña</a>
                                 <br>
                                 <button class="boton" type="submit">Iniciar sesión</button>
                             </form>
-                            <p>¿No tienes cuenta? <a href="#" class="crear-cuenta">Crea una</a></p>
+                            <p>¿No tienes cuenta? <a href="pagina_404.html" class="crear-cuenta">Crea una</a></p>
                             <p>O continua con</p>
                             <div class="sign-up__social-img">
                                 <a href="Activos/BasePHP/Inicio_sesion_google/google.php"  aria-label="Iniciar sesión con Google">
                                     <img src="Activos/Imagenes/login/icon-google.svg" alt="Google">
                                 </a>
-                                <a href="#" aria-label="Iniciar sesión con Facebook">
+                                <a href="pagina_404.html" aria-label="Iniciar sesión con Facebook">
                                     <img src="Activos/Imagenes/login/icon-facebook.svg" alt="Facebook">
                                 </a>
                             </div>
@@ -77,14 +77,14 @@ if (isset($_GET['redirect_to'])) {
                             </form>
 
                             <p class="sign-up__volver-login">
-                                ¿Ya tienes una cuenta? <a href="#" class="volver-login__enlace">Inicia sesión</a>
+                                ¿Ya tienes una cuenta? <a href="pagina_404.html" class="volver-login__enlace">Inicia sesión</a>
                             </p>
                             <p>O continua con</p>
                             <div class="sign-up__social-img sign-up--imgs">
                                 <a href="Activos/BasePHP/Inicio_sesion_google/google.php" aria-label="Iniciar sesión con Google">
                                     <img src="Activos/Imagenes/login/icon-google.svg" alt="Google">
                                 </a>
-                                <a href="#" aria-label="Iniciar sesión con Facebook">
+                                <a href="pagina_404.html" aria-label="Iniciar sesión con Facebook">
                                     <img src="Activos/Imagenes/login/icon-facebook.svg" alt="Facebook">
                                 </a>
                             </div>                            

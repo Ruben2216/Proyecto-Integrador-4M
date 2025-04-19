@@ -91,10 +91,10 @@ if (
     <div class="Pie_pagina">
         <div class="pie_1">
             <h3>¿Qué ofrecemos?</h3>
-            <a href="#">Adopción de mascotas<br></a>
-            <a href="#">Tienda de accesorios<br></a>
-            <a href="#">Servicios veterinarios<br></a>
-            <a href="#">Consejos de cuidado<br></a>
+            <a href="pagina_404.html">Adopción de mascotas<br></a>
+            <a href="pagina_404.html">Tienda de accesorios<br></a>
+            <a href="pagina_404.html">Servicios veterinarios<br></a>
+            <a href="pagina_404.html">Consejos de cuidado<br></a>
         </div>
         <div class="pie_2">
             <h3>Síguenos en nuestras redes sociales</h3>
@@ -107,10 +107,10 @@ if (
         </div>
         <div class="pie_3">
             <h3>¿Quiénes somos?</h3>
-            <a href="#">Aviso legal<br></a>
-            <a href="#">Política de privacidad<br></a>
-            <a href="#">Política de cookies<br></a>
-            <a href="#">Contacto<br></a>   
+            <a href="pagina_404.html">Aviso legal<br></a>
+            <a href="pagina_404.html">Política de privacidad<br></a>
+            <a href="pagina_404.html">Política de cookies<br></a>
+            <a href="pagina_404.html">Contacto<br></a>   
         </div>
         <div class="pie_3">
             <h3>¿Dónde estamos?</h3>
