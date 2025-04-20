@@ -18,7 +18,6 @@ footer a {
 
 footer a:hover {
     text-shadow: 3px 1px 8px #f4aa3cde;
-    font-weight: bold;
 }
 
 footer div {
@@ -29,9 +28,11 @@ footer div {
 }
 
 footer div p {
-    line-height: 1.0;
+    line-height: 1;
 }
-
+footer a{
+    line-height: 1.5;
+}
 .pie_2 {
     align-items: center;
     text-align: center;
