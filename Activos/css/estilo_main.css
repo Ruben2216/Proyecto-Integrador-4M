@@ -399,7 +399,34 @@ details[open] {
     .galeria__overlay:active{
         opacity: 1;
     }
+    .curiosidad{
+        display:none;
+    }
+    .mapa{
+        max-width: 100%;
+  
+    }
+    .mapa__contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+               margin:0;
+
+    }
+    .mapa__contenedor-mapa{
+        width: 80%;
+        margin:0;
+    }
+    .mapa__texto{
+        display:none;
+    }
+    .mapa__titulo{
+        margin:1rem 0;
+        font-size: 2rem;
+    }
+
 }
+
 /*ANIMACION DE GALERIA DE EFECTO DE APARICION DESDE PEQUEÑO*/
 @keyframes show {
     from{
