@@ -7,6 +7,9 @@ body {
     line-height: 1.5;
     border: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 *{
     box-sizing: border-box;
 
