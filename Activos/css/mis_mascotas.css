@@ -35,38 +35,60 @@ h1 {
     justify-content: center;
 }
 
+/* Tarjeta mascota */
 .mascota-card {
     background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 250px;
-    text-align: left;
+    border-radius: 12px;
+    overflow: hidden; /* Importante para redondear todo sin cortes */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .mascota-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(94, 106, 58, 0.4); /* sombra verde oscuro */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(94, 106, 58, 0.4);
 }
 
-.mascota-card h2 {
+/* Imagen dentro de tarjeta */
+.imagen-raza {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.imagen-raza img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Información dentro de tarjeta */
+.info-mascota {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.info-mascota h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
     color: #5e6a3a;
-    margin-bottom: 10px;
 }
 
-.mascota-card p {
+.info-mascota p {
     margin: 5px 0;
+    font-size: 14px;
     color: #5e6a3a;
 }
 
-.sin-mascotas {
-    color: #5e6a3a;
-    font-style: italic;
-    margin-top: 20px;
-}
-
-/* Botones generales */
+/* Botones */
 .btn,
 .btn-registrar {
     display: inline-block;
@@ -97,7 +119,7 @@ h1 {
     transform: scale(0.9);
 }
 
-/* Botón rojo */
+/* Botón eliminar */
 .btn-eliminar {
     background-color: #dc3545;
     color: white;
@@ -108,17 +130,26 @@ h1 {
     transition: background-color 0.3s, transform 0.2s ease-in-out;
     font-weight: 600;
     font-size: 14px;
+    margin-top: 10px;
 }
 
 .btn-eliminar:hover {
     background-color: #a71d2a;
+    transform: translateY(-2px);
 }
 
 .btn-eliminar:active {
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
-/* Formulario mejorado estilo tarjeta */
+/* Si no hay mascotas */
+.sin-mascotas {
+    color: #5e6a3a;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Formulario mascota */
 .formulario-mascota {
     max-width: 420px;
     margin: 40px auto;
@@ -156,7 +187,7 @@ h1 {
     background-color: #ffffff;
 }
 
-/* Botón actualizar tipo tarjeta */
+/* Botón actualizar */
 .btn-actualizar {
     text-align: center;
     margin-top: 10px;
