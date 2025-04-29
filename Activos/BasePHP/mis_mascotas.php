@@ -75,7 +75,7 @@ $resultado = $conn->query($sql);
                         <?php endwhile; ?>
                     </div>
                 <?php else: ?>
-                    <p class="sin-mascotas">No tienes mascotas registradas aún.</p>
+                    <p class="sin-mascotas">Aún no tienes mascotas registradas.</p>
                 <?php endif; ?>
 
             </div>

@@ -43,7 +43,7 @@ $mascotas = $conn->query($sql_mascotas);
             <input type="hidden" name="id" value="<?php echo $recordatorio['Recor_Id']; ?>">
 
             <label for="mascota">Mascota:</label>
-            <select name="mascota" required>
+            <select name="mascota" id="mascota" required>
                 <option value="">--Selecciona--</option>
                 <?php while ($m = $mascotas->fetch_assoc()): ?>
                     <option value="<?php echo $m['Masc_Id']; ?>"
@@ -54,19 +54,16 @@ $mascotas = $conn->query($sql_mascotas);
             </select>
 
             <label for="titulo">Título:</label>
-            <input type="text" name="titulo" required value="<?php echo htmlspecialchars($recordatorio['Recor_Titulo']); ?>">
+            <input type="text" name="titulo" id="titulo" required value="<?php echo htmlspecialchars($recordatorio['Recor_Titulo']); ?>">
 
             <label for="descripcion">Descripción:</label>
-            <input type="text" name="descripcion" required value="<?php echo htmlspecialchars($recordatorio['Recor_Descripcion']); ?>">
+            <input type="text" name="descripcion" id="descripcion" required value="<?php echo htmlspecialchars($recordatorio['Recor_Descripcion']); ?>">
 
             <label for="fecha">Fecha:</label>
-            <input type="date" name="fecha" required value="<?php echo date('Y-m-d', strtotime($recordatorio['Recor_Fecha'])); ?>">
+            <input type="date" name="fecha" id="fecha" required value="<?php echo date('Y-m-d', strtotime($recordatorio['Recor_Fecha'])); ?>">
 
-            <label for="frecuencia">Frecuencia:</label>
-            <select name="frecuencia" required>
-                <option value="Diaria" <?php if ($recordatorio['Recor_Frecuencia'] === 'Diaria') echo 'selected'; ?>>Diaria</option>
-                <option value="Semanal" <?php if ($recordatorio['Recor_Frecuencia'] === 'Semanal') echo 'selected'; ?>>Semanal</option>
-            </select>
+            <label for="hora">Hora:</label>
+            <input type="time" name="hora" id="hora" required value="<?php echo substr($recordatorio['Recor_Hora'], 0, 5); ?>">
 
             <div class="btn-actualizar">
                 <button type="submit">Guardar cambios</button>

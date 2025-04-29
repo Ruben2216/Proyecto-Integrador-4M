@@ -43,7 +43,7 @@ $resultado = $conn->query($sql);
                             <p><strong>Mascota:</strong> <?php echo htmlspecialchars($row['Masc_Nombre']); ?></p>
                             <p><strong>Descripción:</strong> <?php echo htmlspecialchars($row['Recor_Descripcion']); ?></p>
                             <p><strong>Fecha:</strong> <?php echo htmlspecialchars($row['Recor_Fecha']); ?></p>
-                            <p><strong>Frecuencia:</strong> <?php echo htmlspecialchars($row['Recor_Frecuencia']); ?></p>
+                            <p><strong>Hora:</strong> <?php echo date('g:i A', strtotime($row['Recor_Hora'])); ?></p> <!-- Muestra en formato 12h) -->
                             <div class="acciones-recordatorio">
                                 <form action="eliminar_recordatorio.php" method="POST" onsubmit="return confirm('¿Seguro que deseas eliminar este recordatorio?');">
                                     <input type="hidden" name="id" value="<?php echo $row['Recor_Id']; ?>">
