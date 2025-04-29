@@ -7,14 +7,15 @@ if (!isset($_SESSION['usuario_id'])) {
 
 include 'conexion.php';
 
+// Capturar los datos del formulario
 $mascota = $_POST['Recor_Mascota'];
 $titulo = $_POST['Recor_Titulo'];
 $descripcion = $_POST['Recor_Descripcion'];
 $fecha = $_POST['Recor_Fecha'];
-$frecuencia = $_POST['Recor_Frecuencia'];
+$hora = $_POST['Recor_Hora']; // Ahora capturamos la hora en lugar de frecuencia
 
-$sql = "INSERT INTO recordatorio (Recor_Mascota, Recor_Titulo, Recor_Descripcion, Recor_Fecha, Recor_Frecuencia) 
-        VALUES ('$mascota', '$titulo', '$descripcion', '$fecha', '$frecuencia')";
+$sql = "INSERT INTO recordatorio (Recor_Mascota, Recor_Titulo, Recor_Descripcion, Recor_Fecha, Recor_Hora) 
+        VALUES ('$mascota', '$titulo', '$descripcion', '$fecha', '$hora')";
 
 if ($conn->query($sql)) {
     header("Location: recordatorios.php");

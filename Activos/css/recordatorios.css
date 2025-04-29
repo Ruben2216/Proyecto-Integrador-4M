@@ -64,13 +64,16 @@ h1 {
 /* Botón de registrar */
 .btn-registrar {
     display: inline-block;
-    background-color: #5e6a3a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
     color: white;
+    background-color: #5e6a3a;
     padding: 10px 20px;
     border-radius: 8px;
-    text-decoration: none;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-registrar {
@@ -210,7 +213,3 @@ a.volver-link:hover {
     color: #3a4422;
     text-decoration: underline;
 }
-
-
-
-

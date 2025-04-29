@@ -49,3 +49,17 @@ composer require google/apiclient
 Modificar la tabla usuario porque google no guarda una contraseña como tal en la base
 ALTER TABLE usuario MODIFY Usua_Contraseña VARCHAR(255) NULL;
 --------------------------------------------------
+
+Cambios en la tabla de recordatorios quitar Recor_Frecuencia y sustituirlo por Recor_Hora
+1. Eliminar
+ALTER TABLE recordatorio
+DROP COLUMN Recor_Frecuencia;
+
+2. Agregar
+ALTER TABLE recordatorio
+ADD COLUMN Recor_Hora TIME NOT NULL AFTER Recor_Fecha;
+
+3. Modificar el Recor_Hora para que solo sea DATE
+ALTER TABLE recordatorio
+MODIFY Recor_Fecha DATE;
+

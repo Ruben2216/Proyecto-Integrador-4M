@@ -12,20 +12,20 @@ $mascota = $_POST['mascota'];
 $titulo = $_POST['titulo'];
 $descripcion = $_POST['descripcion'];
 $fecha = $_POST['fecha'];
-$frecuencia = $_POST['frecuencia'];
+$hora = $_POST['hora'];
 
 // Validación básica
-if (!$id || !$mascota || !$titulo || !$descripcion || !$fecha || !$frecuencia) {
+if (!$id || !$mascota || !$titulo || !$descripcion || !$fecha || !$hora) {
     echo "Faltan campos obligatorios.";
     exit();
 }
 
 $sql = "UPDATE recordatorio 
-        SET Recor_Mascota = ?, Recor_Titulo = ?, Recor_Descripcion = ?, Recor_Fecha = ?, Recor_Frecuencia = ?
+        SET Recor_Mascota = ?, Recor_Titulo = ?, Recor_Descripcion = ?, Recor_Fecha = ?, Recor_Hora = ?
         WHERE Recor_Id = ?";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("issssi", $mascota, $titulo, $descripcion, $fecha, $frecuencia, $id);
+$stmt->bind_param("issssi", $mascota, $titulo, $descripcion, $fecha, $hora, $id);
 
 if ($stmt->execute()) {
     header("Location: recordatorios.php");

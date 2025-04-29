@@ -46,12 +46,8 @@ $mascotas = $conn->query($sql_mascotas);
             <label for="Recor_Fecha">Fecha:</label>
             <input type="date" name="Recor_Fecha" id="Recor_Fecha" required>
 
-            <label for="Recor_Frecuencia">Frecuencia:</label>
-            <select name="Recor_Frecuencia" id="Recor_Frecuencia" required>
-                <option value="">--Selecciona--</option>
-                <option value="Diaria">Diaria</option>
-                <option value="Semanal">Semanal</option>
-            </select>
+            <label for="Recor_Hora">Hora:</label>
+            <input type="time" name="Recor_Hora" id="Recor_Hora" required>
 
             <div class="btn-actualizar">
                 <button type="submit">Guardar Recordatorio</button>

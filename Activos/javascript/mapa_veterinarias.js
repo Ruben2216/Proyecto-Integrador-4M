@@ -62,7 +62,7 @@ navigator.geolocation.getCurrentPosition(function(pos) {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    L.marker([lat, lon]).addTo(map).bindPopup("<span style='color: red; font-weight: bold;'>" + "¡Estás aquí humano pendejo!" + "</span>").openPopup();
+    L.marker([lat, lon]).addTo(map).bindPopup("<span style='color: red; font-weight: bold;'>" + "¡Estás aquí!" + "</span>").openPopup();
 
     veterinarias.forEach(function(vet) {
         const marker = L.marker([vet.lat, vet.lon]).addTo(map);
