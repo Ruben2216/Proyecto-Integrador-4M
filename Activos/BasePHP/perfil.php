@@ -25,9 +25,6 @@ $usuario = $resultado->fetch_assoc();
     <!-- Header dinámico con barra de navegación -->
     <header></header>
 
-    <!-- Botón regresar -->
-    <a href="../../Index.php" class="regresar-btn">← Regresar al inicio</a>
-
     <div class="perfil-card">
         <div class="perfil-header">
             <img src="../Imagenes/fotoperfil.png" alt="Foto de perfil" class="perfil-foto">
