@@ -110,7 +110,6 @@ INSERT INTO curiosidades (Curi_Id, Curi_Texto, Curi_Especie) VALUES
 (18, 'Es conocida por su fuerza y tamaño, pero también por su ternura con los niños.', 18),
 (19, 'Tiene un temperamento reservado y leal, a menudo formando un fuerte lazo con un solo dueño.', 19),
 (20, 'Puede ser entrenada para competiciones de agilidad gracias a su energía y destreza.', 13),
-
 (21, 'A menudo requiere compañía constante, ya que no le gusta estar sola por mucho tiempo.', 5),
 (22, 'Es propensa a la displasia de cadera si no se ejercita correctamente.', 6),
 (23, 'Disfruta correr y explorar, por lo que necesita espacios amplios.', 7),
