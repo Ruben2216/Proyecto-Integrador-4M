@@ -45,7 +45,7 @@ while ($fila = $resultado->fetch_assoc()) {
                 $diasDeMes = cal_days_in_month(CAL_GREGORIAN, $m, $anio);
             ?>
             <table border="1" cellspacing="0" cellpadding="5" class="calendario">
-                <tr class="NombreMes">
+                <tr class="NombreMes" onclick="window.location.href='recordatorios.php'">
                     <th colspan="7"><h3><?php echo date('F', $primerDiaMes); ?></h3></th>
                 </tr>
                 <tr class="diasCalendario">
@@ -58,7 +58,7 @@ while ($fila = $resultado->fetch_assoc()) {
                         for ($i = 0; $i < $diaSemana; $i++) echo "<td></td>";
 
                         for ($dia = 1; $dia <= $diasDeMes; $dia++) {
-                            echo "<td";
+                            echo "<td onclick=\"window.location.href='nuevo_recordatorio.php'\"";;
                             if (isset($recordatorios[$m][$dia])) {
                                 echo ' class="con-recordatorio" title="' . implode(', ', $recordatorios[$m][$dia]) . '"';
                             }
