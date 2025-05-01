@@ -1,3 +1,15 @@
+/* Animación de entrada */
+@keyframes fadeInUpBody {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #cdeecd, #f0f4f8);
@@ -15,6 +27,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    animation: fadeInUpBody 0.8s ease-out;
 }
 
 h1 {
@@ -61,7 +74,6 @@ h1 {
     margin-top: 20px;
 }
 
-/* Botón de registrar */
 .btn-registrar {
     display: inline-block;
     text-decoration: none;
@@ -74,9 +86,6 @@ h1 {
     transition: background-color 0.3s, transform 0.2s ease-in-out;
     border: none;
     cursor: pointer;
-}
-
-.btn-registrar {
     margin-bottom: 40px;
 }
 
@@ -89,7 +98,6 @@ h1 {
     transform: scale(0.9);
 }
 
-/* Botón Eliminar */
 .btn-eliminar {
     background-color: #dc3545;
     color: white;
@@ -108,7 +116,6 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Botón Editar en la esquina superior */
 .btn-editar-superior {
     position: absolute;
     top: 10px;
@@ -133,7 +140,6 @@ h1 {
     text-align: center;
 }
 
-/* Formulario */
 .formulario-recordatorio {
     max-width: 420px;
     margin: 40px auto;
@@ -212,4 +218,35 @@ a.volver-link {
 a.volver-link:hover {
     color: #3a4422;
     text-decoration: underline;
+}
+
+/* Responsive: pantallas pequeñas */
+@media screen and (max-width: 900px) {
+    .contenedor-recordatorios {
+        padding: 20px 10px;
+    }
+
+    .recordatorios-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recordatorio-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .formulario-recordatorio {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .btn-registrar {
+        width: 50%;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
 }

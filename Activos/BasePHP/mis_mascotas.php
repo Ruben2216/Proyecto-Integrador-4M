@@ -130,7 +130,7 @@ $imagenes = [
 <div class="wrapper">
     <main style="margin-top: 4.5rem;">
         <div class="contenedor-mascotas">
-            <h1>Mis Mascotas</h1>   
+            <h1>Mis Mascotas</h1>
             <a href="registrar_mascota.php" class="btn-registrar">+ Registrar nueva mascota</a> 
 
             <?php if ($resultado->num_rows > 0): ?>
@@ -156,7 +156,10 @@ $imagenes = [
                     <?php endwhile; ?>
                 </div>
             <?php else: ?>
-                <p class="sin-mascotas">Aún no tienes mascotas registradas.</p>
+                <div class="sin-mascotas">
+                    <img src="/Proyecto-Integrador-4M/Activos/Imagenes/perrotriste.png" alt="Sin mascotas" style="max-width: 320px; margin-bottom: 20px;">
+                    <p>Aún no tienes mascotas registradas.</p>
+                </div>
             <?php endif; ?>
         </div>
     </main>
