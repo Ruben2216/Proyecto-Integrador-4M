@@ -20,6 +20,8 @@ $usuario = $resultado->fetch_assoc();
     <title>Mi Perfil</title>
     <link rel="stylesheet" href="../css/perfil.css">
     <link rel="stylesheet" href="../css/nav.css"> <!-- Estilo de la nav -->
+    <link rel="icon" href="/Proyecto-Integrador-4M/Activos/Imagenes/icono_web.png">
+
 </head>
 <body>
     <!-- Header dinámico con barra de navegación -->

@@ -46,11 +46,12 @@ $imagenes = [
 <head>
     <meta charset="UTF-8">
     <title>Mis Mascotas</title>
-
+    
     <link rel="stylesheet" href="../css/mis_mascotas.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/footer.css">
-
+    
+    <link rel="icon" href="/Proyecto-Integrador-4M/Activos/Imagenes/icono_web.png">
     <style>
         body {
             display: flex;

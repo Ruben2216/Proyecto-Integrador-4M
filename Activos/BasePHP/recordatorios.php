@@ -49,6 +49,8 @@ $imagenes = [
     <title>Mis Recordatorios</title>
     <link rel="stylesheet" href="../css/recordatorios.css">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="icon" href="/Proyecto-Integrador-4M/Activos/Imagenes/icono_web.png">
+
 </head>
 <body>
     <!-- Nav -->

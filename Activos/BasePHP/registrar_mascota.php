@@ -16,6 +16,8 @@ $razas = $conn->query("SELECT * FROM especie");
     <title>Registrar Mascota</title>
     <link rel="stylesheet" href="../css/mis_mascotas.css">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="icon" href="/Proyecto-Integrador-4M/Activos/Imagenes/icono_web.png">
+
 </head>
 <body>
     <!-- Header dinámico -->

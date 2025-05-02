@@ -20,6 +20,8 @@ $mascotas = $conn->query($sql_mascotas);
     <title>Nuevo Recordatorio</title>
     <link rel="stylesheet" href="../css/recordatorios.css">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="icon" href="/Proyecto-Integrador-4M/Activos/Imagenes/icono_web.png">
+
 </head>
 <body>
     <!-- Header con navegación -->

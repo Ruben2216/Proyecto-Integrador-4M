@@ -31,6 +31,8 @@ while ($fila = $resultado->fetch_assoc()) {
     <link rel="stylesheet" href="../css/recordatorios.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/calendario.css">
+    <link rel="icon" href="/Proyecto-Integrador-4M/Activos/Imagenes/icono_web.png">
+
 </head>
 <body>
     <header></header>
