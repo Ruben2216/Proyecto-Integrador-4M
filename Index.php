@@ -286,37 +286,66 @@ if ($especie == "Husky Siberiano") {
             </div>
         </div>
         <section class="preguntas_frecuentes">
-            <h2>Preguntas Frecuentes</h2>
-            <details>
-                <summary>Registro y Cuenta</summary>
-                <p><strong>¿Cómo me registro en PetClub?</strong><br>Puedes registrarte haciendo clic en "Registrarse" en la esquina superior derecha o desde el botón en la página principal. Solo necesitas un correo electrónico y una contraseña.</p>
-                <p><strong>¿Es gratuito el servicio?</strong><br>Sí, PetClub es completamente gratuito. No tenemos planes de pago ni suscripciones premium.</p>
-                <p><strong>¿Puedo tener más de una mascota registrada?</strong><br>¡Claro! Puedes registrar todas las mascotas que desees y gestionar sus perfiles de manera individual.</p>
-            </details>
-            <details>
-                <summary>Funcionalidades</summary>
-                <p><strong>¿Cómo funcionan los recordatorios?</strong><br>Puedes programar recordatorios para vacunas, citas veterinarias, horarios de alimentación y más. Recibirás notificaciones en la web.</p>
-                <p><strong>¿PetClub envía recordatorios por correo o SMS?</strong><br>Actualmente, las notificaciones son dentro de la plataforma y por correo electrónico. No contamos con envío de SMS.</p>
-                <p><strong>¿Cómo funciona la búsqueda de veterinarias cercanas?</strong><br>Usamos geolocalización para mostrarte clínicas veterinarias cerca de tu ubicación. También puedes buscar manualmente por ciudad o nombre.</p>
-            </details>
-            <details>
-                <summary>Seguridad y Privacidad</summary>
-                <p><strong>¿Cómo protegen mis datos y los de mi mascota?</strong><br>Utilizamos cifrado de datos y cumplimos con normativas de privacidad. Tu información no se comparte con terceros sin tu consentimiento.</p>
-                <p><strong>¿Puedo eliminar mi cuenta?</strong><br>Sí, en la sección "Configuración de cuenta" puedes eliminar tu perfil y todos los datos asociados.</p>
-            </details>
-            <details>
-                <summary>Problemas Técnicos</summary>
-                <p><strong>No recibo notificaciones, ¿qué hago?</strong><br>Asegúrate de que tu navegador permita alertas.</p>
-                <p><strong>La página no carga correctamente, ¿cómo lo soluciono?</strong><br>Prueba limpiar la caché de tu navegador o acceder desde otro dispositivo. Si el problema persiste, contáctanos.</p>
-            </details>
-            <details>
-                <summary>Otras Consultas</summary>
-                <p><strong>¿PetClub tiene aplicación móvil?</strong><br>Por ahora solo está disponible como plataforma web, pero estamos trabajando en una app para dispositivos móviles.</p>
-                <p><strong>¿Puedo compartir el perfil de mi mascota con otros usuarios?</strong><br>Actualmente no, pero en futuras actualizaciones incluiremos opciones de compartir con familiares o veterinarios.</p>
-                <p><strong>¿Dónde puedo enviar sugerencias o reportar errores?</strong><br>Puedes escribirnos a soporte@petclub.com o usar el formulario de contacto en la sección "Ayuda".</p>
-            </details>
-        </section>
+    <h2>Preguntas Frecuentes</h2>
 
+    <details>
+      <summary>Registro y Cuenta</summary>
+      <div class="content">
+        <p><strong>¿Cómo me registro en PetClub?</strong><br>
+           Puedes registrarte haciendo clic en "Registrarse" en la esquina superior derecha o desde el botón en la página principal. Solo necesitas un correo electrónico y una contraseña.</p>
+        <p><strong>¿Es gratuito el servicio?</strong><br>
+           Sí, PetClub es completamente gratuito. No tenemos planes de pago ni suscripciones premium.</p>
+        <p><strong>¿Puedo tener más de una mascota registrada?</strong><br>
+           ¡Claro! Puedes registrar todas las mascotas que desees y gestionar sus perfiles de manera individual.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Funcionalidades</summary>
+      <div class="content">
+        <p><strong>¿Cómo funcionan los recordatorios?</strong><br>
+           Puedes programar recordatorios para vacunas, citas veterinarias, horarios de alimentación y más. Recibirás notificaciones en la web.</p>
+        <p><strong>¿PetClub envía recordatorios por correo o SMS?</strong><br>
+           Actualmente, las notificaciones son dentro de la plataforma y por correo electrónico. No contamos con envío de SMS.</p>
+        <p><strong>¿Cómo funciona la búsqueda de veterinarias cercanas?</strong><br>
+           Usamos geolocalización para mostrarte clínicas veterinarias cerca de tu ubicación. También puedes buscar manualmente por ciudad o nombre.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Seguridad y Privacidad</summary>
+      <div class="content">
+        <p><strong>¿Cómo protegen mis datos y los de mi mascota?</strong><br>
+           Utilizamos cifrado de datos y cumplimos con normativas de privacidad. Tu información no se comparte con terceros sin tu consentimiento.</p>
+        <p><strong>¿Puedo eliminar mi cuenta?</strong><br>
+           Sí, en la sección "Configuración de cuenta" puedes eliminar tu perfil y todos los datos asociados.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Problemas Técnicos</summary>
+      <div class="content">
+        <p><strong>No recibo notificaciones, ¿qué hago?</strong><br>
+           Asegúrate de que tu navegador permita alertas.</p>
+        <p><strong>La página no carga correctamente, ¿cómo lo soluciono?</strong><br>
+           Prueba limpiar la caché de tu navegador o acceder desde otro dispositivo. Si el problema persiste, contáctanos.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Otras Consultas</summary>
+      <div class="content">
+        <p><strong>¿PetClub tiene aplicación móvil?</strong><br>
+           Por ahora solo está disponible como plataforma web, pero estamos trabajando en una app para dispositivos móviles.</p>
+        <p><strong>¿Puedo compartir el perfil de mi mascota con otros usuarios?</strong><br>
+           Actualmente no, pero en futuras actualizaciones incluiremos opciones de compartir con familiares o veterinarios.</p>
+        <p><strong>¿Dónde puedo enviar sugerencias o reportar errores?</strong><br>
+           Puedes escribirnos a soporte@petclub.com o usar el formulario de contacto en la sección "Ayuda".</p>
+      </div>
+    </details>
+
+  </section>
+  
     </main>
     <footer class="footer"></footer>
     <script src="Activos/javascript/Accesos_permanentes.js"></script>

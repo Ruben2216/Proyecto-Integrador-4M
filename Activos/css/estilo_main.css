@@ -377,27 +377,60 @@ details {
     background: #f9f9f9;
     cursor: pointer;
     margin: 0.1rem 0;
-}
-
-details:hover {
+  }
+  
+  details:hover {
     background: #8fa25698;
     border: 2px solid #8fa25600;
-}
-
-summary {
+  }
+  
+  summary {
     font-weight: bold;
     padding: 5px;
-}
-details:last-child{ /*ULTIMO ELEMENTO DE SUMMARY Y DETAILS INDEPENDIENTEMENTE DE SI SE AGREGAN MAS*/
+  }
+  
+  details:last-child {
     margin-bottom: 2rem;
-}
-
-details[open] {
+  }
+  
+  details[open] {
     background: #8fa256b7;
     border-color: #8fa256;
+  }
+  
+details summary {
+    list-style: none;
 }
 
+details summary::-webkit-details-marker {
+    display: none;
+}
 
+details summary::marker {
+    display: none;
+}
+
+  summary::-webkit-details-marker { 
+    display: none; 
+  }
+  summary::after {
+    content: "▶";                  
+    float: left;
+    transition: transform 0.3s ease; 
+  }
+  details[open] summary::after {
+    transform: rotate(90deg);       /* gira hacia abajo */
+  }
+  
+  .content {
+    max-height: 0;                 
+    overflow: hidden;              
+    transition: max-height 0.4s ease; 
+  }
+  details[open] .content {
+    max-height: 600px;             
+  }
+  
 @media screen and (max-width:900px){ /*ADAPTACION MOBILES-SCROLL DE IMAGENES-*/
     .galeria__overlay:active{
         opacity: 1;
