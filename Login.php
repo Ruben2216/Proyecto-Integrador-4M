@@ -73,7 +73,9 @@ if (isset($_GET['redirect_to'])) {
                                 <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
 
                                 <label for="password">Contraseña</label>
-                                <input type="password" name="password" placeholder="Contraseña" minlength="8" required>
+                                <input type="password" id="password2" name="password"  placeholder="Contraseña" minlength="8" required>
+                                <span class="ver_contraseña2 ver_contraseña-login">🙈</span>
+
                                 <button class="boton boton--crear" type="submit" id="derecha">Crear cuenta</button>
                             </form>
 

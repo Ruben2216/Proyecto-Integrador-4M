@@ -114,7 +114,7 @@ form label {
     color: #000;
 }
 
-.ver_contraseña{
+.ver_contraseña, .ver_contraseña2{
     position: absolute;
     top: 48.5%;
     right: 2.5rem;
@@ -122,6 +122,10 @@ form label {
     cursor: pointer;
     color: #fff;
     user-select: none;
+}
+.ver_contraseña2{
+    top:63.5%;
+
 }
 
 .recuperar, a {
