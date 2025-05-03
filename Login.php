@@ -74,7 +74,7 @@ if (isset($_GET['redirect_to'])) {
 
                                 <label for="password">Contraseña</label>
                                 <input type="password" id="password2" name="password"  placeholder="Contraseña" minlength="8" required>
-                                <span class="ver_contraseña2 ver_contraseña-login">🙈</span>
+                                <span class="ver_contraseña2 ver_contraseña-registro">🙈</span>
 
                                 <button class="boton boton--crear" type="submit" id="derecha">Crear cuenta</button>
                             </form>

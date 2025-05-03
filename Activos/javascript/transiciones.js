@@ -6,16 +6,25 @@ const botonLogin = document.querySelector('.volver-login__enlace');
 const passwordInput = document.getElementById('password');
 const passwordInput2 = document.getElementById('password2');
 const verContraseña = document.querySelector('.ver_contraseña-login');
+const verContraseña2 = document.querySelector('.ver_contraseña-registro');
 
 verContraseña.addEventListener('click', function() {
-    if (passwordInput.type === 'password' || passwordInput2.type === 'password') {
+    if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        passwordInput2.type = 'text';
         verContraseña.textContent = '👀'; 
     } else {
         passwordInput.type = 'password';
-        passwordInput2.type = 'password';
         verContraseña.textContent = '🙈'; 
+    }
+});
+
+verContraseña2.addEventListener('click', function() {
+    if (passwordInput2.type === 'password') {
+        passwordInput2.type = 'text';
+        verContraseña2.textContent = '👀'; 
+    } else {
+        passwordInput2.type = 'password';
+        verContraseña2.textContent = '🙈'; 
     }
 });
 
