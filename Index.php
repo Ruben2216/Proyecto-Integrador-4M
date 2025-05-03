@@ -280,7 +280,7 @@ if ($especie == "Husky Siberiano") {
         <div class="contenedor-tarjetas">
 
     <a href="#como-saber-fiebre" class="tarjeta">
-        <img src="https://placehold.co/350x200/cccccc/333333?text=Imagen+1" alt="Cachorro con termómetro" class="tarjeta__imagen">
+        <img src="/Proyecto-Integrador-4M/Activos/Imagenes/consejos/fiebre.jpg" alt="Cachorro con termómetro" class="tarjeta__imagen">
         <div class="tarjeta__contenido">
             <h3 class="tarjeta__titulo">Cómo saber si mi cachorro tiene fiebre</h3>
         </div>
