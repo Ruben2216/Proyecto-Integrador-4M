@@ -114,6 +114,16 @@ form label {
     color: #000;
 }
 
+.ver_contraseña{
+    position: absolute;
+    top: 48.5%;
+    right: 2.5rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
+}
+
 .recuperar, a {
     font-size: 0.9rem;
     color: #4a90e2;

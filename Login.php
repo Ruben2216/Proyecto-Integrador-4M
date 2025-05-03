@@ -39,6 +39,7 @@ if (isset($_GET['redirect_to'])) {
                                 <br>
                                 <label for="password">Contraseña</label>
                                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                                <span class="ver_contraseña ver_contraseña-login">🙈</span>
                                 <a href="pagina_404.html" class="recuperar">Recuperar Contraseña</a>
                                 <br>
                                 <button class="boton" type="submit">Iniciar sesión</button>
