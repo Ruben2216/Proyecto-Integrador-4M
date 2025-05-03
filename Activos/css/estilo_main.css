@@ -387,7 +387,21 @@ h2{
     margin: 0;
 }
 
+@media (min-width: 600px) {
+    .contenedor-tarjetas {
+        justify-content: space-around;
+    }
 
+    .tarjeta {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (min-width: 900px) {
+    .tarjeta {
+        width: calc(33.333% - 30px);
+    }
+}
 
 
 .popover {
