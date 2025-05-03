@@ -275,6 +275,41 @@ if ($especie == "Husky Siberiano") {
 
             
         </section>
+        <h2  class="mapa__titulo">Consejos de cuidados de tu mascota</h2>
+
+        <div class="contenedor-tarjetas">
+
+    <a href="#como-saber-fiebre" class="tarjeta">
+        <img src="https://placehold.co/350x200/cccccc/333333?text=Imagen+1" alt="Cachorro con termómetro" class="tarjeta__imagen">
+        <div class="tarjeta__contenido">
+            <h3 class="tarjeta__titulo">Cómo saber si mi cachorro tiene fiebre</h3>
+        </div>
+    </a>
+
+    <a href="#herida-carne-viva" class="tarjeta">
+        <img src="https://placehold.co/350x200/cccccc/333333?text=Imagen+2" alt="Veterinario curando herida" class="tarjeta__imagen">
+        <div class="tarjeta__contenido">
+            <h3 class="tarjeta__titulo">Mi perro tiene una herida en carne viva ¿cómo proceder?</h3>
+        </div>
+    </a>
+
+    <a href="#perro-tiembla" class="tarjeta">
+        <img src="https://placehold.co/350x200/cccccc/333333?text=Imagen+3" alt="Perro temblando" class="tarjeta__imagen">
+        <div class="tarjeta__contenido">
+            <h3 class="tarjeta__titulo">Mi perro tiembla: Causas más comunes</h3>
+        </div>
+    </a>
+
+    <a href="#cuidar-articulaciones" class="tarjeta">
+        <img src="https://placehold.co/350x200/cccccc/333333?text=Imagen+4" alt="Perro con articulaciones sanas" class="tarjeta__imagen">
+        <div class="tarjeta__contenido">
+            <h3 class="tarjeta__titulo">Guía definitiva para cuidar las articulaciones de un perro</h3>
+        </div>
+    </a>
+
+
+</div>
+
         <button id="bienvenida-btn" popovertarget="bienvenida-msg" popovertargetaction="toogle" disabled>
 
             Mostrar
@@ -345,7 +380,7 @@ if ($especie == "Husky Siberiano") {
     </details>
 
   </section>
-  
+
     </main>
     <footer class="footer"></footer>
     <script src="Activos/javascript/Accesos_permanentes.js"></script>
