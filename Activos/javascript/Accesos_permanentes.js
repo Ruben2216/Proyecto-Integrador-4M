@@ -32,7 +32,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
             if (document.getElementById("nombre-usuario")) {
                 document.getElementById("nombre-usuario").innerHTML = "Hola, " + 
                     `<span style='color: green; font-weight: bold;'>${data.nombre}</span>` +
-                    "<br>¡Bienvenido a PetClub! 🐾✨¡Estamos felices de tenerte aquí! 💖";
+                    "<br>¡Bienvenido a PetClub! 🐾✨¡Estamos felices de tenerte aquí! 🐶";
             }
 
             if (boton) {

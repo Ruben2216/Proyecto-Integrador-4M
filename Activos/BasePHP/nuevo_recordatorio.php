@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('America/Mexico_City'); // jalar la zona de aqui y no la del servidor de php
 session_start();
 if (!isset($_SESSION['usuario_id'])) {
     header("Location: ../../Login.php");
@@ -46,7 +47,7 @@ $mascotas = $conn->query($sql_mascotas);
             <input type="text" name="Recor_Descripcion" id="Recor_Descripcion" placeholder="Detalles del recordatorio" required>
 
             <label for="Recor_Fecha">Fecha:</label>
-            <input type="date" name="Recor_Fecha" id="Recor_Fecha" required>
+            <input type="date" name="Recor_Fecha" id="Recor_Fecha" required value="<?php echo date("Y-m-d");?>" min="<?php echo date('Y-m-d'); ?>">
 
             <label for="Recor_Hora">Hora:</label>
             <input type="time" name="Recor_Hora" id="Recor_Hora" required>

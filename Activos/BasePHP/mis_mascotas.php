@@ -129,7 +129,7 @@ $imagenes = [
 <header></header>
 
 <div class="wrapper">
-    <main style="margin-top: 4.5rem;">
+    <main style="marginz-top: 4.5rem;">
         <div class="contenedor-mascotas">
             <h1>Mis Mascotas</h1>
             <a href="registrar_mascota.php" class="btn-registrar">+ Registrar nueva mascota</a> 

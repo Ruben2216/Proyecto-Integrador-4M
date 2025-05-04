@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('America/Mexico_City'); // jalar la zona de aqui y no la del servidor de php
 session_start();
 if (!isset($_SESSION['usuario_id'])) {
     header("Location: ../../Login.php");
@@ -38,7 +39,7 @@ $razas = $conn->query("SELECT * FROM especie");
             </select>
 
             <label for="nacimiento">Fecha de nacimiento:</label>
-            <input type="date" name="nacimiento" id="nacimiento" required>
+            <input type="date" name="nacimiento" id="nacimiento" required min="2000-01-01" max="<?= date("Y-m-d") ?>">
 
             <div class="btn-actualizar">
                 <button type="submit">Guardar Mascota</button>
