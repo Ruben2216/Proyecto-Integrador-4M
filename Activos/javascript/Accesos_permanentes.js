@@ -73,6 +73,14 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
             </ul>
         </nav>
         `;
+
+        // Asegurarse de que el script del buscador se cargue en cada vista
+        if (!document.querySelector('script[src="/Proyecto-Integrador-4M/Activos/javascript/buscador.js"]')) {
+            const scriptBuscador = document.createElement('script');
+            scriptBuscador.src = '/Proyecto-Integrador-4M/Activos/javascript/buscador.js';
+            scriptBuscador.defer = true; // Asegura que el script se cargue después del DOM
+            document.head.appendChild(scriptBuscador);
+        }
     });
 
 // ✅ Mostrar footer solo en páginas permitidas (actividades.php sí está incluida ahora)
