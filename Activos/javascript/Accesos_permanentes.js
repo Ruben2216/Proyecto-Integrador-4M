@@ -19,7 +19,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
         let perfilClass = currentPath.includes("perfil.php") ? activeClass : "";
 
         //incluye actividades.php como parte de "Recordatorios"
-        let recordatoriosClass = currentPath.includes("recordatorios") || currentPath.includes("actividades.php") ? activeClass : "";
+        let recordatoriosClass = currentPath.includes("recordatorios") || currentPath.includes("editar_recordatorio.php") || currentPath.includes("nuevo_recordatorio.php") || currentPath.includes("actividades.php") ? activeClass : "";
 
         if (data.autenticado) {
             perfilBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/perfil.php" ${perfilClass}>Yo (${data.nombre})</a></li></div>`;
