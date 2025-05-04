@@ -150,6 +150,12 @@ main{
   }
   /* Responsive adicional para pantallas menores a 480px */
 @media (max-width: 480px) {
+    img{
+      max-width:329.600px ;
+    }
+    h2{
+      font-size: 1.5rem !important;
+    }
     .consejo {
       padding: 0.5rem;
       gap: 1rem;

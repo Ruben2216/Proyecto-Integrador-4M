@@ -293,6 +293,13 @@ nav.Menu ul div h2 {
         border-radius: 5px;
         width: 80%;
     }
+
+    .conten-input__resultado-item {
+        width: 100vw;
+    }
+    .conten-input__resultados{
+        width: auto !important;
+    }
 }
 
 .Menu a.activo {
