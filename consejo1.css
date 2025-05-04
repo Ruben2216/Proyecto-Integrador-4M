@@ -53,14 +53,18 @@ main{
     margin-bottom: 1rem;
   }
   .consejo__sublista {
-    list-style: none; /* Elimina las viñetas por defecto */
-    padding-left: 0; /* Ajusta el margen izquierdo */
+    list-style: none; 
+    padding-left: 0; 
     margin-left: 1.5rem;
     margin-bottom: 0.5rem;
   }
   .consejo__sublista li::before {
     content: "🐾"; /* Agrega el icono personalizado */
     margin-right: 0.5rem; /* Espaciado entre el icono y el texto */
+  }
+  ol li::marker {
+    font-size: 1.5em; /* Tamaño del marcador */
+    line-height: 1; 
   }
   .consejo__subtitulo {
     font-weight: bold;
@@ -77,6 +81,12 @@ main{
     gap: 1.5rem;
     width: 18rem; /* Ajuste del ancho mínimo del aside */
     min-width: 18rem; /* Asegura que el aside no colapse */
+    
+  }
+  .contenedor-tarjetas{
+    padding-top: 1rem !important;
+    position: sticky; 
+    top: 100px;
   }
 
 

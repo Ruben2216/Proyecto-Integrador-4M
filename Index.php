@@ -295,16 +295,16 @@ if ($especie == "Husky Siberiano") {
 
             <a href="#" class="tarjeta">
                 <div class="tarjeta__imagen">
-                <img src="Activos\Imagenes\consejos\fiebre.jpg" alt="Imagen 3">
+                <img src="Activos/Imagenes/consejos/perro-temblando.jpeg" alt="Perro temblando">
                 </div>
-                <h3 class="tarjeta__titulo">Cuidados básicos de un cachorro recién adoptado</h3>
+                <h3 class="tarjeta__titulo">Mi perro tiembla: Causas más comunes</h3>
             </a>
 
             <a href="#" class="tarjeta">
                 <div class="tarjeta__imagen">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/k2fiCG4xCKPhRLuygpzJlw/1200x675mf.jpg" alt="Imagen 4">
+                <img src="Activos//Imagenes/consejos/perro-noble-mirando-otro-lado-espacio-copia_23-2148366957.avif" alt="Imagen 4">
                 </div>
-                <h3 class="tarjeta__titulo">Qué hacer si tu perro no quiere comer: posibles causas</h3>
+                <h3 class="tarjeta__titulo">Guía definitiva para cuidar las articulaciones de un perro</h3>
             </a>
         </div>
         </section>
