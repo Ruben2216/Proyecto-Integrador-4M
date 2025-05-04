@@ -62,7 +62,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
                 ${mascotasBtn}
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/recordatorios.php" ${recordatoriosClass}>Recordatorios</a></li></div>
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.php#mapa__titulo">Veterinarias</a></li></div>
-                <div class="contenedor-nav"><li><a href="pagina_404.html">Consejos</a></li></div>
+                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.php#consejos">Consejos</a></li></div>
                 ${perfilBtn}
                 ${cerrarBtn}
                 <div class="conten-input">
