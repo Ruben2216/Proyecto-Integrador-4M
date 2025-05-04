@@ -279,7 +279,7 @@ if ($especie == "Husky Siberiano") {
         <h2  class="mapa__titulo">Consejos de cuidados de tu mascota</h2>
 
         <div class="contenedor-tarjetas ">
-            <a href="" class="tarjeta">
+            <a href="consejo1.html" class="tarjeta">
                 <div class="tarjeta__imagen">
                 <img src="Activos\Imagenes\consejos\como-saber-si-mi-cachorro-tiene-fiebre.jpg" alt="Perro enfermo">
                 </div>
