@@ -33,7 +33,7 @@ document.addEventListener('menuCargado', function() {
     contenedorResultados.style.backgroundColor = '#fff';
     contenedorResultados.style.position = 'absolute';
     contenedorResultados.style.zIndex = '1000';
-    contenedorResultados.style.width = '100%';
+    contenedorResultados.style.width = '50rem';
 
     // Insertar el contenedor de resultados en el DOM
     contenedorInput.appendChild(contenedorResultados);
@@ -73,7 +73,7 @@ document.addEventListener('menuCargado', function() {
                 itemResultado.style.cursor = 'pointer';
                 itemResultado.addEventListener('click', function() {
                     resultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    resultado.style.backgroundColor = 'yellow';
+                    resultado.style.backgroundColor = '#efefdb';
                     setTimeout(function() {
                         resultado.style.backgroundColor = '';
                     }, 2000);

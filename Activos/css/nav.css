@@ -129,9 +129,9 @@ nav.Menu ul li a {
 .conten-input__resultados {
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     background-color: #fff;
-    color:black;
+    color: black;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -148,7 +148,7 @@ nav.Menu ul li a {
 }
 
 .conten-input__resultado-item:hover {
-    background-color: #f0f0f0;
+    background-color: #a4ba62;
 }
 
 .Menu {
