@@ -2,6 +2,9 @@ const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 let boton = document.querySelector("#bienvenida-btn");
 
+// Disparar un evento personalizado cuando el menú se haya cargado
+const menuCargadoEvent = new Event('menuCargado');
+
 fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
     .then(res => res.json())
     .then(data => {
@@ -74,16 +77,11 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
         </nav>
         `;
 
-        // Asegurarse de que el script del buscador se cargue en cada vista
-        if (!document.querySelector('script[src="/Proyecto-Integrador-4M/Activos/javascript/buscador.js"]')) {
-            const scriptBuscador = document.createElement('script');
-            scriptBuscador.src = '/Proyecto-Integrador-4M/Activos/javascript/buscador.js';
-            scriptBuscador.defer = true; // Asegura que el script se cargue después del DOM
-            document.head.appendChild(scriptBuscador);
-        }
+        // Disparar el evento personalizado
+        document.dispatchEvent(menuCargadoEvent);
     });
 
-// ✅ Mostrar footer solo en páginas permitidas (actividades.php sí está incluida ahora)
+// Mostrar footer solo en páginas permitidas (actividades.php sí está incluida ahora)
 if (
     !window.location.pathname.includes("mis_mascotas.php") &&
     !window.location.pathname.includes("perfil.php") &&

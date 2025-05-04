@@ -1,9 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
+// Escuchar el evento personalizado 'menuCargado' para inicializar el buscador
+
+document.addEventListener('menuCargado', function() {
+    console.log('Menu cargado correctamente, inicializando buscador.');
+
+    // Verificar si el input y el botón del buscador existen
     var inputBuscador = document.getElementById('buscador');
     var botonBuscar = document.getElementById('botonBuscar');
-    var contenedorResultados = document.createElement('div');
+    var contenedorInput = document.querySelector('.conten-input__hijo');
 
-    // Configuración del contenedor de resultados
+    if (!inputBuscador || !botonBuscar || !contenedorInput) {
+        console.warn('El buscador no está presente en esta página.');
+        return;
+    }
+
+    // Mostrar en consola cuando se hace clic en el input
+    inputBuscador.addEventListener('click', function() {
+        console.log('Se hizo clic en el input del buscador.');
+    });
+
+    // Mostrar en consola cuando se hace clic en el botón de buscar
+    botonBuscar.addEventListener('click', function() {
+        console.log('Se hizo clic en el botón de buscar.');
+    });
+
+    // Crear el contenedor de resultados
+    var contenedorResultados = document.createElement('div');
     contenedorResultados.className = 'conten-input__resultados';
     contenedorResultados.style.display = 'none';
     contenedorResultados.style.overflowY = 'auto';
@@ -14,15 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
     contenedorResultados.style.zIndex = '1000';
     contenedorResultados.style.width = '100%';
 
-    // Insertar el contenedor de resultados después del input
-    var contenedorInput = document.querySelector('.conten-input__hijo');
+    // Insertar el contenedor de resultados en el DOM
     contenedorInput.appendChild(contenedorResultados);
 
+    // Agregar evento al botón de búsqueda
     botonBuscar.addEventListener('click', function() {
         var textoBusqueda = inputBuscador.value.trim().toLowerCase();
         contenedorResultados.innerHTML = '';
 
-        if (textoBusqueda.split(' ').length < 2) {
+        if (textoBusqueda.length < 2) {
             contenedorResultados.style.display = 'none';
             return;
         }
@@ -65,8 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Agregar evento al input de búsqueda
     inputBuscador.addEventListener('input', function() {
-        if (inputBuscador.value.trim().split(' ').length < 2) {
+        if (inputBuscador.value.trim().length < 2) {
             contenedorResultados.style.display = 'none';
         }
     });
