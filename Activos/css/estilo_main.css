@@ -328,106 +328,61 @@ h2{
 .contenedor-tarjetas {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 20px;
     justify-content: center;
-    padding: 3rem 1rem;
+    padding: 20px;
 }
 
 .tarjeta {
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    max-width: 330px;
+    max-width: 300px;
+    height: 360px;
     text-decoration: none;
     color: inherit;
+    position: relative;
+    transition: all 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
-    animation: show 0.5s ease forwards;
+    justify-content: flex-start;
 }
 
-.tarjeta:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
 
-.tarjeta__imagen-wrapper {
-    width: 100%;
+.tarjeta__imagen {
     height: 200px;
     overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.tarjeta__imagen-wrapper img {
+.tarjeta__imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
 }
 
-.tarjeta:hover .tarjeta__imagen-wrapper img {
-    transform: scale(1.05);
-}
-
-.tarjeta__contenido {
-    padding: 1.5rem;
+.tarjeta__titulo {
+    background-color: white;
+    margin-top: -40px;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: -1rem;
+    right: -1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    height: 8rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.tarjeta__contenido h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
-    margin: 0;
-}
-
-.contenedor__consejos{
-    display: flex;
-    flex-direction: column;
-    background: transparent;
-    box-shadow: 0 0 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 330px;
-    color: inherit;
-    animation: show 0.5s ease forwards;
-    border-radius: 15px;
-}
-.contenedor__consejos:hover{
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    right:1.5rem;
-    top:0.8rem;
-
-}
-
-.contenedor__consejos img{
-    width: 100%;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-.contenedor__titulo{
-    background-color: white;
-    position: relative;
-    right: -1.5rem;
-    top:-1rem;
-    transition: all 0.2s ease-in-out;
-    border-radius: 0 0 15px 15px;
-
-}
-.contenedor__titulo:hover{
-    /*volver a la posicion original*/
+.tarjeta:hover .tarjeta__titulo {
+    top: 0;
     right: 0;
-    
-   
+    color:#5e6a3a;
 }
-
 
 @media (min-width: 600px) {
     .contenedor-tarjetas {
@@ -444,10 +399,6 @@ h2{
         width: calc(33.333% - 30px);
     }
 }
-
-
-
-
 
 .popover {
     width: 30rem;

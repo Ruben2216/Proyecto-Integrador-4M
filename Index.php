@@ -277,47 +277,36 @@ if ($especie == "Husky Siberiano") {
         </section>
         <h2  class="mapa__titulo">Consejos de cuidados de tu mascota</h2>
 
-        <div class="contenedor-tarjetas">
-        <div class="contenedor__consejos">
-            <div><img src="/Proyecto-Integrador-4M/Activos/Imagenes/consejos/fiebre.jpg" alt=""></div>
-            <div class="contenedor__titulo">
-                <h3>Lorem ipsumolorum natus doloremque tempora perspiciatis minus molestiae.</h3>
-            </div>
+        <div class="contenedor-tarjetas ">
+  <a href="#" class="tarjeta">
+    <div class="tarjeta__imagen">
+      <img src="Activos\Imagenes\consejos\fiebre.jpg" alt="Imagen 1">
+    </div>
+    <h3 class="tarjeta__titulo">Cómo saber si mi cachorro tiene fiebre: Guía para detectar síntomas y</h3>
+  </a>
 
-        </div>
+  <a href="#" class="tarjeta">
+    <div class="tarjeta__imagen">
+      <img src="Activos\Imagenes\consejos\fiebre.jpg" alt="Imagen 2">
+    </div>
+    <h3 class="tarjeta__titulo">Mi perro tiene una herida en carne viva ¿cómo proceder?</h3>
+  </a>
 
+  <a href="#" class="tarjeta">
+    <div class="tarjeta__imagen">
+      <img src="Activos\Imagenes\consejos\fiebre.jpg" alt="Imagen 3">
+    </div>
+    <h3 class="tarjeta__titulo">Cuidados básicos de un cachorro recién adoptado</h3>
+  </a>
 
-
-    <a href="#como-saber-fiebre" class="tarjeta">
-        <img src="/Proyecto-Integrador-4M/Activos/Imagenes/consejos/fiebre.jpg" alt="Cachorro con termómetro" class="tarjeta__imagen">
-        <div class="tarjeta__contenido">
-            <h3 class="tarjeta__titulo">Cómo saber si mi cachorro tiene fiebre</h3>
-        </div>
-    </a>
-
-    <a href="#herida-carne-viva" class="tarjeta">
-        <img src="https://placehold.co/350x200/cccccc/333333?text=Imagen+2" alt="Veterinario curando herida" class="tarjeta__imagen">
-        <div class="tarjeta__contenido">
-            <h3 class="tarjeta__titulo">Mi perro tiene una herida en carne viva ¿cómo proceder?</h3>
-        </div>
-    </a>
-
-    <a href="#perro-tiembla" class="tarjeta">
-        <img src="https://placehold.co/350x200/cccccc/333333?text=Imagen+3" alt="Perro temblando" class="tarjeta__imagen">
-        <div class="tarjeta__contenido">
-            <h3 class="tarjeta__titulo">Mi perro tiembla: Causas más comunes</h3>
-        </div>
-    </a>
-
-    <a href="#cuidar-articulaciones" class="tarjeta">
-        <img src="https://placehold.co/350x200/cccccc/333333?text=Imagen+4" alt="Perro con articulaciones sanas" class="tarjeta__imagen">
-        <div class="tarjeta__contenido">
-            <h3 class="tarjeta__titulo">Guía definitiva para cuidar las articulaciones de un perro</h3>
-        </div>
-    </a>
-
-
+  <a href="#" class="tarjeta">
+    <div class="tarjeta__imagen">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/k2fiCG4xCKPhRLuygpzJlw/1200x675mf.jpg" alt="Imagen 4">
+    </div>
+    <h3 class="tarjeta__titulo">Qué hacer si tu perro no quiere comer: posibles causas</h3>
+  </a>
 </div>
+
 
         <button id="bienvenida-btn" popovertarget="bienvenida-msg" popovertargetaction="toogle" disabled>
 
