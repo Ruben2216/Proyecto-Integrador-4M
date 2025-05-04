@@ -275,38 +275,39 @@ if ($especie == "Husky Siberiano") {
 
             
         </section>
+        <section>
         <h2  class="mapa__titulo">Consejos de cuidados de tu mascota</h2>
 
         <div class="contenedor-tarjetas ">
-  <a href="#" class="tarjeta">
-    <div class="tarjeta__imagen">
-      <img src="Activos\Imagenes\consejos\fiebre.jpg" alt="Imagen 1">
-    </div>
-    <h3 class="tarjeta__titulo">Cómo saber si mi cachorro tiene fiebre: Guía para detectar síntomas y</h3>
-  </a>
+            <a href="" class="tarjeta">
+                <div class="tarjeta__imagen">
+                <img src="Activos\Imagenes\consejos\como-saber-si-mi-cachorro-tiene-fiebre.jpg" alt="Perro enfermo">
+                </div>
+                <h3 class="tarjeta__titulo">Cómo saber si mi cachorro tiene fiebre: Guía para detectar síntomas y</h3>
+            </a>
 
-  <a href="#" class="tarjeta">
-    <div class="tarjeta__imagen">
-      <img src="Activos\Imagenes\consejos\fiebre.jpg" alt="Imagen 2">
-    </div>
-    <h3 class="tarjeta__titulo">Mi perro tiene una herida en carne viva ¿cómo proceder?</h3>
-  </a>
+            <a href="consejo2.html" class="tarjeta">
+                <div class="tarjeta__imagen">
+                <img src="Activos/Imagenes/consejos/Mi-perro-tiene-una-herida-en-carne-viva-que-hago.jpg" alt="Imagen 2">
+                </div>
+                <h3 class="tarjeta__titulo">Mi perro tiene una herida en carne viva ¿cómo proceder?</h3>
+            </a>
 
-  <a href="#" class="tarjeta">
-    <div class="tarjeta__imagen">
-      <img src="Activos\Imagenes\consejos\fiebre.jpg" alt="Imagen 3">
-    </div>
-    <h3 class="tarjeta__titulo">Cuidados básicos de un cachorro recién adoptado</h3>
-  </a>
+            <a href="#" class="tarjeta">
+                <div class="tarjeta__imagen">
+                <img src="Activos\Imagenes\consejos\fiebre.jpg" alt="Imagen 3">
+                </div>
+                <h3 class="tarjeta__titulo">Cuidados básicos de un cachorro recién adoptado</h3>
+            </a>
 
-  <a href="#" class="tarjeta">
-    <div class="tarjeta__imagen">
-      <img src="https://is1-ssl.mzstatic.com/image/thumb/k2fiCG4xCKPhRLuygpzJlw/1200x675mf.jpg" alt="Imagen 4">
-    </div>
-    <h3 class="tarjeta__titulo">Qué hacer si tu perro no quiere comer: posibles causas</h3>
-  </a>
-</div>
-
+            <a href="#" class="tarjeta">
+                <div class="tarjeta__imagen">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/k2fiCG4xCKPhRLuygpzJlw/1200x675mf.jpg" alt="Imagen 4">
+                </div>
+                <h3 class="tarjeta__titulo">Qué hacer si tu perro no quiere comer: posibles causas</h3>
+            </a>
+        </div>
+        </section>
 
         <button id="bienvenida-btn" popovertarget="bienvenida-msg" popovertargetaction="toogle" disabled>
 

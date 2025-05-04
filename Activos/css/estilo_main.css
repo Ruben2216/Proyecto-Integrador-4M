@@ -376,6 +376,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    color:#333333;
 }
 
 .tarjeta:hover .tarjeta__titulo {
@@ -384,17 +385,19 @@ h2{
     color:#5e6a3a;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 360px) {
     .contenedor-tarjetas {
         justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .tarjeta {
-        width: calc(50% - 30px);
+        height: auto;
+        color:red !important;
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 900px) { /*adaptacion a tables (espero)*/
     .tarjeta {
         width: calc(33.333% - 30px);
     }

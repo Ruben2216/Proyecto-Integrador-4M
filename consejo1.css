@@ -1,0 +1,129 @@
+/* RESET BÁSICO */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* BLOQUE: consejo */
+  .consejo {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que los elementos colapsen */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  .consejo__principal {
+    flex: 2;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .consejo__titulo {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  .consejo__parrafo {
+    margin-bottom: 1rem;
+  }
+  .consejo__lista {
+    list-style: decimal inside;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .consejo__sublista {
+    list-style: disc inside;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .consejo__subtitulo {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* BLOQUE: tarjetas */
+  .aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 18rem; /* Ajuste del ancho mínimo del aside */
+    min-width: 18rem; /* Asegura que el aside no colapse */
+  }
+
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .consejo {
+      flex-direction: column;
+    }
+    .aside {
+      flex-direction: row;
+      overflow-x: auto;
+    }
+    .tarjeta {
+      min-width: 200px;
+    }
+  }
+  /* Responsive adicional para pantallas menores a 480px */
+@media (max-width: 480px) {
+    .consejo {
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+  
+    .consejo__principal {
+      padding: 1rem;
+    }
+  
+    .consejo__titulo {
+      font-size: 1.5rem;
+    }
+  
+    .consejo__subtitulo {
+      font-size: 1rem;
+    }
+  
+    .aside {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .tarjeta {
+      min-width: 100%;
+    }
+  
+    .tarjeta__titulo {
+      font-size: 0.95rem;
+    }
+  
+    .tarjeta__contenido {
+      padding: 0.8rem;
+    }
+  }
+  
+  .tarjeta{
+    width: 18rem !important;
+    
+  }
+  .tarjeta__titulo{
+    font-size: 1rem!important;
+  }
+  .tarjeta__imagen{
+    object-fit: cover!important;
+  }
