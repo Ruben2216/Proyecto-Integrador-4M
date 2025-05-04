@@ -278,6 +278,15 @@ if ($especie == "Husky Siberiano") {
         <h2  class="mapa__titulo">Consejos de cuidados de tu mascota</h2>
 
         <div class="contenedor-tarjetas">
+        <div class="contenedor__consejos">
+            <div><img src="/Proyecto-Integrador-4M/Activos/Imagenes/consejos/fiebre.jpg" alt=""></div>
+            <div class="contenedor__titulo">
+                <h3>Lorem ipsumolorum natus doloremque tempora perspiciatis minus molestiae.</h3>
+            </div>
+
+        </div>
+
+
 
     <a href="#como-saber-fiebre" class="tarjeta">
         <img src="/Proyecto-Integrador-4M/Activos/Imagenes/consejos/fiebre.jpg" alt="Cachorro con termómetro" class="tarjeta__imagen">
@@ -390,4 +399,3 @@ if ($especie == "Husky Siberiano") {
 
 </body>
 </html>
-

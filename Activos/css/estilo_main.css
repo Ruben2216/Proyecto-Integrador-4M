@@ -387,6 +387,48 @@ h2{
     margin: 0;
 }
 
+.contenedor__consejos{
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 330px;
+    color: inherit;
+    animation: show 0.5s ease forwards;
+    border-radius: 15px;
+}
+.contenedor__consejos:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    right:1.5rem;
+    top:0.8rem;
+
+}
+
+.contenedor__consejos img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.contenedor__titulo{
+    background-color: white;
+    position: relative;
+    right: -1.5rem;
+    top:-1rem;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0 0 15px 15px;
+
+}
+.contenedor__titulo:hover{
+    /*volver a la posicion original*/
+    right: 0;
+    
+   
+}
+
+
 @media (min-width: 600px) {
     .contenedor-tarjetas {
         justify-content: space-around;
@@ -402,6 +444,9 @@ h2{
         width: calc(33.333% - 30px);
     }
 }
+
+
+
 
 
 .popover {
