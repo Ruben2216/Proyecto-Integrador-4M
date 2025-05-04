@@ -275,7 +275,7 @@ if ($especie == "Husky Siberiano") {
 
             
         </section>
-        <section>
+        <section class="consejos">
         <h2  class="mapa__titulo">Consejos de cuidados de tu mascota</h2>
 
         <div class="contenedor-tarjetas ">
