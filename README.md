@@ -67,3 +67,9 @@ Cambios en la tabla de recordatorios para añadir el estado del la actividad |pe
 ALTER TABLE recordatorio
 ADD COLUMN estado ENUM('pendiente', 'completado') DEFAULT 'pendiente',
 ADD COLUMN visible BOOLEAN DEFAULT 1;
+
+--------- 04/05/2025------------
+AGREGAR NUEVO VALOR EN ESPECIE
+Insert into especie (Esp_Nombre) VALUES ('No se la raza');
+
+-----------------------------------
