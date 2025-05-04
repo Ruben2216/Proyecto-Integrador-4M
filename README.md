@@ -63,3 +63,7 @@ ADD COLUMN Recor_Hora TIME NOT NULL AFTER Recor_Fecha;
 ALTER TABLE recordatorio
 MODIFY Recor_Fecha DATE;
 
+Cambios en la tabla de recordatorios para añadir el estado del la actividad |pendiente, activa, no completado, completado| (este solo guarda pendiente por default y completado cuando se le da al boton de marcar como completado)
+ALTER TABLE recordatorio
+ADD COLUMN estado ENUM('pendiente', 'completado') DEFAULT 'pendiente',
+ADD COLUMN visible BOOLEAN DEFAULT 1;

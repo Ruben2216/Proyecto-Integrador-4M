@@ -17,7 +17,9 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
         let inicioClass = currentPath.includes("Index.php") ? activeClass : "";
         let mascotasClass = currentPath.includes("mis_mascotas.php") || currentPath.includes("registrar_mascota.php") ? activeClass : "";
         let perfilClass = currentPath.includes("perfil.php") ? activeClass : "";
-        let recordatoriosClass = currentPath.includes("recordatorios.php") || currentPath.includes("nuevo_recordatorio.php") || currentPath.includes("editar_recordatorio.php") ? activeClass : "";
+
+        //incluye actividades.php como parte de "Recordatorios"
+        let recordatoriosClass = currentPath.includes("recordatorios") || currentPath.includes("actividades.php") ? activeClass : "";
 
         if (data.autenticado) {
             perfilBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/perfil.php" ${perfilClass}>Yo (${data.nombre})</a></li></div>`;
@@ -33,11 +35,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
             if (boton) {
                 boton.disabled = false;
                 boton.click(); // abre
-
-                setTimeout(() => {
-                    boton.click(); // cierra
-                }, 2000);
-            
+                setTimeout(() => boton.click(), 2000); // cierra
             }
         } else {
             perfilBtn = `<div class="contenedor-nav contenedor-nav__login"><li><a href="/Proyecto-Integrador-4M/Login.php">Login</a></li></div>`;
@@ -77,16 +75,14 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
         `;
     });
 
-// Mostrar footer solo si NO estamos en mis_mascotas.php, perfil.php o registrar_mascota.php
+// ✅ Mostrar footer solo en páginas permitidas (actividades.php sí está incluida ahora)
 if (
     !window.location.pathname.includes("mis_mascotas.php") &&
     !window.location.pathname.includes("perfil.php") &&
-    !window.location.pathname.includes("registrar_mascota.php") &&
     !window.location.pathname.includes("recordatorios.php") &&
-    !window.location.pathname.includes("nuevo_recordatorio.php") &&
-    !window.location.pathname.includes("editar_recordatorio.php")
+    !window.location.pathname.includes("actividades.php") &&
+    !window.location.pathname.includes("registrar_mascota.php")
 ) {
-
     footer.innerHTML = `
     <div class="Pie_pagina">
         <div class="pie_1">

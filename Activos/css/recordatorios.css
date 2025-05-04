@@ -120,7 +120,7 @@ h1 {
     padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 0px;
     transition: background-color 0.3s;
     font-weight: bold;
     font-size: 14px;
@@ -234,6 +234,24 @@ a.volver-link {
 a.volver-link:hover {
     color: #3a4422;
     text-decoration: underline;
+}
+
+.btn-completar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-completar:hover {
+    background-color: #1e7e34;
+    transform: scale(1.05);
 }
 
 /* Responsive: pantallas pequeñas */
