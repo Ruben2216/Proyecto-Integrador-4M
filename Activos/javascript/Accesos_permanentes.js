@@ -14,15 +14,24 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
 
         // Detectar ruta actual
         let currentPath = window.location.pathname;
+        let hash = window.location.hash;
 
         let activeClass = "style='text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 3px;'";
 
         let inicioClass = currentPath.includes("Index.php") ? activeClass : "";
         let mascotasClass = currentPath.includes("mis_mascotas.php") || currentPath.includes("registrar_mascota.php") ? activeClass : "";
         let perfilClass = currentPath.includes("perfil.php") ? activeClass : "";
-
-        //incluye actividades.php como parte de "Recordatorios"
         let recordatoriosClass = currentPath.includes("recordatorios") || currentPath.includes("editar_recordatorio.php") || currentPath.includes("nuevo_recordatorio.php") || currentPath.includes("actividades.php") ? activeClass : "";
+
+        // detectar los consejos en la nav
+        let consejoClass = (
+            currentPath.includes("consejos") ||
+            currentPath.includes("consejo1.html") ||
+            currentPath.includes("consejo2.html") ||
+            currentPath.includes("consejo3.html") ||
+            currentPath.includes("consejo4.html") ||
+            (currentPath.includes("Index.php") && hash === "#consejos")
+        ) ? activeClass : "";
 
         if (data.autenticado) {
             perfilBtn = `<div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/perfil.php" ${perfilClass}>Yo (${data.nombre})</a></li></div>`;
@@ -62,7 +71,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
                 ${mascotasBtn}
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Activos/BasePHP/recordatorios.php" ${recordatoriosClass}>Recordatorios</a></li></div>
                 <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.php#mapa__titulo">Veterinarias</a></li></div>
-                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.php#consejos">Consejos</a></li></div>
+                <div class="contenedor-nav"><li><a href="/Proyecto-Integrador-4M/Index.php#consejos" ${consejoClass}>Consejos</a></li></div>
                 ${perfilBtn}
                 ${cerrarBtn}
                 <div class="conten-input">
@@ -81,7 +90,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
         document.dispatchEvent(menuCargadoEvent);
     });
 
-// Mostrar footer solo en páginas permitidas (actividades.php sí está incluida ahora)
+// Mostrar footer solo en páginas permitidas
 if (
     !window.location.pathname.includes("mis_mascotas.php") &&
     !window.location.pathname.includes("perfil.php") &&
