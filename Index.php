@@ -300,7 +300,7 @@ if ($especie == "Husky Siberiano") {
                 <h3 class="tarjeta__titulo">Mi perro tiembla: Causas más comunes</h3>
             </a>
 
-            <a href="#" class="tarjeta">
+            <a href="consejo4.html" class="tarjeta">
                 <div class="tarjeta__imagen">
                 <img src="Activos//Imagenes/consejos/perro-noble-mirando-otro-lado-espacio-copia_23-2148366957.avif" alt="Imagen 4">
                 </div>
