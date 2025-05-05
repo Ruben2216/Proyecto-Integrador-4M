@@ -92,5 +92,7 @@ $usuario = $resultado->fetch_assoc();
 
     <!-- JS para cargar la nav (sin footer) -->
     <script src="../javascript/Accesos_permanentes.js"></script>
+    <script src="../javascript/procesar_recordatorios.js"></script>
+
 </body>
 </html>

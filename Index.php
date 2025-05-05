@@ -387,6 +387,7 @@ if ($especie == "Husky Siberiano") {
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="Activos/javascript/mapa_veterinarias.js"></script>
     <script src="/Proyecto-Integrador-4M/Activos/javascript/buscador.js" defer></script> <!-- El defer es para ejecutar en segundo plano -->
+    <script src="Activos\javascript\procesar_recordatorios.js"></script>
 
 </body>
 </html>
