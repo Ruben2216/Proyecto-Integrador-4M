@@ -60,7 +60,7 @@ while ($fila = $resultado->fetch_assoc()) {
                         for ($i = 0; $i < $diaSemana; $i++) echo "<td></td>";
 
                         for ($dia = 1; $dia <= $diasDeMes; $dia++) {
-                            echo "<td onclick=\"window.location.href='nuevo_recordatorio.php'\"";;
+                            echo "<td onclick=\"window.location.href='nuevo_recordatorio.php?anio=$anio&mes=$m&dia=$dia'\"";
                             if (isset($recordatorios[$m][$dia])) {
                                 echo ' class="con-recordatorio" title="' . implode(', ', $recordatorios[$m][$dia]) . '"';
                             }

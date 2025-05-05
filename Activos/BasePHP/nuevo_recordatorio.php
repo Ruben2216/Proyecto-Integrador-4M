@@ -31,6 +31,8 @@ $mascotas = $conn->query($sql_mascotas);
     <div class="contenedor-recordatorios" style="margin-top: 2rem;">
         <h1>Agregar Recordatorio</h1>
 
+        <div class="btn-actualizar"><a href="recordatorios.php"><button >Regresar a recordatorios</button></a></div>
+            
         <form action="guardar_recordatorio.php" method="POST" class="formulario-recordatorio">
             <label for="Recor_Mascota">Mascota:</label>
             <select name="Recor_Mascota" id="Recor_Mascota" required>
@@ -45,9 +47,24 @@ $mascotas = $conn->query($sql_mascotas);
 
             <label for="Recor_Descripcion">Descripción:</label>
             <input type="text" name="Recor_Descripcion" id="Recor_Descripcion" placeholder="Detalles del recordatorio" required>
+            
+            <?php
+            // Si hay día/mes/año en la URL, usamos esa fecha
+            if (isset($_GET['anio'], $_GET['mes'], $_GET['dia'])) {
+                $anio = (int)$_GET['anio'];
+                $mes  = (int)$_GET['mes'];
+                $dia  = (int)$_GET['dia'];
 
+                // Aseguramos formato YYYY-MM-DD con ceros donde sea necesario
+                $fecha_seleccionada = sprintf("%04d-%02d-%02d", $anio, $mes, $dia);
+            } else {
+                // Si no hay fecha en la URL, usamos la fecha actual
+                $fecha_seleccionada = date("Y-m-d");
+            }
+            ?>
             <label for="Recor_Fecha">Fecha:</label>
             <input type="date" name="Recor_Fecha" id="Recor_Fecha" required value="<?php echo date("Y-m-d");?>" min="<?php echo date('Y-m-d'); ?>">
+            <input type="date" name="Recor_Fecha" id="Recor_Fecha" required value="<?php echo $fecha_seleccionada; ?>"min="<?php echo date('Y-m-d'); ?>">
 
             <label for="Recor_Hora">Hora:</label>
             <input type="time" name="Recor_Hora" id="Recor_Hora" required>
@@ -61,4 +78,5 @@ $mascotas = $conn->query($sql_mascotas);
     <!-- Script que carga el header dinámico -->
     <script src="../javascript/Accesos_permanentes.js"></script>
 </body>
+</html>
 </html>
