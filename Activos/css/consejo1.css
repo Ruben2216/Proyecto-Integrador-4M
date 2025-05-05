@@ -32,6 +32,10 @@ main{
     margin: 2rem auto;
     padding: 1rem;
   }
+  .consejo__perro-temblando{
+    width: 90%;
+    /*alinenar al centro*/
+  }
 
   .consejo__principal {
     flex: 2;

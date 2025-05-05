@@ -293,7 +293,7 @@ if ($especie == "Husky Siberiano") {
                 <h3 class="tarjeta__titulo">Mi perro tiene una herida en carne viva ¿cómo proceder?</h3>
             </a>
 
-            <a href="#" class="tarjeta">
+            <a href="consejo3.html" class="tarjeta">
                 <div class="tarjeta__imagen">
                 <img src="Activos/Imagenes/consejos/perro-temblando.jpeg" alt="Perro temblando">
                 </div>
