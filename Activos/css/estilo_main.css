@@ -221,7 +221,7 @@ h2{
     text-align: center;
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    background: rgba(0, 0, 0, 0.984); /* Fondo negro semitransparente */
     color: #f1f1f1;
     width: 100%;
     transition: 0.5s ease;
