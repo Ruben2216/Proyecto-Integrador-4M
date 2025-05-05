@@ -29,6 +29,9 @@ $razas = $conn->query("SELECT * FROM especie");
         <form action="guardar_mascota.php" method="POST" class="formulario-mascota">
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" id="nombre" required>
+            <!-- Inicio Validación Nombre -->
+            <span id="error-nombre" style="color: red; font-size: 0.9em; display: none;">Los numeros no estan permitidos (intentelo de nuevo).</span>
+            <!-- Fin Validación Nombre -->
 
             <label for="raza">Raza:</label>
             <select name="raza" id="raza" required>
@@ -52,5 +55,22 @@ $razas = $conn->query("SELECT * FROM especie");
 
     <!-- Script que carga nav/footer -->
     <script src="../javascript/Accesos_permanentes.js"></script>
+
+    <!-- Inicio Script Validación Nombre -->
+    <script>
+    document.querySelector('.formulario-mascota').addEventListener('submit', function(event) {
+        const nombreInput = document.getElementById('nombre');
+        const errorNombre = document.getElementById('error-nombre');
+        const contieneNumeros = /\d/.test(nombreInput.value);
+
+        if (contieneNumeros) {
+            errorNombre.style.display = 'block';
+            event.preventDefault(); // Evita que se envíe el formulario
+        } else {
+            errorNombre.style.display = 'none';
+        }
+    });
+    </script>
+    <!-- Fin Script Validación Nombre -->
 </body>
 </html>
