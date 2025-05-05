@@ -34,6 +34,7 @@ body {
     text-align: center;
     padding: 40px 20px;
     animation: fadeInUpBody 0.8s ease-out;
+    margin-top: 4.4rem;
 }
 
 h1 {
