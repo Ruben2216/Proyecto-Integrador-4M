@@ -73,36 +73,57 @@ try {
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
         }
         .header {
             text-align: center;
-            margin-bottom: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
         }
         .content {
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #333;
+        }
+        .content p {
+            color: #555;
+            margin: 10px 0;
         }
         .footer {
             margin-top: 20px;
             text-align: center;
             font-size: 0.9em;
-            color: #555;
+            color: #777;
+            padding: 10px 0;
+            background-color: #f4f4f9;
+        }
+        .footer p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
     <div class='header'>
-        <h1>Recordatorio de <strong>PetClub</strong></h1>
+        <h1>🐾 Recordatorio de <strong>PetClub</strong> 🐾</h1>
     </div>
     <div class='content'>
-        <p>Hola <strong>$nombreUsuario</strong>,</p>
+        <h2>Hola <strong>$nombreUsuario</strong>,</h2>
         <p>Este es un recordatorio para tu mascota <strong>$mascota</strong>:</p>
         <p><strong>Título:</strong> $titulo</p>
         <p><strong>Descripción:</strong> $descripcion</p>
         <p><strong>Fecha:</strong> $fecha</p>
         <p><strong>Hora:</strong> $hora</p>
-        <p>¡Esperamos que este recordatorio sea útil para ti y tu mascota!</p>
+        <p style='margin-top: 20px;'>¡Esperamos que este recordatorio sea útil para ti y tu mascota! 🐶🐱</p>
     </div>
     <div class='footer'>
         <p>Este correo fue enviado automáticamente, por favor no respondas a este mensaje.</p>
