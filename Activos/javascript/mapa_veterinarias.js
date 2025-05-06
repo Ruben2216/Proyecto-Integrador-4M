@@ -1,7 +1,7 @@
 // Lista de veterinarias: agrega aquí con los campos, A FUTURO ESTO IRA EN LA BASE DE DATOS, ES PARA PRUEBAS DE FUNCIONALIDAD
 const veterinarias = [
     { nombre: "Clínica veterinaria Blue Vet", lat: 16.767979077333926, lon: -93.18430823771625, URL: "https://maps.app.goo.gl/cVaVwdtt9NhVQvqKA", telefono: "9611234567", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
-    { nombre: "Bonds and Care", lat: 16.76228557023935, lon: -93.17444103253929, URL: "https://maps.app.goo.gl/JxS9BfpfYJ8Za7Hm9", telefono: "9612345678", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
+    { nombre: "Bonds and Care", lat: 16.761752414617217,  lon: -93.17528830095668, URL: "https://maps.app.goo.gl/JxS9BfpfYJ8Za7Hm9", telefono: "9612345678", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
     { nombre: "Hospital Veterinario Pet´s", lat: 16.769100942623158, lon: -93.17603717638282, URL: "https://maps.app.goo.gl/rzHcu4TjN2PaWdwm6", telefono: "9613456789", horarioAbierto: "10:00 am", horarioCerrado: "09:00 pm" },
     { nombre: "Clínica Veterinaria Pet Help", lat: 16.771372679150463, lon: -93.18086874706154, URL: "https://maps.app.goo.gl/unQyNCkCv8kff8hL7", telefono: "9614567890", horarioAbierto: "07:00 am", horarioCerrado: "05:00 pm" },
     { nombre: "Can Bull Clínica Veterinaria", lat: 16.75412, lon: -93.17806, URL: "https://maps.app.goo.gl/fjGwzzzFd624YQhS8", telefono: "9615678901", horarioAbierto: "10:00 am", horarioCerrado: "08:00 pm" },
