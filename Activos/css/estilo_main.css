@@ -187,6 +187,7 @@ h2{
     transform: scale(0.9);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .galeria__item.active {
@@ -229,6 +230,7 @@ h2{
     font-size: 20px;
     padding: 1rem 0;
     font-weight: bold;
+    user-select: none;
 }
 /* .galeria__contenedor:hover .galeria__name-pet{
     opacity: 1;
