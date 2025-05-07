@@ -5,6 +5,7 @@ if (!isset($_SESSION['usuario_id'])) {
     exit();
 }
 
+date_default_timezone_set('America/Mexico_City');
 include 'conexion.php';
 $usuario_id = $_SESSION['usuario_id'];
 $hoy = date('Y-m-d');
@@ -78,7 +79,8 @@ $imagenes = [
                     $raza = $row['Esp_Nombre'];
                     $imagen = isset($imagenes[$raza]) ? $imagenes[$raza] : "/Proyecto-Integrador-4M/Activos/Imagenes/iconos_mascotas/dog.png";
                     $estado = $row['estado'];
-                    $fecha = $row['Recor_Fecha'];
+                    $fecha_raw = $row['Recor_Fecha'];
+                    $fecha = date('Y-m-d', strtotime($fecha_raw)); // Asegura formato correcto
 
                     if ($estado !== 'completado') {
                         if ($fecha === $hoy) {
@@ -130,6 +132,5 @@ $imagenes = [
 <footer></footer>
 <script src="../javascript/Accesos_permanentes.js"></script>
 <script src="../javascript/procesar_recordatorios.js"></script>
-
 </body>
 </html>
