@@ -7,7 +7,8 @@ if (!isset($_SESSION['usuario_id'])) {
 
 include 'conexion.php';
 $usuario_id = $_SESSION['usuario_id'];
-$hoy = date('Y-m-d');
+date_default_timezone_set('America/Mexico_City');
+$ahora = new DateTime();
 
 $sql = "SELECT r.*, m.Masc_Nombre, e.Esp_Nombre 
         FROM recordatorio r 
@@ -26,15 +27,15 @@ $estados = [
 ];
 
 while($row = $resultado->fetch_assoc()) {
-    $fecha = $row['Recor_Fecha'];
+    $fechaHora = DateTime::createFromFormat('Y-m-d H:i:s', $row['Recor_Fecha'] . ' ' . $row['Recor_Hora']);
     $estado_actual = $row['estado'];
 
     if ($estado_actual === 'completado') {
         $estados['completado'][] = $row;
-    } elseif ($fecha === $hoy) {
-        $estados['activo'][] = $row;
-    } elseif ($fecha < $hoy) {
+    } elseif ($fechaHora < $ahora) {
         $estados['no completado'][] = $row;
+    } elseif ($fechaHora->format('Y-m-d') === $ahora->format('Y-m-d')) {
+        $estados['activo'][] = $row;
     } else {
         $estados['pendiente'][] = $row;
     }
