@@ -64,7 +64,6 @@ $mascotas = $conn->query($sql_mascotas);
             ?>
             <label for="Recor_Fecha">Fecha:</label>
             <input type="date" name="Recor_Fecha" id="Recor_Fecha" required value="<?php echo date("Y-m-d");?>" min="<?php echo date('Y-m-d'); ?>">
-            <input type="date" name="Recor_Fecha" id="Recor_Fecha" required value="<?php echo $fecha_seleccionada; ?>"min="<?php echo date('Y-m-d'); ?>">
 
             <label for="Recor_Hora">Hora:</label>
             <input type="time" name="Recor_Hora" id="Recor_Hora" required>

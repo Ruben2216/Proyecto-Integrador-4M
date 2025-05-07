@@ -48,9 +48,8 @@ while($row = $resultado->fetch_assoc()) {
     <title>Resumen de Actividades</title>
     <link rel="stylesheet" href="../css/recordatorios.css">
     <link rel="stylesheet" href="../css/nav.css">
-    <link rel="icon" href="/Proyecto-Integrador-4M/Activos/Imagenes/icono_web.png">
     <link rel="stylesheet" href="../css/actividades.css">
-
+    <link rel="icon" href="/Proyecto-Integrador-4M/Activos/Imagenes/icono_web.png">
 </head>
 <body>
 <header></header>
@@ -78,16 +77,18 @@ while($row = $resultado->fetch_assoc()) {
                 </h3>
                 <ul>
                     <?php foreach ($lista as $item): ?>
-                        <li><strong><?= htmlspecialchars($item['Recor_Titulo']) ?></strong> — <?= htmlspecialchars($item['Masc_Nombre']) ?> — <?= htmlspecialchars($item['Recor_Fecha']) ?></li>
+                        <li>
+                            <strong><?= htmlspecialchars($item['Recor_Titulo']) ?></strong> —
+                            <?= htmlspecialchars($item['Masc_Nombre']) ?> —
+                            <?= date("d/m/Y", strtotime($item['Recor_Fecha'])) ?>
+                        </li>
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
 </div>
-<footer></footer>
 <script src="../javascript/Accesos_permanentes.js"></script>
 <script src="../javascript/procesar_recordatorios.js"></script>
-
 </body>
 </html>

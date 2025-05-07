@@ -290,3 +290,47 @@ a.volver-link:hover {
         font-size: 24px;
     }
 }
+
+/* Estilos solo para ver_recordatorios_dia.php */
+body.vista-ver-dia .recordatorios-lista {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+body.vista-ver-dia .recordatorio-card {
+    margin-bottom: 20px;
+}
+
+/* Opcional: ajusta el espaciado superior del contenedor */
+body.vista-ver-dia .contenedor-recordatorios {
+    margin-top: 3rem;
+}
+
+body.vista-ver-dia .acciones-recordatorio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; /* Espacio reducido entre botones */
+}
+
+.estado-completado {
+    color: green;
+    font-weight: bold;
+}
+
+.estado-activo {
+    color: blue;
+    font-weight: bold;
+}
+
+.estado-no {
+    color: red;
+    font-weight: bold;
+}
+
+.estado-pendiente {
+    color: gray;
+    font-weight: bold;
+}
