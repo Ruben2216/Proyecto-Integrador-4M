@@ -103,6 +103,56 @@ if (isset($_GET['redirect_to'])) {
             </div>
         </div>
     </div>
+
+    <script> //ECHO POR FABI
+    document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form[action="Activos/BasePHP/guardar_usuario.php"]');
+    const nombreInput = document.getElementById('nombre');
+    const apellidoInput = document.getElementById('apellido');
+
+    // Crear y añadir el mensaje de error debajo de los campos 
+    function crearSpanError(input, id) {
+        if (!document.getElementById(id)) {
+            const span = document.createElement('span');
+            span.id = id;
+            span.style.color = 'red';
+            span.style.fontSize = '14px';
+            input.insertAdjacentElement('afterend', span);
+        }
+    }
+
+        crearSpanError(nombreInput, 'error-nombre');
+        crearSpanError(apellidoInput, 'error-apellido');
+
+        const errorNombre = document.getElementById('error-nombre');
+        const errorApellido = document.getElementById('error-apellido');
+
+        form.addEventListener('submit', function (e) {
+            let valid = true;
+            const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+
+            if (!regex.test(nombreInput.value.trim())) {
+                errorNombre.textContent = "Datos invalidos (Intentelo de nuevo)";
+                valid = false;
+            } else {
+                errorNombre.textContent = "";
+            }
+
+            if (!regex.test(apellidoInput.value.trim())) {
+                errorApellido.textContent = "Datos Invalidos (Intentelo de nuevo).";
+                valid = false;
+            } else {
+                errorApellido.textContent = "";
+            }
+
+            if (!valid) {
+                e.preventDefault(); // Evita que se envíe el formulario si hay errores
+            }
+        });
+    });
+    
+</script>
+
     <script src="Activos/javascript/transiciones.js"></script>
 </body>
 </html>
