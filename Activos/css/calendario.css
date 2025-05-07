@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #f5f5f5;
+    margin-top: 2.5rem;
 }
 
 /* Botones */
@@ -26,6 +27,7 @@ button:hover {
 .calendarios {
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 2rem;
 }
 
 /* Estilos para cada calendario individual */
@@ -34,6 +36,7 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
+    margin-top: 2rem;
 }
 
 /* Grid para calendario anual (4 columnas x 3 filas) */
