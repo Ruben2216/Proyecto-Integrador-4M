@@ -147,7 +147,7 @@ $imagenes = [
                             <div class="info-mascota">
                                 <h2><?= htmlspecialchars($fila['Masc_Nombre']) ?></h2>
                                 <p><strong>Raza:</strong> <?= htmlspecialchars($raza) ?></p>
-                                <p><strong>Nacimiento:</strong> <?= htmlspecialchars($fila['Masc_Nacimiento']) ?></p>
+                                <p><strong>Nacimiento:</strong> <?= date("d/m/Y", strtotime($fila['Masc_Nacimiento'])) ?></p>
                                 <form method="POST" action="eliminar_mascota.php" onsubmit="return confirm('¿Estás seguro de eliminar esta mascota?');">
                                     <input type="hidden" name="mascota_id" value="<?= $fila['Masc_Id'] ?>">
                                     <button type="submit" class="btn-eliminar">Eliminar</button>

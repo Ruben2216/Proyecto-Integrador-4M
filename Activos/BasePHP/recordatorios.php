@@ -105,7 +105,7 @@ $imagenes = [
                         <h2><?= htmlspecialchars($row['Recor_Titulo']) ?></h2>
                         <p><strong>Mascota:</strong> <?= htmlspecialchars($row['Masc_Nombre']) ?></p>
                         <p><strong>Descripción:</strong> <?= htmlspecialchars($row['Recor_Descripcion']) ?></p>
-                        <p><strong>Fecha:</strong> <?= htmlspecialchars($fecha) ?></p>
+                        <p><strong>Fecha:</strong> <?= date("d/m/Y", strtotime($fecha)) ?></p>
                         <p><strong>Hora:</strong> <?= date('g:i A', strtotime($row['Recor_Hora'])) ?></p>
                         <p><strong>Estado:</strong> <span class="<?= $clase_estado ?>"><?= $estado_texto ?></span></p>
                         <div class="acciones-recordatorio">
