@@ -122,7 +122,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
             <p>Teléfono: 9611234567<br></p>
             <p>Correo: contacto@mascotasfelices.com</p>
         </div>
-        <p class="Texto_centrado">© 2025 Mascotas Felices. Todos los derechos reservados.</p>
+        <p class="Texto_centrado">© 2025 PetClub. Todos los derechos reservados.</p>
     </div>
     `;
 }
