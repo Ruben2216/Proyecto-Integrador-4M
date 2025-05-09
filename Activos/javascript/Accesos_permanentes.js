@@ -90,14 +90,7 @@ fetch('/Proyecto-Integrador-4M/Activos/BasePHP/estado_sesion.php')
         document.dispatchEvent(menuCargadoEvent);
     });
 
-// Mostrar footer solo en páginas permitidas
-if (
-    !window.location.pathname.includes("mis_mascotas.php") &&
-    !window.location.pathname.includes("perfil.php") &&
-    !window.location.pathname.includes("recordatorios.php") &&
-    !window.location.pathname.includes("actividades.php") &&
-    !window.location.pathname.includes("registrar_mascota.php")
-) {
+    {
     footer.innerHTML = `
     <div class="Pie_pagina">
         <div class="pie_1">

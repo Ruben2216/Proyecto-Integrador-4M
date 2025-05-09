@@ -50,9 +50,6 @@ $razas = $conn->query("SELECT * FROM especie");
         </form>
     </div>
 
-    <!-- Footer (opcional, se oculta por JS en esta página) -->
-    <footer></footer>
-
     <!-- Script que carga nav/footer -->
     <script src="../javascript/Accesos_permanentes.js"></script>
 

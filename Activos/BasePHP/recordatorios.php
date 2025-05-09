@@ -129,7 +129,7 @@ $imagenes = [
         </div>
     </div>
 </div>
-<footer></footer>
+
 <script src="../javascript/Accesos_permanentes.js"></script>
 <script src="../javascript/procesar_recordatorios.js"></script>
 </body>
