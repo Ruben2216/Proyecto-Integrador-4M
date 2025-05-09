@@ -1,33 +1,35 @@
+
+
 // Lista de veterinarias: agrega aquí con los campos, A FUTURO ESTO IRA EN LA BASE DE DATOS, ES PARA PRUEBAS DE FUNCIONALIDAD
 const veterinarias = [
-    { nombre: "Clínica veterinaria Blue Vet", lat: 16.767979077333926, lon: -93.18430823771625, URL: "https://maps.app.goo.gl/cVaVwdtt9NhVQvqKA", telefono: "9611234567", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
-    { nombre: "Bonds and Care", lat: 16.761752414617217,  lon: -93.17528830095668, URL: "https://maps.app.goo.gl/JxS9BfpfYJ8Za7Hm9", telefono: "9612345678", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
-    { nombre: "Hospital Veterinario Pet´s", lat: 16.769100942623158, lon: -93.17603717638282, URL: "https://maps.app.goo.gl/rzHcu4TjN2PaWdwm6", telefono: "9613456789", horarioAbierto: "10:00 am", horarioCerrado: "09:00 pm" },
-    { nombre: "Clínica Veterinaria Pet Help", lat: 16.771372679150463, lon: -93.18086874706154, URL: "https://maps.app.goo.gl/unQyNCkCv8kff8hL7", telefono: "9614567890", horarioAbierto: "07:00 am", horarioCerrado: "05:00 pm" },
-    { nombre: "Can Bull Clínica Veterinaria", lat: 16.75412, lon: -93.17806, URL: "https://maps.app.goo.gl/fjGwzzzFd624YQhS8", telefono: "9615678901", horarioAbierto: "10:00 am", horarioCerrado: "08:00 pm" },
-    { nombre: "GOVET Veterinaria & Grooming", lat: 16.75470, lon: -93.16579, URL: "https://maps.app.goo.gl/ErWfQYX63QP1ctP27", telefono: "9616789012", horarioAbierto: "09:00 am", horarioCerrado: "07:00 pm" },
-    { nombre: "ZooMedics", lat: 16.774515958005836, lon: -93.16232907848466, URL: "https://maps.app.goo.gl/bGyQ6ePWBCwCnPwt7", telefono: "9617890123", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
-    { nombre: "Pets Life", lat: 16.763750280637776, lon: -93.12344777676628, URL: "https://maps.app.goo.gl/s3VEerVLPcDwcpxw5", telefono: "9618901234", horarioAbierto: "07:30 am", horarioCerrado: "05:30 pm" },
-    { nombre: "VET-NOVA", lat: 16.74829923632251, lon: -93.12301862296037, URL: "https://maps.app.goo.gl/cU2KDmCcYhyHsVCR8", telefono: "9619012345", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
-    { nombre: "VeterClin", lat: 16.744271896363212, lon: -93.11331975525671, URL: "https://maps.app.goo.gl/Y7DpZR5xEp9YsLiN7", telefono: "9610123456", horarioAbierto: "08:30 am", horarioCerrado: "06:30 pm" },
-    { nombre: "Servicio Veterinario Scrappy Dog", lat: 16.74164175085894, lon: -93.09349286659553, URL: "https://maps.app.goo.gl/EGtjhbKa5jkiUeDbA", telefono: "9611234568", horarioAbierto: "10:00 am", horarioCerrado: "07:00 pm" },
-    { nombre: "Rincón Canino", lat: 16.742305470057097, lon: -93.11844562897534, URL: "https://maps.app.goo.gl/S4j7nULELGC9BjZC7", telefono: "9612345679", horarioAbierto: "09:00 am", horarioCerrado: "06:00 pm" },
-    { nombre: "Fauna Clínica-Veterinaria", lat: 16.743899237870544, lon: -93.10031022433796, URL: "https://maps.app.goo.gl/eusjdLs9Wjhv2Zid8", telefono: "9613456780", horarioAbierto: "08:00 am", horarioCerrado: "05:00 pm" },
-    { nombre: "Clínica Médica Veterinaria Dr. Mendoza", lat: 16.759391992618074, lon: -93.12822206140484, URL: "https://maps.app.goo.gl/wJgfJ7RPpPfkCWPV7", telefono: "9614567891", horarioAbierto: "07:00 am", horarioCerrado: "04:00 pm" },
-    { nombre: "Clínica Veterinaria Zoomundo", lat: 16.75045, lon: -93.13193, URL: "https://maps.app.goo.gl/aJ7Kuts3qbwBap378", telefono: "9615678902", horarioAbierto: "09:30 am", horarioCerrado: "07:30 pm" },
-    { nombre: "Clínica Veterinaria StarPet's", lat: 16.754448804151885, lon: -93.11122316730328, URL: "https://maps.app.goo.gl/oiGEb94ry3GDdBJM6", telefono: "9616789013", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
-    { nombre: "Animal Vet Clínica Veterinaria", lat: 16.749774781904712, lon: -93.10812614551213, URL: "https://maps.app.goo.gl/iFmEFfgAFeS5P8q3A", telefono: "9617890124", horarioAbierto: "10:00 am", horarioCerrado: "08:00 pm" },
-    { nombre: "Clínica para Perros y Gatos", lat: 16.752514739878844, lon: -93.11920136485305, URL: "https://maps.app.goo.gl/jGRCAkcmGyDSwqAX6", telefono: "9618901235", horarioAbierto: "09:00 am", horarioCerrado: "05:00 pm" },
-    { nombre: "Pet's Life", lat: 16.755382108576974, lon: -93.10376441784776, URL: "https://maps.app.goo.gl/2i6rN6zUKmwAiiW4A", telefono: "9619012346", horarioAbierto: "08:30 am", horarioCerrado: "06:30 pm" },
-    { nombre: "Cli Vet Mi Pequeño Dragón", lat: 16.745131394353347, lon: -93.09134266710723, URL: "https://maps.app.goo.gl/RDQz5GNeXaVw6iCs5", telefono: "9610123457", horarioAbierto: "07:00 am", horarioCerrado: "05:00 pm" },
-    { nombre: "Veterinaria Doc & Dog", lat: 16.746663205040768, lon: -93.08612995941213, URL: "https://maps.app.goo.gl/GmFdXDbX6cKm8EuXA", telefono: "9611234569", horarioAbierto: "09:00 am", horarioCerrado: "07:00 pm" },
-    { nombre: "Clínica Veterinaria Zoo Hospital", lat: 16.740342359213162, lon: -93.07268002463945, URL: "https://maps.app.goo.gl/AVFVnxzsMKmLuvLr5", telefono: "9612345670", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
-    { nombre: ".-CACHORROS VETERINARIA.-", lat: 16.745313362122452, lon: -93.10685608024131, URL: "https://maps.app.goo.gl/RXnYfRk9SmTCEu8t9", telefono: "9613456781", horarioAbierto: "10:00 am", horarioCerrado: "08:00 pm" },
-    { nombre: "Consultorio Médico Veterinario", lat: 16.74695912372168, lon: -93.10322776939611, URL: "https://maps.app.goo.gl/rJvPGvs8Jj1sAaD76", telefono: "9614567892", horarioAbierto: "09:00 am", horarioCerrado: "07:00 pm" },
-    { nombre: "Canes", lat: 16.762752928999024, lon: -93.11706564546024, URL: "https://maps.app.goo.gl/xwtcc6cYYV6fMj4JA", telefono: "9615678903", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
-    { nombre: "Medical Vet", lat: 16.773789547096708, lon: -93.10988585287198, URL: "https://maps.app.goo.gl/3wLmPxyADTpcPRVz7", telefono: "9616789014", horarioAbierto: "07:30 am", horarioCerrado: "05:30 pm" },
-    { nombre: "Clínica Dr. Levet", lat: 16.76309099885011, lon: -93.12615290868489, URL: "https://maps.app.goo.gl/tsSLMMRcES3L5gky5", telefono: "9617890125", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
-    { nombre: "Kopek", lat: 16.760314926523943,  lon: -93.1605374907951, URL: "https://maps.app.goo.gl/w3nPohC69bPTbcof6", telefono: "9617890861", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" }
+    { nombre: "Clínica veterinaria Blue Vet", lat: 16.767643171346688, lon: -93.18353335877217,  URL: "https://maps.app.goo.gl/QwVXrkeZDnxjUq8b7", Direccion: "Av. Chihuahua 32, Plan de Ayala, 29020 Tuxtla Gutiérrez, Chis." , telefono: "9611790906", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Bonds and Care", lat: 16.761797406572207,  lon:-93.17527882755448, URL: "https://maps.app.goo.gl/JxS9BfpfYJ8Za7Hm9", Direccion: "Esc.Prim.Federal Prof, Cjon. Raúl Isidro Burgos 90, Plan de Ayala, 29020 Tuxtla Gutiérrez, Chis." , telefono: "9611258125", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Hospital Veterinario Pet´s", lat: 16.76852844805711,lon: -93.17785947103819, URL: "https://maps.app.goo.gl/rzHcu4TjN2PaWdwm6", Direccion: "Calz. Juan Crispin No. 938, Plan de Ayala, 29020 Tuxtla Gutiérrez, Chis." ,telefono: "9613456789", horarioAbierto: "10:00 am", horarioCerrado: "09:00 pm" },
+    { nombre: "Clínica Veterinaria Pet Help", lat: 16.770444522642777, lon:  -93.18231426345487, URL: "https://maps.app.goo.gl/unQyNCkCv8kff8hL7",Direccion: "29110, C. Nuevo León 200, Plan de Ayala, 29020 Tuxtla Gutiérrez, Chis." , telefono: "9611277961", horarioAbierto: "10:00 am", horarioCerrado: "07:00 pm" },
+    { nombre: "Can Bull Clínica Veterinaria", lat: 16.75411447192594,  lon: -93.17805653772243, URL: "https://maps.app.goo.gl/fjGwzzzFd624YQhS8", Direccion: "Rosario Sabinal, Terán, 29057 Tuxtla Gutiérrez, Chis." ,telefono: "9616903094", horarioAbierto: "09:00 am", horarioCerrado: "05:30 pm" },
+    { nombre: "GOVET Veterinaria & Grooming", lat: 16.75469950761847,  lon:  -93.16581705632031, URL: "https://maps.app.goo.gl/ErWfQYX63QP1ctP27",Direccion: "Av 3a norte y 1a poniente, Terán, 29050 Tuxtla Gutiérrez, Chis." , telefono: "9614710810", horarioAbierto: "09:00 am", horarioCerrado: "05:00 pm" },
+    { nombre: "ZooMedics", lat: 16.77207846476205, lon: -93.16264126450477, URL: "https://maps.app.goo.gl/bGyQ6ePWBCwCnPwt7",Direccion: "Sureste 250, Bonampak, 29027 Tuxtla Gutiérrez, Chis." , telefono: "5516607663", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Pets Life", lat: 16.762741534813678, lon:-93.12349697026791, URL: "https://maps.app.goo.gl/s3VEerVLPcDwcpxw5",Direccion: "C. 10a. Pte. Nte. 955, Vista Hermosa, 29030 Tuxtla Gutiérrez, Chis." , telefono: "9616496502", horarioAbierto: "07:30 am", horarioCerrado: "05:30 pm" },
+    { nombre: "VET-NOVA", lat: 16.746385611734254, lon: -93.12263026968314, URL: "https://maps.app.goo.gl/cU2KDmCcYhyHsVCR8", Direccion: "Calle Sexta Pte. Sur 1057, San Francisco, 29066 Tuxtla Gutiérrez, Chis." ,telefono: "9611556558", horarioAbierto: "Las 24 horas" },
+    { nombre: "VeterClin", lat:16.742701725769813, lon: -93.11331975525671, URL: "https://maps.app.goo.gl/Y7DpZR5xEp9YsLiN7",Direccion: "29080, Carr. Villaflores 1405, Obrera, Tuxtla Gutiérrez, Chis." , telefono: "9610123456", horarioAbierto: "08:30 am", horarioCerrado: "06:30 pm" },
+    { nombre: "Servicio Veterinario Scrappy Dog", lat: 16.74078307564525,  lon: -93.09731645366553, URL: "https://maps.app.goo.gl/x4ymfQjGgeTTwE1F8",Direccion: "9a. Sur Ote. 2549, entre Pino Suárez y 15 de Mayo, Bienestar Soc, 29077 Tuxtla Gutiérrez, Chis." , telefono: "9612555977", horarioAbierto: "Las 24 horas" },
+    { nombre: "Rincón Canino", lat: 16.741891640700615, lon: -93.11821664725788, URL: "https://maps.app.goo.gl/S4j7nULELGC9BjZC7",Direccion: "C. Central-Sur 1515, San Francisco, 29066 Tuxtla Gutiérrez, Chis." , telefono: "9616135400", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Fauna Clínica-Veterinaria", lat: 16.74303593875838, lon: -93.10159014173686,  URL: "https://maps.app.goo.gl/mPxEk7praLJjNq3M6", Direccion: "Calz Samuel León Brindis 174, Mexicanidad Chiapaneca, 29076 Tuxtla Gutiérrez, Chis." ,telefono: "9611523316", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
+    { nombre: "Clínica Médica Veterinaria Dr. Mendoza", lat:16.75903742202426,  lon: -93.1299195554296, URL: "https://maps.app.goo.gl/wJgfJ7RPpPfkCWPV7", Direccion: "3a. Nte. Pte. 1580, Moctezuma, 29030 Tuxtla Gutiérrez, Chis." ,telefono: "9616541843", horarioAbierto: "08:00 am", horarioCerrado: "09:00 pm" },
+    { nombre: "Clínica Veterinaria Zoomundo", lat:16.750457710464303,  lon: -93.13196880643925, URL: "https://maps.app.goo.gl/aJ7Kuts3qbwBap378",Direccion: "Calle 15a. Pte Sur 689, Xamaipak, 29000 Tuxtla Gutiérrez, Chis." , telefono: "9616028790", horarioAbierto: "08:00 am", horarioCerrado: "10:00 pm" },
+    { nombre: "Clínica Veterinaria StarPet's", lat: 16.753812565005422, lon: -93.11216130211167,  URL: "https://maps.app.goo.gl/oiGEb94ry3GDdBJM6", Direccion: "Calle 1a norte, Av. 1a Nte. Ote. 557a, 29000 Tuxtla Gutiérrez, Chis." ,telefono: "9611571947", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Animal Vet Clínica Veterinaria", lat: 16.749219620804954, lon: -93.10891120821967 ,URL: "https://maps.app.goo.gl/ZxVXpgtc1EnUsH9X9",Direccion: "Av. 4a. Sur Ote. s/n, San Roque, 29066 Tuxtla Gutiérrez, Chis." , telefono: "9616001493", horarioAbierto: "Las 24 horas" },
+    { nombre: "Clínica Para Perros y Gatos", lat: 16.752401927186018, lon: -93.12085714931726,  URL: "https://maps.app.goo.gl/7Yx99iAcz2Ma6FNB6", Direccion: "Av 2a. Sur Pte 615, El Cerrito, 29000 Tuxtla Gutiérrez, Chis." ,telefono: "9616110528", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Clínica Veterinaria Medipet's", lat: 16.7663962832574, lon: -93.16334861796291, URL: "https://maps.app.goo.gl/n31kEjpnqxQbF14j7",Direccion: "Av. Poco Vinic Casa16, San José Yeguiste, 29025 Tuxtla Gutiérrez, Chis." , telefono: "9612122662", horarioAbierto: "Las 24 horas" },
+    { nombre: "Cli Vet Mi Pequeño Dragón", lat: 16.74445250687501, lon: -93.09229946355201,  URL: "https://maps.app.goo.gl/RDQz5GNeXaVw6iCs5",Direccion: "Av Miguel Hidalgo 1046, Bienestar Soc, 29077 Tuxtla Gutiérrez, Chis." , telefono: "9616025662", horarioAbierto: "09:30 am", horarioCerrado: "10:00 pm" },
+    { nombre: "Veterinaria Doc & Dog", lat: 16.746313358765857, lon:  -93.0865693737262,  URL: "https://maps.app.goo.gl/HMwWHWfuRbGkfChV9",Direccion: "Blvd. la Salle 280, La Salle 2, 29070 Tuxtla Gutiérrez, Chis." , telefono: "9612439873", horarioAbierto: "10:00 am", horarioCerrado: "07:00 pm" },
+    { nombre: "Clínica Veterinaria Zoo Hospital", lat:16.739935913382013,  lon: -93.07369078679584, URL: "https://maps.app.goo.gl/AVFVnxzsMKmLuvLr5",Direccion: "Cto. las Casas Pte. s/n, La Misión, 29096 Tuxtla Gutiérrez, Chis." , telefono: "9611588181", horarioAbierto: "11:00 am", horarioCerrado: "09:00 pm" },
+    { nombre: ".-CACHORROS VETERINARIA.-", lat: 16.744994057104904,  lon: -93.10637315555982, URL: "https://maps.app.goo.gl/5fL9bisgJ2K2seEq9",Direccion: "Calle 13a Ote Sur 915, Col. Centro, Santa Cruz, 29073 Tuxtla Gutiérrez, Chis." , telefono: "9611776883", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
+    { nombre: "Consultorio Médico Veterinario", lat: 16.74695912372168, lon: -93.10322776939611, URL: "https://maps.app.goo.gl/rJvPGvs8Jj1sAaD76", Direccion: "" ,telefono: "9614567892", horarioAbierto: "09:00 am", horarioCerrado: "07:00 pm" },
+    { nombre: "Canes", lat:16.76203194818488, lon:-93.11701658206265, URL: "https://maps.app.goo.gl/xwtcc6cYYV6fMj4JA", Direccion: "Av. Novena Nte. Pte. 347-A, Niño de Atocha, 29037 Tuxtla Gutiérrez, Chis." ,telefono: "9616135781", horarioAbierto: "09:20 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Medical Vet", lat: 16.773073221332726, lon:  -93.11244239245609, URL: "https://maps.app.goo.gl/jXDYKdAM65xDy4BQ8",Direccion: "Central Nte. 2237, Pedregal San Antonio, 29014 Tuxtla Gutiérrez, Chis." , telefono: "9611253867", horarioAbierto: "07:30 am", horarioCerrado: "05:30 pm" },
+    { nombre: "Clínica Dr. Levet", lat: 16.76309099885011, lon: -93.12615290868489, URL: "https://maps.app.goo.gl/tsSLMMRcES3L5gky5", Direccion: "Av 8ᵃ Nte Pte, Juy Juy, 29038 Tuxtla Gutiérrez, Chis." ,telefono: "9616182406", horarioAbierto: "10:30 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Kopek", lat: 16.760314926523943,  lon: -93.1605374907951, URL: "https://maps.app.goo.gl/w3nPohC69bPTbcof6", telefono: "9617890861", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm",Direccion: "Av Juan Sabines G. 8-A, Jardín Corona Fovissste II, 29020 Tuxtla Gutiérrez, Chis."  }
 ];
 
 //LA IDEA DEL BLOQUE DE ABAJO ES MOSTRAR EN VERDE SI ESTA ABIERTO O NO, PERO NO FUNCIONA
@@ -52,6 +54,8 @@ const veterinarias = [
 // console.log("Hora exacta:", obtenerHoraExacta());
 // console.log(estaAbierto());
 
+
+
 navigator.geolocation.getCurrentPosition(function(pos) {
     const lat = pos.coords.latitude;
     const lon = pos.coords.longitude;
@@ -62,18 +66,37 @@ navigator.geolocation.getCurrentPosition(function(pos) {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    L.marker([lat, lon]).addTo(map).bindPopup("<span style='color: red; font-weight: bold;'>" + "¡Estás aquí!" + "</span>").openPopup();
+     // Crear ícono rojo para la ubicación actual
+     const redIcon = new L.Icon({
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+        shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    // Usar el icono rojo en tu ubicación
+    L.marker([lat, lon], { icon: redIcon })
+        .addTo(map)
+        .bindPopup("<span style='color: red; font-weight: bold;'>¡Estás aquí!</span>")
+        .openPopup();
+
+
+   
 
     veterinarias.forEach(function(vet) {
         const marker = L.marker([vet.lat, vet.lon]).addTo(map);
+        
 
         // Evento de click simple -- muestra nombre
         marker.on('click', function() {
             marker.bindPopup(
-                "<strong style='text-align: center;'>" + vet.nombre + "</strong><br>" //INTENTE ALINAE PERO NO NOTO DIFERENCIAS, LO DEJO ASI PORSI SE ALINEA EN MOBILES
-                + "<span><strong>Teléfono:</strong> " + vet.telefono + "</span><br>" 
-                + "<span style='color: green;'><strong>Abre</strong>: " + vet.horarioAbierto + "</span><br>" 
-                +"<span style='color: red;'><strong>Cierra:</strong> " + vet.horarioCerrado + "</span>"
+                "<strong style='text-align: center;'>" + vet.nombre + "</strong><br>"
+                + "<span><strong>Dirección:</strong> " + (vet.Direccion || "No disponible") + "</span><br>"
+                + "<span><strong>Teléfono:</strong> " + vet.telefono + "</span><br>"
+                + "<span style='color: green;'><strong>Abre:</strong> " + vet.horarioAbierto + "</span><br>"
+                + "<span style='color: red;'><strong>Cierra:</strong> " + vet.horarioCerrado + "</span>"
             ).openPopup(); 
         });
 
