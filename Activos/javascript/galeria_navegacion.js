@@ -4,10 +4,10 @@
 
             // Pool de contenido para las tarjetas
             const cardContent = [
-                { href: 'consejo1.html', imageUrl:'https://www.clinicaveterinariaaguilar.es/wp-content/uploads/2020/01/cachorro.jpg', text: 'Cómo saber si mi cachorro tiene fiebre: Guía para detectar síntomas y...' },
+                { href: 'consejo1.html', imageUrl:'Activos/Imagenes/consejos/como-saber-si-mi-cachorro-tiene-fiebre.jpg', text: 'Cómo saber si mi cachorro tiene fiebre: Guía para detectar síntomas y...' },
                 { href: 'consejo2.html', imageUrl: 'Activos/Imagenes/consejos/Mi-perro-tiene-una-herida-en-carne-viva-que-hago.jpg', text: 'Mi perro tiene una herida en carne viva ¿cómo proceder?' },
                 { href: 'consejo3.html', imageUrl: 'Activos/Imagenes/consejos/perro-temblando.jpeg', text: 'Mi perro tiembla: Causas más comunes' },
-                { href: 'consejo4.html', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Guía definitiva para cuidar las articulaciones de un perro' },
+                { href: 'consejo4.html', imageUrl: 'Activos//Imagenes/consejos/perro-noble-mirando-otro-lado-espacio-copia_23-2148366957.avif', text: 'Guía definitiva para cuidar las articulaciones de un perro' },
                 { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Entendiendo el comportamiento de tu gato' },
                 { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'La importancia de la vacunación en mascotas' },
                 { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp.jpeg', text: 'Primeros auxilios para mascotas' },
