@@ -340,14 +340,14 @@ if ($especie == "Husky Siberiano") {
             <div class="content">
             <p><strong>¿Cómo funcionan los recordatorios?</strong><br> Puedes programar recordatorios para vacunas, citas veterinarias, horarios de alimentación y más. Recibirás notificaciones en la web. </p>
             <p><strong>¿PetClub envía recordatorios por correo o SMS?</strong><br> Actualmente, las notificaciones son por correo electrónico. No contamos con envío de SMS. </p>
-            <p><strong>¿Cómo funciona la búsqueda de veterinarias?</strong><br> Usamos geolocalización para mostrarte clínicas veterinarias cerca de tu ubicación. También puedes buscar manualmente por ciudad o nombre. </p>
+            <p><strong>¿Cómo funciona la búsqueda de veterinarias cercanas?</strong><br> Usamos geolocalización para mostrarte clínicas veterinarias cerca de tu ubicación. También puedes buscar manualmente por ciudad o nombre. </p>
             </div>
         </details>
 
         <details>
             <summary><i class="fas fa-lock"></i> Seguridad y Privacidad</summary>
             <div class="content">
-            <p><strong>¿Cómo protegen mis datos?</strong><br> Utilizamos cifrado de datos y cumplimos con normativas de privacidad. Tu información no se comparte con terceros sin tu consentimiento. </p>
+            <p><strong>¿Cómo protegen mis datos y los de mi mascota?</strong><br> Utilizamos cifrado de datos y cumplimos con normativas de privacidad. Tu información no se comparte con terceros sin tu consentimiento. </p>
             <p><strong>¿Puedo eliminar mi cuenta?</strong><br> Sí, en la sección "Yo (nombre)" puedes eliminar tu perfil y todos los datos asociados. </p>
             </div>
         </details>
@@ -355,8 +355,8 @@ if ($especie == "Husky Siberiano") {
         <details>
             <summary><i class="fas fa-bug"></i> Problemas Técnicos</summary>
             <div class="content">
-            <p><strong>No recibo notificaciones</strong><br> Asegúrate de permitir alertas del navegador. </p>
-            <p><strong>La página no carga</strong><br> Prueba limpiar la caché o cambiar de dispositivo. Si el problema persiste, contáctanos. </p>
+            <p><strong>No recibo notificaciones, ¿qué hago?</strong><br> Asegúrate de permitir alertas del navegador. </p>
+            <p><strong>La página no carga correctamente, ¿cómo lo soluciono?</strong><br> Prueba limpiar la caché o cambiar de dispositivo. Si el problema persiste, contáctanos. </p>
             </div>
         </details>
 
@@ -364,8 +364,8 @@ if ($especie == "Husky Siberiano") {
             <summary><i class="fas fa-question-circle"></i> Otras Consultas</summary>
             <div class="content">
             <p><strong>¿Tienen app móvil?</strong><br> Por ahora solo web, pero una app está en camino. </p>
-            <p><strong>¿Puedo compartir el perfil?</strong><br> Aún no, pero planeamos incluirlo. </p>
-            <p><strong>¿Dónde envío sugerencias?</strong><br> Puedes escribirnos a soporte@petclub.com o usar el formulario de contacto en la sección "Ayuda". </p>
+            <p><strong>¿Puedo compartir el perfil de mi mascota con otros usuarios?</strong><br> Aún no, pero planeamos incluirlo. </p>
+            <p><strong>¿Dónde puedo enviar sugerencias o reportar errores?</strong><br> Puedes escribirnos a soporte@petclub.com o usar el formulario de contacto en la sección "Ayuda". </p>
             </div>
         </details>
         </section>
