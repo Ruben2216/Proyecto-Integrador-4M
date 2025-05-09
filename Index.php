@@ -277,38 +277,23 @@ if ($especie == "Husky Siberiano") {
 
             
         </section>
+ 
+
         <section class="consejos" id="consejos">
-        <h2  class="mapa__titulo">Consejos de cuidados de tu mascota</h2>
+                    <h2  class="mapa__titulo">Consejos de cuidados de tu mascota</h2>
 
-        <div class="contenedor-tarjetas ">
-            <a href="consejo1.html" class="tarjeta">
-                <div class="tarjeta__imagen">
-                <img src="Activos\Imagenes\consejos\como-saber-si-mi-cachorro-tiene-fiebre.jpg" alt="Perro enfermo">
-                </div>
-                <h3 class="tarjeta__titulo">Cómo saber si mi cachorro tiene fiebre: Guía para detectar síntomas y</h3>
-            </a>
+    <div class="container mx-auto">
 
-            <a href="consejo2.html" class="tarjeta">
-                <div class="tarjeta__imagen">
-                <img src="Activos/Imagenes/consejos/Mi-perro-tiene-una-herida-en-carne-viva-que-hago.jpg" alt="Imagen 2">
-                </div>
-                <h3 class="tarjeta__titulo">Mi perro tiene una herida en carne viva ¿cómo proceder?</h3>
-            </a>
-
-            <a href="consejo3.html" class="tarjeta">
-                <div class="tarjeta__imagen">
-                <img src="Activos/Imagenes/consejos/perro-temblando.jpeg" alt="Perro temblando">
-                </div>
-                <h3 class="tarjeta__titulo">Mi perro tiembla: Causas más comunes</h3>
-            </a>
-
-            <a href="consejo4.html" class="tarjeta">
-                <div class="tarjeta__imagen">
-                <img src="Activos//Imagenes/consejos/perro-noble-mirando-otro-lado-espacio-copia_23-2148366957.avif" alt="Imagen 4">
-                </div>
-                <h3 class="tarjeta__titulo">Guía definitiva para cuidar las articulaciones de un perro</h3>
-            </a>
+        <div class="">
+            <button id="leftButton" class="navigation-button">
+                <svg xmlns="" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <div id="cardsWrapper" class="card-container"></div>
+            <button id="rightButton" class="navigation-button">
+                <svg xmlns="" viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+            </button>
         </div>
+    </div>
         </section>
 
         <button id="bienvenida-btn" popovertarget="bienvenida-msg" popovertargetaction="toogle" disabled>
@@ -390,6 +375,8 @@ if ($especie == "Husky Siberiano") {
     <script src="Activos/javascript/mapa_veterinarias.js"></script>
     <script src="/Proyecto-Integrador-4M/Activos/javascript/buscador.js" defer></script> <!-- El defer es para ejecutar en segundo plano -->
     <script src="Activos\javascript\procesar_recordatorios.js"></script>
+    <script src="Activos\javascript\galeria_navegacion.js"></script>
+
 
 </body>
 </html>
