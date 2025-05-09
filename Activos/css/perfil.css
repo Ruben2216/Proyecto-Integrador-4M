@@ -37,6 +37,7 @@ body {
     position: relative;
     animation: fadeInUpBody 0.8s ease-out;
     margin-top: 50px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 /* Foto */
@@ -127,7 +128,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
 .btn-actualizar button:hover {
