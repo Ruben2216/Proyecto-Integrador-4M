@@ -78,6 +78,10 @@ $usuario = $resultado->fetch_assoc();
                 <button type="submit">Actualizar</button>
             </div>
         </form>
+        <form action="eliminar_perfil.php" method="POST" onsubmit="return confirm('¿Estás seguro de que deseas eliminar tu perfil? Esta acción no se puede deshacer.');">
+            <input type="hidden" name="usuario_id" value="<?= $usuario_id ?>">
+            <button type="submit" class="btn-eliminar">Eliminar Perfil</button>
+        </form>
 
     </div>
     
