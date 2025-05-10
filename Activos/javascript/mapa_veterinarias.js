@@ -1,5 +1,3 @@
-
-
 // Lista de veterinarias: agrega aquí con los campos, A FUTURO ESTO IRA EN LA BASE DE DATOS, ES PARA PRUEBAS DE FUNCIONALIDAD
 const veterinarias = [
     { nombre: "Clínica veterinaria Blue Vet", lat: 16.767643171346688, lon: -93.18353335877217,  URL: "https://maps.app.goo.gl/QwVXrkeZDnxjUq8b7", Direccion: "Av. Chihuahua 32, Plan de Ayala, 29020 Tuxtla Gutiérrez, Chis." , telefono: "9611790906", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
@@ -29,30 +27,29 @@ const veterinarias = [
     { nombre: "Canes", lat:16.76203194818488, lon:-93.11701658206265, URL: "https://maps.app.goo.gl/xwtcc6cYYV6fMj4JA", Direccion: "Av. Novena Nte. Pte. 347-A, Niño de Atocha, 29037 Tuxtla Gutiérrez, Chis." ,telefono: "9616135781", horarioAbierto: "09:20 am", horarioCerrado: "08:00 pm" },
     { nombre: "Medical Vet", lat: 16.773073221332726, lon:  -93.11244239245609, URL: "https://maps.app.goo.gl/jXDYKdAM65xDy4BQ8",Direccion: "Central Nte. 2237, Pedregal San Antonio, 29014 Tuxtla Gutiérrez, Chis." , telefono: "9611253867", horarioAbierto: "07:30 am", horarioCerrado: "05:30 pm" },
     { nombre: "Clínica Dr. Levet", lat: 16.76309099885011, lon: -93.12615290868489, URL: "https://maps.app.goo.gl/tsSLMMRcES3L5gky5", Direccion: "Av 8ᵃ Nte Pte, Juy Juy, 29038 Tuxtla Gutiérrez, Chis." ,telefono: "9616182406", horarioAbierto: "10:30 am", horarioCerrado: "08:00 pm" },
-    { nombre: "Kopek", lat: 16.760314926523943,  lon: -93.1605374907951, URL: "https://maps.app.goo.gl/w3nPohC69bPTbcof6", telefono: "9617890861", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm",Direccion: "Av Juan Sabines G. 8-A, Jardín Corona Fovissste II, 29020 Tuxtla Gutiérrez, Chis."  }
+    { nombre: "Kopek", lat: 16.760314926523943,  lon: -93.1605374907951, URL: "https://maps.app.goo.gl/w3nPohC69bPTbcof6", Direccion: "Av Juan Sabines G. 8-A, Jardín Corona Fovissste II, 29020 Tuxtla Gutiérrez, Chis.",  telefono: "9617890861", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "VILLARREAL-Veterinaria & Estética Canina", lat:16.754541977919416,  lon: -93.16389239782806 , URL: "https://maps.app.goo.gl/o5KHfAVvNQ9WhATe7", Direccion: "Tercera Avenida Nte. Ote. 170, Terán, 29050 Tuxtla Gutiérrez, Chis.",  telefono: "9614514157", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Veterinaria Schnauzer", lat: 16.748762842742927,   lon:-93.16357725480667, URL: "https://maps.app.goo.gl/shrt9ERxAWJyxdVo7", Direccion: "Segunda Ote. Sur 577, Terán, 29050 Tuxtla Gutiérrez, Chis.",  telefono: "9611745611", horarioAbierto: "09:00 am ", horarioCerrado: "06:30 pm" },
+    { nombre: "Tivu", lat: 16.751883470975333,   lon:-93.15520698625537, URL: "https://maps.app.goo.gl/Rv5zdoynpYfPmX8N6", Direccion: "29059 Avenida Golondrinas, Av. Golondrinas 725, Buenos Aíres, 29059 Tuxtla Gutiérrez, Chis.",  telefono: "9616881272", horarioAbierto: "09:00 am", horarioCerrado: "04:00 pm" },
+    { nombre: "Clínica veterinaria huellitaxs", lat: 16.744920155288565,   lon: -93.15937511490252, URL: "https://maps.app.goo.gl/PwYnjkxDKGfUrfVt7", Direccion: "8 oriente sur#1051, Terán, 29059 Tuxtla Gutiérrez, Chis.",  telefono: "9611944562", horarioAbierto: "09:00 am", horarioCerrado: "=8:00 pm" },
+    { nombre: "Veterinaria San Jorge", lat: 16.750608344945874,  lon:  -93.16318047076209, URL: "https://maps.app.goo.gl/GezV9dk29WmfNUvU9", Direccion: "2A. Oriente Sur 312, Terán, 29050 Tuxtla Gutiérrez, Chis.",  telefono: "9616716098", horarioAbierto: "08:00 am", horarioCerrado: "10:00 pm" },
+    { nombre: "Dalmatas", lat: 16.7628383691379,   lon: -93.18564284278351, URL: "https://maps.app.goo.gl/wbXMPPw5KM56MRTu6", Direccion: "Aguascalientes s/n, Plan de Ayala, Tuxtla Gutiérrez, Chis.",  telefono: "9616715626", horarioAbierto: "09:00 am", horarioCerrado: "10:00 pm" },
+    { nombre: "Clinica Veterinaria PETLAND", lat: 16.74583425617839,  lon:-93.12939829124205, URL: "https://maps.app.goo.gl/jpDSgPGCGxniH32E8", Direccion: "Av. Doceava Sur Pte. 1514, Popular Xamaipak, 29060 Tuxtla Gutiérrez, Chis.",  telefono: "9611215217", horarioAbierto: "09:00 am", horarioCerrado: "04:00 pm" },
+    { nombre: "Jaen Pet veterinaria", lat: 16.762346595121794, lon:  -93.12294423011596, URL: "https://maps.app.goo.gl/u4XvPyaxk64JvpV47", Direccion: "Av 8ᵃ Nte Pte 1016, Colón, 29000 Tuxtla Gutiérrez, Chis.",  telefono: "9612325783", horarioAbierto: "09:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "CLÍNICA VETERINARIA NUTRYFARM", lat:16.762454327465328,  lon:-93.11753669505674 , URL: "https://maps.app.goo.gl/QxvJsHcwvB1SgtCm6", Direccion: "Av. Novena Nte. Pte. 402, Niño de Atocha, 29037 Tuxtla Gutiérrez, Chis.",  telefono: "9616181602", horarioAbierto: "09:00 am", horarioCerrado: "10:00 pm" },
+    { nombre: "The Happy Pet", lat:16.78279426068736,  lon: -93.10437987749177, URL: "https://maps.app.goo.gl/LFuCMKcP14vkrwLq8", Direccion: "Calz. Al Sumidero s/n Int. 1, Albania Baja, 29010 Tuxtla Gutiérrez",  telefono: "9611293099", horarioAbierto: "09:00 am", horarioCerrado: "06:00 pm" },
+    { nombre: "centro veterinario chiapas", lat: 16.760473089964993,  lon:  -93.11739708956442, URL: "https://maps.app.goo.gl/2ouzqDdbAvSwgcjS9", Direccion: "Sauce 36, Albania Baja, 29010 Tuxtla Gutiérrez, Chis.",  telefono: "+529611707956", horarioAbierto: "08:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Salud Animal del Sureste", lat:16.749653509688244,  lon:-93.11882920899505 ,  URL: "https://maps.app.goo.gl/S41o4ZfTauQ99c6b6", Direccion: "Av. Quinta Sur Pte. 313 C, El Calvario, 29000 Tuxtla Gutiérrez, Chis.",  telefono: "v", horarioAbierto: "09:00 am", horarioCerrado: "08:00" },
+    { nombre: "Hospital Clínica Mundopet", lat: 16.736128468951158, lon: -93.12055567106286, URL: "https://maps.app.goo.gl/qMFDW4VED2Nfy1hh7", Direccion: "Libramiento Sur 156B, San Francisco, Tuxtla Gutiérrez, Chis.",  telefono: "+529611413574", horarioAbierto: "09:00 am", horarioCerrado: "04:00 pm" },
+    { nombre: "VET&GUAU", lat:16.741781082134995, lon:  -93.1248072010496 , URL: "https://maps.app.goo.gl/RLpxDKHirWkv7tDr6", Direccion: "16 sur poniente #854-A, entre 7 y 8 pte, San Francisco, 29066 Tuxtla Gutiérrez, Chis.",  telefono: "9613938766", horarioAbierto: "09:00 am", horarioCerrado: "10:00 pm" },
+    { nombre: "Pek-mitsu Veterinaria", lat: 16.760992014766938, lon:  -93.1069218987698, URL: "https://maps.app.goo.gl/vTaK3gcToBeNq5o19", Direccion: "Calle, 9a. Ote. Nte. 1070, Nte, Brasilia, 29010 Tuxtla Gutiérrez, Chis.",  telefono: "9611547410", horarioAbierto: "08:00 am", horarioCerrado: "08:00 pm" },
+    { nombre: "Perrioni Veterinaria", lat: 16.74657566226088,  lon: -93.1193390492452, URL: "https://maps.app.goo.gl/EtcVwavBi1uwTQYq9", Direccion: "Calle Segunda Pte. Sur 962, El Calvario, 29000 Tuxtla Gutiérrez, Chis.",  telefono: "9616145653", horarioAbierto: "08:00 am", horarioCerrado: "06:00 pm" },
+    { nombre: "Animal's Medic", lat: 16.730645149998338,  lon:-93.10408687533254, URL: "https://maps.app.goo.gl/KWVuhsFcerAqBw7g7", Direccion: "Calz. Samuel León Brindis 1050, Calz Samuel León Brindis 87, Francisco I. Madero, 29090 Tuxtla Gutiérrez, Chis.",  telefono: "9616387769", horarioAbierto: "Las 24 horas" },
+    { nombre: "Clínica Veterinaria Peludogs", lat:16.754286440034477,   lon: -93.11340813706576 , URL: "https://maps.app.goo.gl/ry9Mk5FRo92GsR7d8", Direccion: "Calle Tercera Ote. Nte. 240, San Marcos, 29000 Tuxtla Gutiérrez, Chis.",  telefono: "9616122543", horarioAbierto: "Las 24 horas" },
+    { nombre: "Veterinaria Cachorros Vip´s", lat:16.705393084340365,  lon:-93.17115236923186 ,URL: "https://maps.app.goo.gl/dxRf3sNFsyrmbi1R6", Direccion: "Av del Tule 616, Real del Bosque, 29055 Tuxtla Gutiérrez, Chis.",  telefono: "617013318", horarioAbierto: "09:00 am", horarioCerrado: "06:00 pm" } 
+
+    
 ];
-
-//LA IDEA DEL BLOQUE DE ABAJO ES MOSTRAR EN VERDE SI ESTA ABIERTO O NO, PERO NO FUNCIONA
-
-
-// // Función para obtener la hora exacta en ejeculion
-// function obtenerHoraExacta() {
-//     const fecha = new Date();
-//     const horas = fecha.getHours().toString().padStart(2, '0');
-//     const minutos = fecha.getMinutes().toString().padStart(2, '0');
-//     let hora= parseFloat(horas + '.' + minutos); // Convertir a formato decimal
-//     return hora;
-// }
-// function estaAbierto(hora, horarioAbierto, horarioCerrado) {
-//     if (hora > horarioAbierto && hora < horarioCerrado) {
-//         return true; // Veterinaria  esta abierta   
-//     } else {
-//         return false;
-//     }
-
-// }
-// console.log("Hora exacta:", obtenerHoraExacta());
-// console.log(estaAbierto());
 
 
 
