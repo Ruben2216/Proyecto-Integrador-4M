@@ -1,12 +1,3 @@
-<?php
-session_start();
-
-// Guardar a donde quería ir el usuario antes de iniciar sesión
-if (isset($_GET['redirect_to'])) {
-    $_SESSION['redireccion'] = $_GET['redirect_to'];
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,7 +13,7 @@ if (isset($_GET['redirect_to'])) {
 <body>
     <a href="Index.php" class="boton-regresar">
         &larr; <strong>Regresar</strong>
-    </a>        
+    </a>
     <div class="contenedor">
         <div class="envoltura">
             <div class="contenido">
@@ -47,7 +38,7 @@ if (isset($_GET['redirect_to'])) {
                             <p>¿No tienes cuenta? <a href="pagina_404.html" class="crear-cuenta">Crea una</a></p>
                             <p>O continua con</p>
                             <div class="sign-up__social-img">
-                                <a href="Activos/BasePHP/Inicio_sesion_google/google.php"  aria-label="Iniciar sesión con Google">
+                                <a href="Activos/BasePHP/Inicio_sesion_google/google.php" aria-label="Iniciar sesión con Google">
                                     <img src="Activos/Imagenes/login/icon-google.svg" alt="Google">
                                 </a>
                                 <a href="pagina_404.html" aria-label="Iniciar sesión con Facebook">
@@ -63,18 +54,19 @@ if (isset($_GET['redirect_to'])) {
                             <h1>Crea tu cuenta</h1>
                             <br>
                             <form action="Activos/BasePHP/guardar_usuario.php" method="POST">
-                              <label for="nombre">Nombre</label>
+                                <label for="nombre">Nombre</label>
                                 <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
 
                                 <label for="apellido">Apellido</label>
                                 <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
-                                
+
                                 <label for="email">Correo</label>
                                 <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
 
                                 <label for="password">Contraseña</label>
-                                <input type="password" id="password2" name="password"  placeholder="Contraseña" minlength="8" required>
+                                <input type="password" id="password2" name="password" placeholder="Contraseña" minlength="8" required>
                                 <span class="ver_contraseña2 ver_contraseña-registro">🙈</span>
+                                <span id="mensaje-password" style="font-size: 14px; margin-top: 4px; display: block; color: yellow;">Ingrese mínimo 8 caracteres</span>
 
                                 <button class="boton boton--crear" type="submit" id="derecha">Crear cuenta</button>
                             </form>
@@ -90,7 +82,7 @@ if (isset($_GET['redirect_to'])) {
                                 <a href="pagina_404.html" aria-label="Iniciar sesión con Facebook">
                                     <img src="Activos/Imagenes/login/icon-facebook.svg" alt="Facebook">
                                 </a>
-                            </div>                            
+                            </div>
                         </div>
                     </section>
 
@@ -105,54 +97,69 @@ if (isset($_GET['redirect_to'])) {
     </div>
 
     <script> //ECHO POR FABI
-    document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form[action="Activos/BasePHP/guardar_usuario.php"]');
-    const nombreInput = document.getElementById('nombre');
-    const apellidoInput = document.getElementById('apellido');
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form[action="Activos/BasePHP/guardar_usuario.php"]');
+            const nombreInput = document.getElementById('nombre');
+            const apellidoInput = document.getElementById('apellido');
 
-    // Crear y añadir el mensaje de error debajo de los campos 
-    function crearSpanError(input, id) {
-        if (!document.getElementById(id)) {
-            const span = document.createElement('span');
-            span.id = id;
-            span.style.color = 'red';
-            span.style.fontSize = '14px';
-            input.insertAdjacentElement('afterend', span);
-        }
-    }
-
-        crearSpanError(nombreInput, 'error-nombre');
-        crearSpanError(apellidoInput, 'error-apellido');
-
-        const errorNombre = document.getElementById('error-nombre');
-        const errorApellido = document.getElementById('error-apellido');
-
-        form.addEventListener('submit', function (e) {
-            let valid = true;
-            const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
-
-            if (!regex.test(nombreInput.value.trim())) {
-                errorNombre.textContent = "Datos invalidos (Intentelo de nuevo)";
-                valid = false;
-            } else {
-                errorNombre.textContent = "";
+            // Crear y añadir el mensaje de error debajo de los campos 
+            function crearSpanError(input, id) {
+                if (!document.getElementById(id)) {
+                    const span = document.createElement('span');
+                    span.id = id;
+                    span.style.color = 'red';
+                    span.style.fontSize = '14px';
+                    input.insertAdjacentElement('afterend', span);
+                }
             }
 
-            if (!regex.test(apellidoInput.value.trim())) {
-                errorApellido.textContent = "Datos Invalidos (Intentelo de nuevo).";
-                valid = false;
-            } else {
-                errorApellido.textContent = "";
-            }
+            crearSpanError(nombreInput, 'error-nombre');
+            crearSpanError(apellidoInput, 'error-apellido');
 
-            if (!valid) {
-                e.preventDefault(); // Evita que se envíe el formulario si hay errores
-            }
+            const errorNombre = document.getElementById('error-nombre');
+            const errorApellido = document.getElementById('error-apellido');
+
+            form.addEventListener('submit', function (e) {
+                let valid = true;
+                const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+
+                if (!regex.test(nombreInput.value.trim())) {
+                    errorNombre.textContent = "Datos invalidos (Intentelo de nuevo)";
+                    valid = false;
+                } else {
+                    errorNombre.textContent = "";
+                }
+
+                if (!regex.test(apellidoInput.value.trim())) {
+                    errorApellido.textContent = "Datos Invalidos (Intentelo de nuevo).";
+                    valid = false;
+                } else {
+                    errorApellido.textContent = "";
+                }
+
+                if (!valid) {
+                    e.preventDefault(); // Evita que se envíe el formulario si hay errores
+                }
+            });
         });
-    });
-    
-</script>
+    </script>
 
     <script src="Activos/javascript/transiciones.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const passwordInput = document.getElementById('password2');
+            const mensajePassword = document.getElementById('mensaje-password');
+
+            passwordInput.addEventListener('input', function () {
+                if (passwordInput.value.length < 8) {
+                    mensajePassword.textContent = 'Ingrese mínimo 8 caracteres';
+                    mensajePassword.style.color = 'red';
+                } else {
+                    mensajePassword.textContent = 'Contraseña válida';
+                    mensajePassword.style.color = 'yellow';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
