@@ -120,3 +120,87 @@
     (28, 'Es muy obediente y responde bien al adiestramiento positivo.', 2),
     (29, 'Puede sufrir de ansiedad por separación si no se le presta suficiente atención.', 1),
     (30, 'Fue utilizada históricamente como perro guardián y de caza mayor.', 19);
+
+
+Creacion de la tabla de veterinarias
+CREATE TABLE veterinarias (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(255) DEFAULT NULL,
+    lat DECIMAL(15,12) DEFAULT NULL,
+    lon DECIMAL(15,12) DEFAULT NULL,
+    url TEXT DEFAULT NULL,
+    direccion TEXT DEFAULT NULL,
+    telefono VARCHAR(20) DEFAULT NULL,
+    horario_abierto VARCHAR(20) DEFAULT NULL,
+    horario_cerrado VARCHAR(20) DEFAULT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+Datos insertados de todas las veterinarias (corregi links de algunas veterinarias, de preferencia al exponer elegir las mas cercanas):
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('Clínica veterinaria Blue Vet', 16.767643171346688, -93.18353335877217, 'https://maps.app.goo.gl/tUvjqQibMS8pZG9j7', 'Av. Chihuahua 32, Plan de Ayala, 29020 Tuxtla Gutiérrez, Chis.', '9611790906', '09:00 am', '08:00 pm'),
+('Bonds and Care', 16.761797406572207, -93.17527882755448, 'https://maps.app.goo.gl/JxS9BfpfYJ8Za7Hm9', 'Esc.Prim.Federal Prof, Cjon. Raúl Isidro Burgos 90, Plan de Ayala, 29020 Tuxtla Gutiérrez, Chis.', '9611258125', '09:00 am', '08:00 pm'),
+('Hospital Veterinario Pet´s', 16.76852844805711, -93.17785947103819, 'https://maps.app.goo.gl/rzHcu4TjN2PaWdwm6', 'Calz. Juan Crispin No. 938, Plan de Ayala, 29020 Tuxtla Gutiérrez, Chis.', '9613456789', '10:00 am', '09:00 pm'),
+('Clínica Veterinaria Pet Help', 16.770444522642777, -93.18231426345487, 'https://maps.app.goo.gl/unQyNCkCv8kff8hL7', '29110, C. Nuevo León 200, Plan de Ayala, 29020 Tuxtla Gutiérrez, Chis.', '9611277961', '10:00 am', '07:00 pm'),
+('Can Bull Clínica Veterinaria', 16.75411447192594, -93.17805653772243, 'https://maps.app.goo.gl/fjGwzzzFd624YQhS8', 'Rosario Sabinal, Terán, 29057 Tuxtla Gutiérrez, Chis.', '9616903094', '09:00 am', '05:30 pm');
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('GOVET Veterinaria & Grooming', 16.75469950761847, -93.16581705632031, 'https://maps.app.goo.gl/ErWfQYX63QP1ctP27', 'Av 3a norte y 1a poniente, Terán, 29050 Tuxtla Gutiérrez, Chis.', '9614710810', '09:00 am', '05:00 pm'),
+('ZooMedics', 16.77207846476205, -93.16264126450477, 'https://maps.app.goo.gl/bGyQ6ePWBCwCnPwt7', 'Sureste 250, Bonampak, 29027 Tuxtla Gutiérrez, Chis.', '5516607663', '09:00 am', '08:00 pm'),
+('Pets Life', 16.762741534813678, -93.12349697026791, 'https://maps.app.goo.gl/s3VEerVLPcDwcpxw5', 'C. 10a. Pte. Nte. 955, Vista Hermosa, 29030 Tuxtla Gutiérrez, Chis.', '9616496502', '07:30 am', '05:30 pm'),
+('VET-NOVA', 16.746385611734254, -93.12263026968314, 'https://maps.app.goo.gl/cU2KDmCcYhyHsVCR8', 'Calle Sexta Pte. Sur 1057, San Francisco, 29066 Tuxtla Gutiérrez, Chis.', '9611556558', 'Las 24 horas', NULL),
+('VeterClin', 16.742701725769813, -93.11331975525671, 'https://maps.app.goo.gl/Y7DpZR5xEp9YsLiN7', '29080, Carr. Villaflores 1405, Obrera, Tuxtla Gutiérrez, Chis.', '9610123456', '08:30 am', '06:30 pm');
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('Servicio Veterinario Scrappy Dog', 16.74078307564525, -93.09731645366553, 'https://maps.app.goo.gl/rQ9K2t1gAWo9VWzj9', '9a. Sur Ote. 2549, entre Pino Suárez y 15 de Mayo, Bienestar Soc, 29077 Tuxtla Gutiérrez, Chis.', '9612555977', 'Las 24 horas', NULL),
+('Rincón Canino', 16.741891640700615, -93.11821664725788, 'https://maps.app.goo.gl/S4j7nULELGC9BjZC7', 'C. Central-Sur 1515, San Francisco, 29066 Tuxtla Gutiérrez, Chis.', '9616135400', '09:00 am', '08:00 pm'),
+('Fauna Clínica-Veterinaria', 16.74303593875838, -93.10159014173686, 'https://maps.app.goo.gl/GChKNMFC7bHyDj2q7', 'Calz Samuel León Brindis 174, Mexicanidad Chiapaneca, 29076 Tuxtla Gutiérrez, Chis.', '9611523316', '08:00 am', '06:00 pm'),
+('Clínica Médica Veterinaria Dr. Mendoza', 16.75903742202426, -93.1299195554296, 'https://maps.app.goo.gl/wJgfJ7RPpPfkCWPV7', '3a. Nte. Pte. 1580, Moctezuma, 29030 Tuxtla Gutiérrez, Chis.', '9616541843', '08:00 am', '09:00 pm'),
+('Clínica Veterinaria Zoomundo', 16.750457710464303, -93.13196880643925, 'https://maps.app.goo.gl/aJ7Kuts3qbwBap378', 'Calle 15a. Pte Sur 689, Xamaipak, 29000 Tuxtla Gutiérrez, Chis.', '9616028790', '08:00 am', '10:00 pm');
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('Clínica Veterinaria StarPet''s', 16.753812565005422, -93.11216130211167, 'https://maps.app.goo.gl/oiGEb94ry3GDdBJM6', 'Calle 1a norte, Av. 1a Nte. Ote. 557a, 29000 Tuxtla Gutiérrez, Chis.', '9611571947', '09:00 am', '08:00 pm'),
+('Animal Vet Clínica Veterinaria', 16.749219620804954, -93.10891120821967, 'https://maps.app.goo.gl/ZxVXpgtc1EnUsH9X9', 'Av. 4a. Sur Ote. s/n, San Roque, 29066 Tuxtla Gutiérrez, Chis.', '9616001493', 'Las 24 horas', NULL),
+('Clínica Para Perros y Gatos', 16.752401927186018, -93.12085714931726, 'https://maps.app.goo.gl/7Yx99iAcz2Ma6FNB6', 'Av 2a. Sur Pte 615, El Cerrito, 29000 Tuxtla Gutiérrez, Chis.', '9616110528', '09:00 am', '08:00 pm'),
+('Clínica Veterinaria Medipet''s', 16.7663962832574, -93.16334861796291, 'https://maps.app.goo.gl/Bbfk3ZezUQmQs62DA', 'Av. Poco Vinic Casa16, San José Yeguiste, 29025 Tuxtla Gutiérrez, Chis.', '9612122662', 'Las 24 horas', NULL),
+('Cli Vet Mi Pequeño Dragón', 16.74445250687501, -93.09229946355201, 'https://maps.app.goo.gl/RDQz5GNeXaVw6iCs5', 'Av Miguel Hidalgo 1046, Bienestar Soc, 29077 Tuxtla Gutiérrez, Chis.', '9616025662', '09:30 am', '10:00 pm');
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('Veterinaria Doc & Dog', 16.746313358765857, -93.0865693737262, 'https://maps.app.goo.gl/WjasP2Zz4st3rHZ2A', 'Blvd. la Salle 280, La Salle 2, 29070 Tuxtla Gutiérrez, Chis.', '9612439873', '10:00 am', '07:00 pm'),
+('Clínica Veterinaria Zoo Hospital', 16.739935913382013, -93.07369078679584, 'https://maps.app.goo.gl/AVFVnxzsMKmLuvLr5', 'Cto. las Casas Pte. s/n, La Misión, 29096 Tuxtla Gutiérrez, Chis.', '9611588181', '11:00 am', '09:00 pm'),
+('.-CACHORROS VETERINARIA.-', 16.744994057104904, -93.10637315555982, 'https://maps.app.goo.gl/Ehgf9d2Qb8yjNZbP6', 'Calle 13a Ote Sur 915, Col. Centro, Santa Cruz, 29073 Tuxtla Gutiérrez, Chis.', '9611776883', '08:00 am', '06:00 pm'),
+('Consultorio Médico Veterinario', 16.74695912372168, -93.10322776939611, 'https://maps.app.goo.gl/rJvPGvs8Jj1sAaD76', '', '9614567892', '09:00 am', '07:00 pm'),
+('Canes', 16.76203194818488, -93.11701658206265, 'https://maps.app.goo.gl/xwtcc6cYYV6fMj4JA', 'Av. Novena Nte. Pte. 347-A, Niño de Atocha, 29037 Tuxtla Gutiérrez, Chis.', '9616135781', '09:20 am', '08:00 pm');
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('Medical Vet', 16.773073221332726, -93.11244239245609, 'https://maps.app.goo.gl/f3r1xUK4GNadz2Xq9', 'Central Nte. 2237, Pedregal San Antonio, 29014 Tuxtla Gutiérrez, Chis.', '9611253867', '07:30 am', '05:30 pm'),
+('Clínica Dr. Levet', 16.76309099885011, -93.12615290868489, 'https://maps.app.goo.gl/tsSLMMRcES3L5gky5', 'Av 8ᵃ Nte Pte, Juy Juy, 29038 Tuxtla Gutiérrez, Chis.', '9616182406', '10:30 am', '08:00 pm'),
+('Kopek', 16.760314926523943, -93.1605374907951, 'https://maps.app.goo.gl/w3nPohC69bPTbcof6', 'Av Juan Sabines G. 8-A, Jardín Corona Fovissste II, 29020 Tuxtla Gutiérrez, Chis.', '9617890861', '09:00 am', '08:00 pm'),
+('VILLARREAL-Veterinaria & Estética Canina', 16.754541977919416, -93.16389239782806, 'https://maps.app.goo.gl/pqfHn3jFexze1pp3A', 'Tercera Avenida Nte. Ote. 170, Terán, 29050 Tuxtla Gutiérrez, Chis.', '9614514157', '09:00 am', '08:00 pm'),
+('Veterinaria Schnauzer', 16.748762842742927, -93.16357725480667, 'https://maps.app.goo.gl/ucsHQZri8hZ4Kf8y6', 'Segunda Ote. Sur 577, Terán, 29050 Tuxtla Gutiérrez, Chis.', '9611745611', '09:00 am', '06:30 pm');
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('Tivu', 16.751883470975333, -93.15520698625537, 'https://maps.app.goo.gl/J1BxG3n8dncQ7KDL9', '29059 Avenida Golondrinas, Av. Golondrinas 725, Buenos Aíres, 29059 Tuxtla Gutiérrez, Chis.', '9616881272', '09:00 am', '04:00 pm'),
+('Clínica veterinaria huellitaxs', 16.744920155288565, -93.15937511490252, 'https://maps.app.goo.gl/uGjYKSszmcy7cN3f9', '8 oriente sur#1051, Terán, 29059 Tuxtla Gutiérrez, Chis.', '9611944562', '09:00 am', '08:00 pm'),
+('Veterinaria San Jorge', 16.750608344945874, -93.16318047076209, 'https://maps.app.goo.gl/F8esV2fDtEGQXtZM8', '2A. Oriente Sur 312, Terán, 29050 Tuxtla Gutiérrez, Chis.', '9616716098', '08:00 am', '10:00 pm'),
+('Dalmatas', 16.7628383691379, -93.18564284278351, 'https://maps.app.goo.gl/vRoh1VEYxQEyp8Ub7', 'Aguascalientes s/n, Plan de Ayala, Tuxtla Gutiérrez, Chis.', '9616715626', '09:00 am', '10:00 pm'),
+('Clinica Veterinaria PETLAND', 16.74583425617839, -93.12939829124205, 'https://maps.app.goo.gl/jpDSgPGCGxniH32E8', 'Av. Doceava Sur Pte. 1514, Popular Xamaipak, 29060 Tuxtla Gutiérrez, Chis.', '9611215217', '09:00 am', '04:00 pm');
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('Jaen Pet veterinaria', 16.762346595121794, -93.12294423011596, 'https://maps.app.goo.gl/26vz2EYXb4WNF6kc8', 'Av 8ᵃ Nte Pte 1016, Colón, 29000 Tuxtla Gutiérrez, Chis.', '9612325783', '09:00 am', '08:00 pm'),
+('CLÍNICA VETERINARIA NUTRYFARM', 16.762454327465328, -93.11753669505674, 'https://maps.app.goo.gl/QxvJsHcwvB1SgtCm6', 'Av. Novena Nte. Pte. 402, Niño de Atocha, 29037 Tuxtla Gutiérrez, Chis.', '9616181602', '09:00 am', '10:00 pm'),
+('The Happy Pet', 16.78279426068736, -93.10437987749177, 'https://maps.app.goo.gl/opvJq2W6fZQqME7b7', 'Calz. Al Sumidero s/n Int. 1, Albania Baja, 29010 Tuxtla Gutiérrez', '9611293099', '09:00 am', '06:00 pm'),
+('centro veterinario chiapas', 16.760473089964993, -93.11739708956442, 'https://maps.app.goo.gl/2ouzqDdbAvSwgcjS9', 'Sauce 36, Albania Baja, 29010 Tuxtla Gutiérrez, Chis.', '+529611707956', '08:00 am', '08:00 pm'),
+('Salud Animal del Sureste', 16.749653509688244, -93.11882920899505, 'https://maps.app.goo.gl/S41o4ZfTauQ99c6b6', 'Av. Quinta Sur Pte. 313 C, El Calvario, 29000 Tuxtla Gutiérrez, Chis.', 'v', '09:00 am', '08:00');
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('Hospital Clínica Mundopet', 16.736128468951158, -93.12055567106286, 'https://maps.app.goo.gl/MiEhD57iWSdv9bDq5', 'Libramiento Sur 156B, San Francisco, Tuxtla Gutiérrez, Chis.', '+529611413574', '09:00 am', '04:00 pm'),
+('VET&GUAU', 16.741781082134995, -93.1248072010496, 'https://maps.app.goo.gl/y3rDui4haPpxDEXA8', '16 sur poniente #854-A, entre 7 y 8 pte, San Francisco, 29066 Tuxtla Gutiérrez, Chis.', '9613938766', '09:00 am', '10:00 pm'),
+('Pek-mitsu Veterinaria', 16.760992014766938, -93.1069218987698, 'https://maps.app.goo.gl/vTaK3gcToBeNq5o19', 'Calle, 9a. Ote. Nte. 1070, Nte, Brasilia, 29010 Tuxtla Gutiérrez, Chis.', '9611547410', '08:00 am', '08:00 pm'),
+('Perrioni Veterinaria', 16.74657566226088, -93.1193390492452, 'https://maps.app.goo.gl/udE2hBwNmd2mvhLU7', 'Calle Segunda Pte. Sur 962, El Calvario, 29000 Tuxtla Gutiérrez, Chis.', '9616145653', '08:00 am', '06:00 pm'),
+('Animal''s Medic', 16.730645149998338, -93.10408687533254, 'https://maps.app.goo.gl/oMUFAMu8Apof2nKa8', 'Calz. Samuel León Brindis 1050, Calz Samuel León Brindis 87, Francisco I. Madero, 29090 Tuxtla Gutiérrez, Chis.', '9616387769', 'Las 24 horas', NULL);
+
+INSERT INTO veterinarias (nombre, lat, lon, url, direccion, telefono, horario_abierto, horario_cerrado) VALUES
+('Clínica Veterinaria Peludogs', 16.754286440034477, -93.11340813706576, 'https://maps.app.goo.gl/Ldgm16GHo5ru6YxC7', 'Calle Tercera Ote. Nte. 240, San Marcos, 29000 Tuxtla Gutiérrez, Chis.', '9616122543', 'Las 24 horas', NULL),
+('Veterinaria Cachorros Vip´s', 16.705393084340365, -93.17115236923186, 'https://maps.app.goo.gl/dxRf3sNFsyrmbi1R6', 'Av del Tule 616, Real del Bosque, 29055 Tuxtla Gutiérrez, Chis.', '617013318', '09:00 am', '06:00 pm');
