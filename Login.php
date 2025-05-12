@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Activos/css/estilo_login.css">
     <title>PetClub</title>
+   
 </head>
 <body>
     <a href="Index.php" class="boton-regresar">
@@ -26,10 +27,10 @@
                             <p>Bienvenido de vuelta</p>
                             <form action="Activos/BasePHP/validar_login.php" method="POST">
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                                <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required autocomplete="off">
                                 <br>
                                 <label for="password">Contraseña</label>
-                                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                                <input type="password" id="password" name="password" placeholder="Contraseña" required autocomplete="off">
                                 <span class="ver_contraseña ver_contraseña-login">🙈</span>
                                 <a href="pagina_404.html" class="recuperar">Recuperar Contraseña</a>
                                 <br>
@@ -65,7 +66,7 @@
                                 <label for="password">Contraseña</label>
                                 <input type="password" id="password2" name="password" placeholder="Contraseña" minlength="8" required>
                                 <span class="ver_contraseña2 ver_contraseña-registro">🙈</span>
-                                <span id="mensaje-password" style="font-size: 14px;  display: block; color: yellow;">Ingrese mínimo 8 caracteres</span>
+                                <span id="mensaje-password" style="font-size: 14px;  display: block; color:#90de1f">Ingrese mínimo 8 caracteres</span>
 
                                 <button class="boton boton--crear" type="submit" id="derecha">Crear cuenta</button>
                             </form>
@@ -152,11 +153,21 @@
             passwordInput.addEventListener('input', function () {
                 if (passwordInput.value.length < 8) {
                     mensajePassword.textContent = 'Ingrese mínimo 8 caracteres';
-                    mensajePassword.style.color = 'red';
+                    mensajePassword.style.color = '#90de1f ';
                 } else {
                     mensajePassword.textContent = 'Contraseña válida';
-                    mensajePassword.style.color = 'yellow';
+                    mensajePassword.style.color = '#FFFF00'; 
+                    
                 }
+            });
+
+            // Asegurarse de que el mensaje sea visible al enfocar y oculto al desenfocar
+            passwordInput.addEventListener('focus', function () {
+                mensajePassword.style.visibility = 'visible';
+            });
+
+            passwordInput.addEventListener('blur', function () {
+                mensajePassword.style.visibility = 'hidden';
             });
         });
     </script>

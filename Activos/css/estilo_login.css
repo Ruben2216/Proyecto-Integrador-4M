@@ -116,6 +116,7 @@ form label {
 }
 
 .ver_contraseña, .ver_contraseña2{
+    font-size: 1.3rem;
     position: absolute;
     top: 48.5%;
     right: 2.5rem;
@@ -125,7 +126,7 @@ form label {
     user-select: none;
 }
 .ver_contraseña2{
-    top:63.5%;
+    top:64.4%;
 
 }
 .boton--crear{
@@ -290,6 +291,12 @@ section.imagen div img {
     text-decoration: underline;
     color: #054997;
 }
+#mensaje-password {
+            visibility: hidden; 
+        }
+        #password2:focus + #mensaje-password {
+            visibility: visible; 
+        }
 
 @media (max-width: 768px) {
     .contenedor {
