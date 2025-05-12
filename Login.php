@@ -52,7 +52,6 @@
                     <section class="seccion seccion--derecha">
                         <div class="sign-up">
                             <h1>Crea tu cuenta</h1>
-                            <br>
                             <form action="Activos/BasePHP/guardar_usuario.php" method="POST">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
@@ -66,7 +65,7 @@
                                 <label for="password">Contraseña</label>
                                 <input type="password" id="password2" name="password" placeholder="Contraseña" minlength="8" required>
                                 <span class="ver_contraseña2 ver_contraseña-registro">🙈</span>
-                                <span id="mensaje-password" style="font-size: 14px; margin-top: 4px; display: block; color: yellow;">Ingrese mínimo 8 caracteres</span>
+                                <span id="mensaje-password" style="font-size: 14px;  display: block; color: yellow;">Ingrese mínimo 8 caracteres</span>
 
                                 <button class="boton boton--crear" type="submit" id="derecha">Crear cuenta</button>
                             </form>

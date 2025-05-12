@@ -74,6 +74,7 @@ body {
 }
 .sign-up h1{
     padding-top:1.5rem;
+    margin-bottom: 0.5rem;
     
 }
 
@@ -126,6 +127,9 @@ form label {
 .ver_contraseña2{
     top:63.5%;
 
+}
+.boton--crear{
+    margin-bottom: 0.5rem;
 }
 
 .recuperar, a {
@@ -185,10 +189,6 @@ section.imagen div img {
 .boton:hover {
     background-color: #4e572f; 
     transform: scale(1.05);
-}
-.boton--crear{
-margin:0.8rem 0;
-
 }
 
 .transicion {
@@ -276,7 +276,6 @@ margin:0.8rem 0;
     font-size: 0.9rem;
     color: #dddddd;
     text-align: center;
-    padding-bottom:0.7rem;
 }
 .sign-up--imgs{
     padding-top: 0.7rem;
