@@ -58,6 +58,14 @@ if ($conn->query($sql)) {
     if (isset($_POST['nombre'])) {
         include __DIR__ . '/../../envio_correo.php';
     }
+    // Si el registro fue por Google, también enviar correo de bienvenida al igual que de la forma manual
+    if (isset($_SESSION['user_name']) && isset($_SESSION['email_email'])) {
+        // Simular los datos en $_POST para envio_correo.php
+        $_POST['nombre'] = $nombre;
+        $_POST['apellido'] = $apellido;
+        $_POST['email'] = $email;
+        include __DIR__ . '/../../envio_correo.php';
+    }
     // Redirigir al inicio
     header("Location: /Proyecto-Integrador-4M/Index.php");
     exit();
