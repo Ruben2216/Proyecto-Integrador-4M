@@ -6,6 +6,7 @@ body {
     padding: 0;
     line-height: 1.5;
     border: 0;
+    overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
@@ -329,7 +330,6 @@ h2{
 /*----------seccion de consejos----------*/
 .card-container {
             display: flex;
-            overflow: hidden; 
             scroll-behavior: smooth; 
              padding: 20px; 
         }

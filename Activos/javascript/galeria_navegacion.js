@@ -137,32 +137,38 @@ function moveCardToStart(card, prevContent) {
     cardsWrapper.prepend(card);
 }
 
+// Agregar una clase CSS para la transición suave
+cardsWrapper.style.scrollBehavior = 'smooth';
+
 // Inicializar las tarjetas al cargar la página
 initializeCards();
 
-// Reemplazar lógica en los botones
+// Modificar la lógica para animar la transición de las tarjetas
 rightButton.addEventListener('click', () => {
     leftButton.disabled = true;
     rightButton.disabled = true;
 
     const cards = cardsWrapper.querySelectorAll('.tarjeta');
     const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
-    const cardToMove = cards[0];
-    const nextContentIndex = (currentIndex + cardsToShow) % cardContent.length;
-    const nextContent = cardContent[nextContentIndex];
 
-    moveCardToEnd(cardToMove, nextContent);
-    cardsWrapper.scrollLeft -= cardWidth;
-
-    requestAnimationFrame(() => {
-        cardsWrapper.scrollLeft += cardWidth;
-    });
+    // Aplicar una clase temporal para animar el desplazamiento
+    cardsWrapper.style.transition = 'transform 0.6s ease';
+    cardsWrapper.style.transform = `translateX(-${cardWidth}px)`;
 
     setTimeout(() => {
+        cardsWrapper.style.transition = '';
+        cardsWrapper.style.transform = '';
+
+        const cardToMove = cards[0];
+        const nextContentIndex = (currentIndex + cardsToShow) % cardContent.length;
+        const nextContent = cardContent[nextContentIndex];
+
+        moveCardToEnd(cardToMove, nextContent);
         currentIndex = (currentIndex + 1) % cardContent.length;
+
         leftButton.disabled = false;
         rightButton.disabled = false;
-    }, 600);
+    }, 600); // Tiempo de la transición
 });
 
 leftButton.addEventListener('click', () => {
@@ -171,22 +177,25 @@ leftButton.addEventListener('click', () => {
 
     const cards = cardsWrapper.querySelectorAll('.tarjeta');
     const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
-    const cardToMove = cards[totalCardsInDOM - 1];
-    const prevContentIndex = (currentIndex - 1 + cardContent.length) % cardContent.length;
-    const prevContent = cardContent[prevContentIndex];
 
-    moveCardToStart(cardToMove, prevContent);
-    cardsWrapper.scrollLeft += cardWidth;
-
-    requestAnimationFrame(() => {
-        cardsWrapper.scrollLeft -= cardWidth;
-    });
+    // Aplicar una clase temporal para animar el desplazamiento
+    cardsWrapper.style.transition = 'transform 0.6s ease';
+    cardsWrapper.style.transform = `translateX(${cardWidth}px)`;
 
     setTimeout(() => {
+        cardsWrapper.style.transition = '';
+        cardsWrapper.style.transform = '';
+
+        const cardToMove = cards[totalCardsInDOM - 1];
+        const prevContentIndex = (currentIndex - 1 + cardContent.length) % cardContent.length;
+        const prevContent = cardContent[prevContentIndex];
+
+        moveCardToStart(cardToMove, prevContent);
         currentIndex = (currentIndex - 1 + cardContent.length) % cardContent.length;
+
         leftButton.disabled = false;
         rightButton.disabled = false;
-    }, 600);
+    }, 600); // Tiempo de la transición
 });
 
 // Asegurar que el scroll inicial se ajuste al redimensionar la ventana
