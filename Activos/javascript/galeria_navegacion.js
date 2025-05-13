@@ -1,199 +1,200 @@
-    const cardsWrapper = document.getElementById('cardsWrapper');
-            const leftButton = document.getElementById('leftButton');
-            const rightButton = document.getElementById('rightButton');
+const cardsWrapper = document.getElementById('cardsWrapper');
+const leftButton = document.getElementById('leftButton');
+const rightButton = document.getElementById('rightButton');
 
-            // Pool de contenido para las tarjetas
-            const cardContent = [
-                { href: 'consejo1.html', imageUrl:'Activos/Imagenes/consejos/como-saber-si-mi-cachorro-tiene-fiebre.jpg', text: 'Cómo saber si mi cachorro tiene fiebre: Guía para detectar síntomas y...' },
-                { href: 'consejo2.html', imageUrl: 'Activos/Imagenes/consejos/Mi-perro-tiene-una-herida-en-carne-viva-que-hago.jpg', text: 'Mi perro tiene una herida en carne viva ¿cómo proceder?' },
-                { href: 'consejo3.html', imageUrl: 'Activos/Imagenes/consejos/perro-temblando.jpeg', text: 'Mi perro tiembla: Causas más comunes' },
-                { href: 'consejo4.html', imageUrl: 'Activos//Imagenes/consejos/perro-noble-mirando-otro-lado-espacio-copia_23-2148366957.avif', text: 'Guía definitiva para cuidar las articulaciones de un perro' },
-                { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Entendiendo el comportamiento de tu gato' },
-                { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'La importancia de la vacunación en mascotas' },
-                { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Primeros auxilios para mascotas' },
-                { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Alimentación saludable para perros' },
-                { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Cómo entrenar a tu cachorro' },
-                { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Beneficios de adoptar una mascota' },
-            ];
+// Pool de contenido para las tarjetas
+const cardContent = [
+    { href: 'consejo1.html', imageUrl:'Activos/Imagenes/consejos/como-saber-si-mi-cachorro-tiene-fiebre.jpg', text: 'Cómo saber si mi cachorro tiene fiebre: Guía para detectar síntomas y...' },
+    { href: 'consejo2.html', imageUrl: 'Activos/Imagenes/consejos/Mi-perro-tiene-una-herida-en-carne-viva-que-hago.jpg', text: 'Mi perro tiene una herida en carne viva ¿cómo proceder?' },
+    { href: 'consejo3.html', imageUrl: 'Activos/Imagenes/consejos/perro-temblando.jpeg', text: 'Mi perro tiembla: Causas más comunes' },
+    { href: 'consejo4.html', imageUrl: 'Activos//Imagenes/consejos/perro-noble-mirando-otro-lado-espacio-copia_23-2148366957.avif', text: 'Guía definitiva para cuidar las articulaciones de un perro' },
+    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Entendiendo el comportamiento de tu gato' },
+    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'La importancia de la vacunación en mascotas' },
+    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Primeros auxilios para mascotas' },
+    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Alimentación saludable para perros' },
+    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Cómo entrenar a tu cachorro' },
+    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Beneficios de adoptar una mascota' },
+];
 
-            let currentIndex = 0; // Índice del primer elemento visible en el pool de contenido
-            const cardsToShow = 4; // Número de tarjetas visibles a la vez
-            const totalCardsInDOM = 6; // Número total de elementos <a> en el DOM (para permitir la transición)
+let currentIndex = 0; // Índice del primer elemento visible en el pool de contenido
+const cardsToShow = 4; // Número de tarjetas visibles a la vez
+const totalCardsInDOM = 6; // Número total de elementos <a> en el DOM (para permitir la transición)
 
-            // Función para crear un elemento de tarjeta (<a>) con la nueva estructura
-            function createCardElement(content) {
-                const a = document.createElement('a');
-                a.href = content.href;
-                a.classList.add('tarjeta');
+// Función para crear un elemento de tarjeta (<a>) con la nueva estructura
+function createCardElement(content) {
+    const a = document.createElement('a');
+    a.href = content.href;
+    a.classList.add('tarjeta');
 
-                const imagenDiv = document.createElement('div');
-                imagenDiv.classList.add('tarjeta__imagen');
+    const imagenDiv = document.createElement('div');
+    imagenDiv.classList.add('tarjeta__imagen');
 
-                const img = document.createElement('img');
-                img.src = content.imageUrl;
-                img.alt = content.text;
+    const img = document.createElement('img');
+    img.src = content.imageUrl;
+    img.alt = content.text;
 
-                imagenDiv.appendChild(img);
+    imagenDiv.appendChild(img);
 
-                const tituloH3 = document.createElement('h3');
-                tituloH3.classList.add('tarjeta__titulo');
-                tituloH3.textContent = content.text;
+    const tituloH3 = document.createElement('h3');
+    tituloH3.classList.add('tarjeta__titulo');
+    tituloH3.textContent = content.text;
 
-                a.appendChild(imagenDiv);
-                a.appendChild(tituloH3);
+    a.appendChild(imagenDiv);
+    a.appendChild(tituloH3);
 
-                return a;
-            }
+    return a;
+}
 
-            // Función para inicializar los elementos de tarjeta en el DOM (se llama solo al inicio)
-            function initializeCards() {
-                cardsWrapper.innerHTML = ''; // Limpiar el contenedor actual
+// Función para inicializar los elementos de tarjeta en el DOM (se llama solo al inicio)
+function initializeCards() {
+    cardsWrapper.innerHTML = ''; // Limpiar el contenedor actual
 
-                // Crear y añadir los 6 elementos de tarjeta iniciales al DOM
-                for (let i = 0; i < totalCardsInDOM; i++) {
-                    const card = createCardElement({ href: '#', imageUrl: '', text: '' }); // Crear elementos vacíos inicialmente
-                    cardsWrapper.appendChild(card);
-                }
-                // Actualizar el contenido de estos elementos con los datos iniciales
-                updateCardContent();
+    // Crear y añadir los 6 elementos de tarjeta iniciales al DOM
+    for (let i = 0; i < totalCardsInDOM; i++) {
+        const card = createCardElement({ href: '#', imageUrl: '', text: '' }); // Crear elementos vacíos inicialmente
+        cardsWrapper.appendChild(card);
+    }
+    // Actualizar el contenido de estos elementos con los datos iniciales
+    updateCardContent();
 
-                // Ajustar el scroll inicial para mostrar las 4 tarjetas centrales
-                requestAnimationFrame(() => {
-                    const cards = cardsWrapper.querySelectorAll('.tarjeta');
-                    if (cards.length >= totalCardsInDOM) {
-                        const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
-                        cardsWrapper.scrollLeft = cardWidth * Math.floor((totalCardsInDOM - cardsToShow) / 2);
-                    }
-                });
-            }
+    // Ajustar el scroll inicial para mostrar las 4 tarjetas centrales
+    requestAnimationFrame(() => {
+        const cards = cardsWrapper.querySelectorAll('.tarjeta');
+        if (cards.length >= totalCardsInDOM) {
+            const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
+            cardsWrapper.scrollLeft = cardWidth * Math.floor((totalCardsInDOM - cardsToShow) / 2);
+        }
+    });
+}
 
-            // Función para actualizar SOLO el contenido de los elementos de tarjeta existentes
-            function updateCardContent() {
-                const cards = cardsWrapper.querySelectorAll('.tarjeta');
-                // Calcular los índices del contenido a mostrar en los 6 elementos del DOM
-                const contentIndices = [];
-                for (let i = 0; i < totalCardsInDOM; i++) {
-                    let index = (currentIndex + i - Math.floor((totalCardsInDOM - cardsToShow) / 2) + cardContent.length) % cardContent.length;
-                    if (index < 0) {
-                        index += cardContent.length;
-                    }
-                    contentIndices.push(cardContent[index]);
-                }
+// Función para actualizar SOLO el contenido de los elementos de tarjeta existentes
+function updateCardContent() {
+    const cards = cardsWrapper.querySelectorAll('.tarjeta');
+    // Calcular los índices del contenido a mostrar en los 6 elementos del DOM
+    const contentIndices = [];
+    for (let i = 0; i < totalCardsInDOM; i++) {
+        let index = (currentIndex + i - Math.floor((totalCardsInDOM - cardsToShow) / 2) + cardContent.length) % cardContent.length;
+        if (index < 0) {
+            index += cardContent.length;
+        }
+        contentIndices.push(cardContent[index]);
+    }
 
-                // Actualizar el contenido de cada elemento de tarjeta existente
-                cards.forEach((card, i) => {
-                    const content = contentIndices[i];
-                    card.href = content.href;
-                    card.querySelector('.tarjeta__imagen img').src = content.imageUrl;
-                    card.querySelector('.tarjeta__imagen img').alt = content.text;
-                    card.querySelector('.tarjeta__titulo').textContent = content.text;
-                });
-            }
+    // Actualizar el contenido de cada elemento de tarjeta existente
+    cards.forEach((card, i) => {
+        const content = contentIndices[i];
+        card.href = content.href;
+        card.querySelector('.tarjeta__imagen img').src = content.imageUrl;
+        card.querySelector('.tarjeta__imagen img').alt = content.text;
+        card.querySelector('.tarjeta__titulo').textContent = content.text;
+    });
+}
 
+// Ajustar la lógica para evitar duplicaciones al mover tarjetas
+function moveCardToEnd(card, nextContent) {
+    // Verificar si ya existe una tarjeta con el mismo texto en el DOM
+    const existingCard = Array.from(cardsWrapper.children).find(
+        (child) => child.querySelector('.tarjeta__titulo').textContent === nextContent.text
+    );
 
-            // Inicializar las tarjetas al cargar la página
-            initializeCards();
+    if (existingCard) {
+        return; // Evitar duplicación si ya existe
+    }
 
-            // Event Listener para el botón derecho
-            rightButton.addEventListener('click', () => {
-                // Deshabilitar botones temporalmente durante la animación
-                leftButton.disabled = true;
-                rightButton.disabled = true;
+    // Eliminar la tarjeta del inicio antes de moverla al final
+    cardsWrapper.removeChild(card);
 
-                const cards = cardsWrapper.querySelectorAll('.tarjeta');
-                const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
-                const cardCount = cardContent.length;
+    // Actualizar el contenido de la tarjeta
+    card.href = nextContent.href;
+    card.querySelector('.tarjeta__imagen img').src = nextContent.imageUrl;
+    card.querySelector('.tarjeta__imagen img').alt = nextContent.text;
+    card.querySelector('.tarjeta__titulo').textContent = nextContent.text;
 
-                // Identificar la tarjeta que saldrá de la vista (la primera)
-                const cardToMove = cards[0];
+    // Añadir la tarjeta al final del contenedor
+    cardsWrapper.appendChild(card);
+}
 
-                // Calcular el índice del contenido que debe ir en esta tarjeta cuando se mueva al final
-                const nextContentIndex = (currentIndex + cardsToShow) % cardCount;
-                const nextContent = cardContent[nextContentIndex];
+function moveCardToStart(card, prevContent) {
+    // Verificar si ya existe una tarjeta con el mismo texto en el DOM
+    const existingCard = Array.from(cardsWrapper.children).find(
+        (child) => child.querySelector('.tarjeta__titulo').textContent === prevContent.text
+    );
 
-                // Actualizar el contenido de la tarjeta ANTES de moverla y scrollear
-                cardToMove.href = nextContent.href;
-                cardToMove.querySelector('.tarjeta__imagen img').src = nextContent.imageUrl;
-                cardToMove.querySelector('.tarjeta__imagen img').alt = nextContent.text;
-                cardToMove.querySelector('.tarjeta__titulo').textContent = nextContent.text;
+    if (existingCard) {
+        return; // Evitar duplicación si ya existe
+    }
 
-                // Mover la tarjeta al final del contenedor
-                cardsWrapper.appendChild(cardToMove);
+    // Eliminar la tarjeta del final antes de moverla al inicio
+    cardsWrapper.removeChild(card);
 
-                // Ajustar instantáneamente el scroll hacia atrás por el ancho de una tarjeta
-                // Esto prepara el contenedor para la animación de scroll suave hacia adelante
-                cardsWrapper.scrollLeft -= cardWidth;
+    // Actualizar el contenido de la tarjeta
+    card.href = prevContent.href;
+    card.querySelector('.tarjeta__imagen img').src = prevContent.imageUrl;
+    card.querySelector('.tarjeta__imagen img').alt = prevContent.text;
+    card.querySelector('.tarjeta__titulo').textContent = prevContent.text;
 
+    // Añadir la tarjeta al inicio del contenedor
+    cardsWrapper.prepend(card);
+}
 
-                // Desplazar el scroll suavemente hacia adelante por el ancho de una tarjeta
-                requestAnimationFrame(() => {
-                    cardsWrapper.scrollLeft += cardWidth;
-                });
+// Inicializar las tarjetas al cargar la página
+initializeCards();
 
+// Reemplazar lógica en los botones
+rightButton.addEventListener('click', () => {
+    leftButton.disabled = true;
+    rightButton.disabled = true;
 
-                // Después de que termine el scroll, actualizar el currentIndex
-                setTimeout(() => {
-                    currentIndex = (currentIndex + 1) % cardContent.length;
-                    // Habilitar botones
-                    leftButton.disabled = false;
-                    rightButton.disabled = false;
-                }, 600); // Ajusta este tiempo si la transición de scroll es más larga o corta
+    const cards = cardsWrapper.querySelectorAll('.tarjeta');
+    const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
+    const cardToMove = cards[0];
+    const nextContentIndex = (currentIndex + cardsToShow) % cardContent.length;
+    const nextContent = cardContent[nextContentIndex];
 
-            });
+    moveCardToEnd(cardToMove, nextContent);
+    cardsWrapper.scrollLeft -= cardWidth;
 
-            // Event Listener para el botón izquierdo
-            leftButton.addEventListener('click', () => {
-                // Deshabilitar botones temporalmente durante la animación
-                leftButton.disabled = true;
-                rightButton.disabled = true;
+    requestAnimationFrame(() => {
+        cardsWrapper.scrollLeft += cardWidth;
+    });
 
-                const cards = cardsWrapper.querySelectorAll('.tarjeta');
-                const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
-                const cardCount = cardContent.length;
+    setTimeout(() => {
+        currentIndex = (currentIndex + 1) % cardContent.length;
+        leftButton.disabled = false;
+        rightButton.disabled = false;
+    }, 600);
+});
 
-                // Identificar la tarjeta que saldrá de la vista (la última)
-                const cardToMove = cards[totalCardsInDOM - 1]; // Índice 5
+leftButton.addEventListener('click', () => {
+    leftButton.disabled = true;
+    rightButton.disabled = true;
 
-                // Calcular el índice del contenido que debe ir en esta tarjeta cuando se mueva al principio
-                const prevContentIndex = (currentIndex - 1 + cardCount) % cardCount;
-                const prevContent = cardContent[prevContentIndex];
+    const cards = cardsWrapper.querySelectorAll('.tarjeta');
+    const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
+    const cardToMove = cards[totalCardsInDOM - 1];
+    const prevContentIndex = (currentIndex - 1 + cardContent.length) % cardContent.length;
+    const prevContent = cardContent[prevContentIndex];
 
-                // Actualizar el contenido de la tarjeta ANTES de moverla y scrollear
-                cardToMove.href = prevContent.href;
-                cardToMove.querySelector('.tarjeta__imagen img').src = prevContent.imageUrl;
-                cardToMove.querySelector('.tarjeta__imagen img').alt = prevContent.text;
-                cardToMove.querySelector('.tarjeta__titulo').textContent = prevContent.text;
+    moveCardToStart(cardToMove, prevContent);
+    cardsWrapper.scrollLeft += cardWidth;
 
-                // Mover la tarjeta al principio del contenedor
-                cardsWrapper.prepend(cardToMove);
+    requestAnimationFrame(() => {
+        cardsWrapper.scrollLeft -= cardWidth;
+    });
 
-                // Ajustar instantáneamente el scroll hacia adelante por el ancho de una tarjeta
-                // Esto prepara el contenedor para la animación de scroll suave hacia atrás
-                cardsWrapper.scrollLeft += cardWidth;
+    setTimeout(() => {
+        currentIndex = (currentIndex - 1 + cardContent.length) % cardContent.length;
+        leftButton.disabled = false;
+        rightButton.disabled = false;
+    }, 600);
+});
 
-
-                // Desplazar el scroll suavemente hacia atrás por el ancho de una tarjeta
-                requestAnimationFrame(() => {
-                    cardsWrapper.scrollLeft -= cardWidth;
-                });
-
-
-                // Después de que termine el scroll, actualizar el currentIndex
-                setTimeout(() => {
-                    currentIndex = (currentIndex - 1 + cardContent.length) % cardContent.length;
-                    // Habilitar botones
-                    leftButton.disabled = false;
-                    rightButton.disabled = false;
-                }, 600); // Ajusta este tiempo
-
-            });
-
-            // Asegurar que el scroll inicial se ajuste al redimensionar la ventana
-            window.addEventListener('resize', () => {
-                // Re-ajustar el scroll inicial sin cambiar el contenido
-                const cards = cardsWrapper.querySelectorAll('.tarjeta');
-                if (cards.length >= totalCardsInDOM) {
-                    const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
-                    cardsWrapper.scrollLeft = cardWidth * Math.floor((totalCardsInDOM - cardsToShow) / 2);
-                }
-            });
+// Asegurar que el scroll inicial se ajuste al redimensionar la ventana
+window.addEventListener('resize', () => {
+    // Re-ajustar el scroll inicial sin cambiar el contenido
+    const cards = cardsWrapper.querySelectorAll('.tarjeta');
+    if (cards.length >= totalCardsInDOM) {
+        const cardWidth = cards[0].offsetWidth + (parseFloat(getComputedStyle(cards[0]).marginLeft) + parseFloat(getComputedStyle(cards[0]).marginRight));
+        cardsWrapper.scrollLeft = cardWidth * Math.floor((totalCardsInDOM - cardsToShow) / 2);
+    }
+});
