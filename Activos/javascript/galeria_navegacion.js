@@ -9,11 +9,11 @@ const cardContent = [
     { href: 'consejo3.html', imageUrl: 'Activos/Imagenes/consejos/perro-temblando.jpeg', text: 'Mi perro tiembla: Causas más comunes' },
     { href: 'consejo4.html', imageUrl: 'Activos//Imagenes/consejos/perro-noble-mirando-otro-lado-espacio-copia_23-2148366957.avif', text: 'Guía definitiva para cuidar las articulaciones de un perro' },
     { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Entendiendo el comportamiento de tu gato' },
-    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'La importancia de la vacunación en mascotas' },
-    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Primeros auxilios para mascotas' },
-    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Alimentación saludable para perros' },
-    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Cómo entrenar a tu cachorro' },
-    { href: '', imageUrl: 'https://www.laclinicaveterinaria.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-02-a-las-13.49.23_resultado-scaled.webp', text: 'Beneficios de adoptar una mascota' },
+    { href: '', imageUrl: 'Activos/Imagenes/consejos/vacunas-para-perros-768x512.jpg', text: 'La importancia de la vacunación en mascotas' },
+    { href: '', imageUrl: 'Activos/Imagenes/consejos/primeros-auxilios-perros.jpg', text: 'Primeros auxilios para mascotas' },
+    { href: '', imageUrl: 'Activos/Imagenes/consejos/nutricion-del-perro.jpg', text: 'Alimentación saludable para perros' },
+    { href: '', imageUrl: 'Activos/Imagenes/consejos/como_educar_a_un_cachorro_21092_orig.jpg.webp', text: 'Cómo entrenar a tu cachorro' },
+    { href: '', imageUrl: 'Activos/Imagenes/consejos/pet-adoption.jpg', text: 'Beneficios de adoptar una mascota' },
 ];
 
 let currentIndex = 0; // Índice del primer elemento visible en el pool de contenido
