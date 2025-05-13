@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const map = L.map('map').setView([16.75, -93.13], 13);
+    const map = L.map('map').setView([16.75, -93.13], 14);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     grupoMarcadores.addLayer(marker);
                 });
 
-                if (grupoMarcadores.getLayers().length > 0) {
-                    map.fitBounds(grupoMarcadores.getBounds());
-                }
+                // if (grupoMarcadores.getLayers().length > 0) {
+                //     map.fitBounds(grupoMarcadores.getBounds());
+                // }
             })
             .catch(error => {
                 console.error("Error al cargar veterinarias:", error);
