@@ -13,7 +13,7 @@ const cardContent = [
     { href: '', imageUrl: 'Activos/Imagenes/consejos/primeros-auxilios-perros.jpg', text: 'Primeros auxilios para mascotas' },
     { href: '', imageUrl: 'Activos/Imagenes/consejos/nutricion-del-perro.jpg', text: 'Alimentación saludable para perros' },
     { href: '', imageUrl: 'Activos/Imagenes/consejos/como_educar_a_un_cachorro_21092_orig.jpg.webp', text: 'Cómo entrenar a tu cachorro' },
-    { href: '', imageUrl: 'Activos/Imagenes/consejos/pet-adoption.jpg', text: 'Beneficios de adoptar una mascota' },
+    { href: 'consejo5.html', imageUrl: 'Activos/Imagenes/consejos/pet-adoption.jpg', text: 'Beneficios de adoptar una mascota' },
 ];
 
 let currentIndex = 0; // Índice del primer elemento visible en el pool de contenido
